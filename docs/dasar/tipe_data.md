@@ -2,8 +2,6 @@
 
 Dalam pemrograman, **tipe data** digunakan untuk menentukan jenis nilai (angka, huruf, logika) yang dapat disimpan dalam sebuah **variabel**.
 
----
-
 ## 🔤 Apa itu Variabel?
 
 Variabel adalah **wadah** untuk menyimpan data dalam memori.  
@@ -19,8 +17,6 @@ String nama = "Marno";
 boolean aktif = true;
 ````
 
----
-
 ## 📦 Jenis-Jenis Tipe Data di Java
 
 ### 1. 📊 **Tipe Data Primitif**
@@ -31,8 +27,8 @@ Java memiliki 8 tipe data primitif bawaan:
 | --------- | ------ | ------------------- | ------------------------ |
 | `byte`    | 8 bit  | 127                 | Bilangan kecil           |
 | `short`   | 16 bit | 32000               | Bilangan sedang          |
-| `int`     | 32 bit | 2\_147\_483\_647    | Bilangan bulat umum      |
-| `long`    | 64 bit | 9\_223\_372\_036... | Bilangan bulat besar     |
+| `int`     | 32 bit | 2\.147\.483\.647    | Bilangan bulat umum      |
+| `long`    | 64 bit | 9\.223\.372\.036... | Bilangan bulat besar     |
 | `float`   | 32 bit | 3.14f               | Bilangan desimal kecil   |
 | `double`  | 64 bit | 3.1415926535        | Bilangan desimal presisi |
 | `char`    | 16 bit | 'A'                 | Karakter tunggal         |
@@ -99,7 +95,7 @@ int 1angka;       // Error: tidak boleh mulai dengan angka
 String nama lengkap; // Error: tidak boleh ada spasi
 ```
 
----
+<!-- --- -->
 
 ## 🧪 Contoh Program Lengkap
 

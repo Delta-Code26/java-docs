@@ -1,40 +1,107 @@
-site_name: Belajar Java dari Nol || Delta Code
-site_description: Panduan lengkap belajar Java dari dasar hingga tingkat lanjut.
-site_author: Delta Code
+site_name: Dokumentasi Java Lengkap
+site_url: https://Delta-Code26.github.io/java-docs/
+site_description: Panduan Pemrograman Java dari Pemula hingga Mahir
+site_author: Marno
+
 theme:
   name: material
   language: id
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Mode Gelap
+    - scheme: slate
+      primary: deep orange
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Mode Terang
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+  font:
+    text: Roboto
+    code: Fira Code
+  icon:
+    repo: fontawesome/brands/github
+
+repo_url: https://github.com/Delta-Code26/java-docs
+repo_name: java-docs
+edit_uri: edit/main/docs/
 
 nav:
-  - Pendahuluan:
-      - Apa itu Java?: index.md
-      - Persiapan Lingkungan: setup.md
-  - Dasar-Dasar Java:
-      - Struktur Program Java: dasar/struktur.md
-      - Tipe Data & Variabel: dasar/tipe_data.md
-      - Operator dan Ekspresi: dasar/operator.md
-      - Kontrol Alur (If, Switch): dasar/kontrol_alur.md
+  - Beranda: index.md
+  - Dasar Java:
+      - Struktur Program: dasar/struktur.md
+      - Tipe Data: dasar/tipe_data.md
+      - Operator: dasar/operator.md
+      - Ekspresi: dasar/expression.md
+      - Kontrol Alur: dasar/kontrol_alur.md
       - Perulangan: dasar/perulangan.md
-      - Method & Parameter: dasar/method.md
-  - OOP (Pemrograman Berorientasi Objek):
+      - Method: dasar/method.md
+  - Pemrograman Berbasis Objek:
       - Konsep OOP: oop/konsep.md
-      - Kelas & Objek: oop/class_objek.md
+      - Class & Objek: oop/class_objek.md
+      - Encapsulation: oop/encapsulation.md
       - Inheritance: oop/inheritance.md
       - Polymorphism: oop/polymorphism.md
-      - Encapsulation: oop/encapsulation.md
-      - Interface & Abstract: oop/interface.md
-  - Tingkat Menengah:  
-      - Exception Handling: menengah/exception_handling.md
-      - Koleksi (List, Map): menengah/collections.md
+      - Abstraction: oop/abstraction.md
+      - Ringkasan OOP: oop/ringkasan.md
+  - Java Tingkat Menengah:
       - Package & Import: menengah/package_import.md
+      - Exception Handling: menengah/exception_handling.md
+      - ArrayList: menengah/array_list.md
+      - HashMap: menengah/hashmap.md
       - File I/O: menengah/file_io.md
-      - Generic & Lambda: menengah/generics_lambda.md
-  - Tingkat Lanjut:
+      - Enum: menengah/enum.md
+      - Inner Class: menengah/inner_class.md
+  - Java Tingkat Lanjut:
+      - Overview: lanjutan/overview.md
+      - Generics: lanjutan/generics.md
+      - Functional Interface: lanjutan/interface_functional.md
+      - Lambda Expression: lanjutan/lambda_expression.md
+      - Stream API: lanjutan/stream_api.md
       - Multithreading: lanjutan/multithreading.md
-      - JavaFX: lanjutan/javafx.md
-      - JDBC (Koneksi Database): lanjutan/jdbc.md
-      - REST API dengan Spring Boot: lanjutan/springboot.md
-  - Penutup:
-      - FAQ: penutup/faq.md
-      - Tips Belajar Java: penutup/tips.md
-      - Kontribusi & Lisensi: penutup/lisensi.md
+      - Synchronized: lanjutan/synchronized.md
+      - Networking: lanjutan/networking.md
+      - JDBC + MySQL: lanjutan/jdbc_mysql.md
+      - Collection Framework: lanjutan/collection_framework.md
+      - Ekspresi Kustom: lanjutan/expression_custom.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - codehilite
+  - footnotes
+  - def_list
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/username
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/@namachannel
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/marnodev
+
+copyright: © 2025 Marno. Semua Hak Dilindungi.

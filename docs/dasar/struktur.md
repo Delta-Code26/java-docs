@@ -1,8 +1,7 @@
 # 🧱 Struktur Dasar Program Java
 
-Sebelum membuat aplikasi besar, kita perlu memahami *struktur paling dasar* dari program Java.
+Sebelum membangun aplikasi besar, mari kuasai dulu *fondasi* dari program Java.
 
----
 
 ## 🔍 Contoh Program Java Paling Sederhana
 
@@ -14,53 +13,42 @@ public class HelloWorld {
 }
 ````
 
-Jika dijalankan, akan menghasilkan:
+🖨️ Output:
 
-```
+```text
 Halo, dunia!
 ```
 
----
+## 🧩 Penjelasan Baris per Baris
 
-## 🧩 Penjelasan Bagian per Bagian
+### ✅ 1. `public class HelloWorld`
 
-Mari kita pecah kode di atas:
+* `class` → mendefinisikan sebuah kelas (*wadah utama* dalam Java)
+* `HelloWorld` → nama kelas (**harus sama dengan nama file**)
+* `public` → kelas dapat diakses dari mana saja
 
-### 1. `public class HelloWorld`
+> 📌 **Catatan:**
+> Satu file `.java` hanya boleh memiliki **satu `public class`**, dan nama filenya **harus sama** dengan nama kelasnya.
 
-* **`class`** adalah kata kunci untuk mendefinisikan kelas (wadah utama dalam Java).
-* **`HelloWorld`** adalah nama kelas. Nama file **harus sama** dengan nama kelas.
-* **`public`** berarti kelas ini dapat diakses dari mana saja.
+### ✅ 2. `public static void main(String[] args)`
 
-> 📌 *Satu file Java hanya boleh punya satu `public class` dan namanya harus sama dengan nama file.*
-
----
-
-### 2. `public static void main(String[] args)`
-
-Ini adalah **method utama** tempat program mulai dijalankan.
-
-* `public` → bisa diakses dari mana saja
-* `static` → bisa dijalankan tanpa membuat objek dulu
+* `public` → bisa dipanggil dari luar
+* `static` → dapat dijalankan tanpa membuat objek
 * `void` → tidak mengembalikan nilai
-* `main` → nama fungsi utama
-* `String[] args` → argumen dari command line (jarang digunakan di awal)
+* `main` → titik masuk program (entry point)
+* `String[] args` → parameter dari command line
 
 > 💬 *Tanpa method `main()`, program Java tidak akan bisa dijalankan.*
 
----
+### ✅ 3. `System.out.println("Halo, dunia!");`
 
-### 3. `System.out.println("Halo, dunia!");`
-
-Digunakan untuk mencetak teks ke layar.
-
-* `System` → kelas sistem standar Java
-* `out` → objek output standar (biasanya layar)
-* `println()` → cetak teks lalu pindah baris
+* `System` → kelas utilitas Java untuk sistem standar
+* `out` → output standar (biasanya ke layar)
+* `println()` → mencetak teks dan membuat baris baru
 
 ---
 
-## 📂 Contoh File dan Struktur Folder
+## 📁 Struktur File & Folder
 
 ```
 BelajarJava/
@@ -69,17 +57,17 @@ BelajarJava/
 
 ---
 
-## 🛠️ Cara Kompilasi dan Jalankan
+## 🛠️ Cara Kompilasi & Menjalankan Program
 
-### 1. Kompilasi Program
+### 🧱 1. Kompilasi Program
 
 ```bash
 javac HelloWorld.java
 ```
 
-Jika tidak ada error, akan muncul file `HelloWorld.class`.
+📦 Output: File `HelloWorld.class` akan terbentuk jika tidak ada error.
 
-### 2. Jalankan Program
+### ▶️ 2. Jalankan Program
 
 ```bash
 java HelloWorld
@@ -87,24 +75,29 @@ java HelloWorld
 
 ---
 
-## ⚠️ Catatan Penting
+## ⚠️ Hal-Hal yang Wajib Diingat
 
-| Hal                                                | Penjelasan                                        |
-| -------------------------------------------------- | ------------------------------------------------- |
-| Nama file harus sama dengan nama kelas public      | `HelloWorld.java` untuk `public class HelloWorld` |
-| Java bersifat case-sensitive                       | `HelloWorld` ≠ `helloworld`                       |
-| Setiap statement diakhiri dengan `;`               | Wajib seperti titik di akhir kalimat              |
-| Blok kode dibuka dengan `{` dan ditutup dengan `}` | Jangan sampai tidak seimbang                      |
+| ⚙️ Hal Penting                                        | 💡 Penjelasan                                 |
+| ----------------------------------------------------- | --------------------------------------------- |
+| Nama file = nama kelas `public`                       | `HelloWorld.java` → `public class HelloWorld` |
+| Java bersifat **case-sensitive**                      | `HelloWorld` ≠ `helloworld`                   |
+| Setiap statement diakhiri dengan **titik koma (`;`)** | Seperti tanda titik dalam kalimat             |
+| Blok kode dibuka `{` dan ditutup `}`                  | Harus seimbang, jangan ada yang tertinggal    |
 
 ---
 
-## ✅ Kesimpulan
+## 🧭 Kesimpulan
 
-Struktur dasar program Java selalu dimulai dari:
+Struktur dasar program Java selalu terdiri dari:
 
-* Sebuah **kelas** (`class`)
-* Fungsi utama **`main()`**
-* Statement di dalamnya (seperti `System.out.println`)
+✅ Satu **kelas** (`class`)
+✅ Satu method utama **`main()`**
+✅ Satu atau lebih **statement** di dalamnya, misalnya:
 
-Selanjutnya kita akan belajar tentang:
-➡️ [Tipe Data & Variabel](tipe_data.md)
+```java
+System.out.println("Halo, dunia!");
+```
+
+---
+
+📚 Selanjutnya → [Tipe Data & Variabel](tipe_data.md)
