@@ -18,7 +18,7 @@ nav:
       - Method & Parameter: dasar/method.md
   - OOP (Pemrograman Berorientasi Objek):
       - Konsep OOP: oop/konsep.md
-      - Kelas & Objek: oop/kelas_objek.md
+      - Kelas & Objek: oop/class_objek.md
       - Inheritance: oop/inheritance.md
       - Polymorphism: oop/polymorphism.md
       - Encapsulation: oop/encapsulation.md
