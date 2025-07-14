@@ -23,9 +23,10 @@ nav:
       - Polymorphism: oop/polymorphism.md
       - Encapsulation: oop/encapsulation.md
       - Interface & Abstract: oop/interface.md
-  - Tingkat Menengah:
-      - Exception Handling: menengah/exception.md
+  - Tingkat Menengah:  
+      - Exception Handling: menengah/exception_handling.md
       - Koleksi (List, Map): menengah/collections.md
+      - Package & Import: menengah/package_import.md
       - File I/O: menengah/file_io.md
       - Generic & Lambda: menengah/generics_lambda.md
   - Tingkat Lanjut:
