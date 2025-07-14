@@ -1,0 +1,39 @@
+site_name: Belajar Java dari Nol || Delta Code
+site_description: Panduan lengkap belajar Java dari dasar hingga tingkat lanjut.
+site_author: Delta Code
+theme:
+  name: material
+  language: id
+
+nav:
+  - Pendahuluan:
+      - Apa itu Java?: index.md
+      - Persiapan Lingkungan: setup.md
+  - Dasar-Dasar Java:
+      - Struktur Program Java: dasar/struktur.md
+      - Tipe Data & Variabel: dasar/tipe_data.md
+      - Operator dan Ekspresi: dasar/operator.md
+      - Kontrol Alur (If, Switch): dasar/kontrol_alur.md
+      - Perulangan: dasar/perulangan.md
+      - Method & Parameter: dasar/method.md
+  - OOP (Pemrograman Berorientasi Objek):
+      - Konsep OOP: oop/konsep.md
+      - Kelas & Objek: oop/kelas_objek.md
+      - Inheritance: oop/inheritance.md
+      - Polymorphism: oop/polymorphism.md
+      - Encapsulation: oop/encapsulation.md
+      - Interface & Abstract: oop/interface.md
+  - Tingkat Menengah:
+      - Exception Handling: menengah/exception.md
+      - Koleksi (List, Map): menengah/collections.md
+      - File I/O: menengah/file_io.md
+      - Generic & Lambda: menengah/generics_lambda.md
+  - Tingkat Lanjut:
+      - Multithreading: lanjutan/multithreading.md
+      - JavaFX: lanjutan/javafx.md
+      - JDBC (Koneksi Database): lanjutan/jdbc.md
+      - REST API dengan Spring Boot: lanjutan/springboot.md
+  - Penutup:
+      - FAQ: penutup/faq.md
+      - Tips Belajar Java: penutup/tips.md
+      - Kontribusi & Lisensi: penutup/lisensi.md
