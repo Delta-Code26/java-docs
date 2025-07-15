@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami jenis-jenis perulangan di Java seperti for, while, do-while, serta penggunaan break dan continue">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Perulangan - Dokumentasi Java Lengkap</title>
+        <title>Perulangan (Loop) dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Perulangan
+              Perulangan (Loop) dalam Java
             
           </span>
         </div>
@@ -649,6 +649,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#contoh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -674,7 +683,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contoh" class="md-nav__link">
+  <a href="#contoh_1" class="md-nav__link">
     <span class="md-ellipsis">
       Contoh:
     </span>
@@ -707,7 +716,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contoh_1" class="md-nav__link">
+  <a href="#contoh_2" class="md-nav__link">
     <span class="md-ellipsis">
       Contoh:
     </span>
@@ -731,7 +740,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contoh_2" class="md-nav__link">
+  <a href="#contoh_3" class="md-nav__link">
     <span class="md-ellipsis">
       Contoh:
     </span>
@@ -745,13 +754,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-break-dan-continue" class="md-nav__link">
+  <a href="#5-pengendalian-perulangan-break-dan-continue" class="md-nav__link">
     <span class="md-ellipsis">
-      5. ⛔ break dan continue
+      5. ⛔ Pengendalian Perulangan: break dan continue
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. ⛔ break dan continue">
+    <nav class="md-nav" aria-label="5. ⛔ Pengendalian Perulangan: break dan continue">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -790,6 +799,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1629,141 +1647,181 @@
 
 
 <h1 id="perulangan-loop-dalam-java">🔁 Perulangan (Loop) dalam Java<a class="headerlink" href="#perulangan-loop-dalam-java" title="Permanent link">&para;</a></h1>
-<p>Perulangan digunakan untuk mengeksekusi blok kode <strong>berulang kali</strong> selama kondisi tertentu masih terpenuhi.</p>
-<p>Java menyediakan tiga jenis perulangan utama:
-1. <code>for</code>
-2. <code>while</code>
-3. <code>do-while</code></p>
-<hr />
+<p>Perulangan memungkinkan eksekusi <strong>blok kode secara berulang</strong> selama kondisi tertentu terpenuhi. Java menyediakan tiga jenis perulangan utama: <code>for</code>, <code>while</code>, dan <code>do-while</code>. Selain itu, terdapat mekanisme seperti <code>break</code>, <code>continue</code>, dan perulangan bersarang untuk mengontrol alur perulangan.</p>
 <h2 id="1-perulangan-for">1. 🔃 Perulangan <code>for</code><a class="headerlink" href="#1-perulangan-for" title="Permanent link">&para;</a></h2>
-<p>Digunakan ketika <strong>jumlah perulangan sudah diketahui</strong>.</p>
+<p>Perulangan <code>for</code> digunakan ketika <strong>jumlah iterasi sudah diketahui</strong> sebelumnya.</p>
 <h3 id="struktur">Struktur:<a class="headerlink" href="#struktur" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">inisialisasi</span><span class="p">;</span><span class="w"> </span><span class="n">kondisi</span><span class="p">;</span><span class="w"> </span><span class="n">perubahan</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// blok kode</span>
+<span class="w">    </span><span class="c1">// Blok kode yang diulang</span>
 <span class="p">}</span>
-<span class="err">````</span>
-
-<span class="err">###</span><span class="w"> </span><span class="n">Contoh</span><span class="p">:</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="nf">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</code></pre></div>
+<ul>
+<li><strong>Inisialisasi</strong>: Menyiapkan variabel pengontrol (misalnya, <code>int i = 1</code>).</li>
+<li><strong>Kondisi</strong>: Mengevaluasi apakah perulangan harus dilanjutkan (misalnya, <code>i &lt;= 5</code>).</li>
+<li><strong>Perubahan</strong>: Memperbarui nilai variabel pengontrol (misalnya, <code>i++</code>).</li>
+</ul>
+<h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Iterasi ke-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>💡 Output:</p>
+<p><strong>🖨️ Output:</strong></p>
 <div class="highlight"><pre><span></span><code>Iterasi ke-1
 Iterasi ke-2
 Iterasi ke-3
 Iterasi ke-4
 Iterasi ke-5
 </code></pre></div>
-<hr />
 <h2 id="2-perulangan-while">2. ♻️ Perulangan <code>while</code><a class="headerlink" href="#2-perulangan-while" title="Permanent link">&para;</a></h2>
-<p>Digunakan ketika <strong>kita tidak tahu pasti jumlah perulangan</strong>, tetapi ingin mengulang selama suatu kondisi terpenuhi.</p>
+<p>Perulangan <code>while</code> digunakan ketika <strong>jumlah iterasi tidak diketahui</strong> secara pasti, tetapi perulangan berlanjut selama kondisi tertentu terpenuhi.</p>
 <h3 id="struktur_1">Struktur:<a class="headerlink" href="#struktur_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">kondisi</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// blok kode</span>
+<span class="w">    </span><span class="c1">// Blok kode yang diulang</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
+<h3 id="contoh_1">Contoh:<a class="headerlink" href="#contoh_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;i = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
 <span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>i = 1
+i = 2
+i = 3
+</code></pre></div>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Pastikan kondisi dalam <code>while</code> akan berhenti pada suatu titik untuk menghindari <em>infinite loop</em>.</p>
+</blockquote>
 <h2 id="3-perulangan-do-while">3. 🔄 Perulangan <code>do-while</code><a class="headerlink" href="#3-perulangan-do-while" title="Permanent link">&para;</a></h2>
-<p>Perulangan ini <strong>menjalankan kode minimal satu kali</strong>, lalu mengecek kondisi.</p>
+<p>Perulangan <code>do-while</code> <strong>menjalankan blok kode minimal satu kali</strong> sebelum memeriksa kondisi.</p>
 <h3 id="struktur_2">Struktur:<a class="headerlink" href="#struktur_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">do</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// blok kode</span>
+<span class="w">    </span><span class="c1">// Blok kode yang diulang</span>
 <span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">kondisi</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="contoh_1">Contoh:<a class="headerlink" href="#contoh_1" title="Permanent link">&para;</a></h3>
+<h3 id="contoh_2">Contoh:<a class="headerlink" href="#contoh_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="k">do</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Cetak ke-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
 <span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Cetak ke-1
+Cetak ke-2
+</code></pre></div>
+<blockquote>
+<p>💡 <strong>Info</strong>: Perulangan <code>do-while</code> cocok untuk kasus di mana kode harus dijalankan setidaknya sekali, seperti meminta input pengguna hingga valid.</p>
+</blockquote>
 <h2 id="4-perulangan-bersarang-nested-loop">4. 🔂 Perulangan Bersarang (Nested Loop)<a class="headerlink" href="#4-perulangan-bersarang-nested-loop" title="Permanent link">&para;</a></h2>
-<p>Perulangan di dalam perulangan.</p>
-<h3 id="contoh_2">Contoh:<a class="headerlink" href="#contoh_2" title="Permanent link">&para;</a></h3>
+<p>Perulangan bersarang adalah perulangan di dalam perulangan lain. Biasanya digunakan untuk pola data kompleks, seperti tabel atau matriks.</p>
+<h3 id="contoh_3">Contoh:<a class="headerlink" href="#contoh_3" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;i = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, j = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="5-break-dan-continue">5. ⛔ <code>break</code> dan <code>continue</code><a class="headerlink" href="#5-break-dan-continue" title="Permanent link">&para;</a></h2>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>i = 1, j = 1
+i = 1, j = 2
+i = 2, j = 1
+i = 2, j = 2
+i = 3, j = 1
+i = 3, j = 2
+</code></pre></div>
+<h2 id="5-pengendalian-perulangan-break-dan-continue">5. ⛔ Pengendalian Perulangan: <code>break</code> dan <code>continue</code><a class="headerlink" href="#5-pengendalian-perulangan-break-dan-continue" title="Permanent link">&para;</a></h2>
 <h3 id="break"><code>break</code><a class="headerlink" href="#break" title="Permanent link">&para;</a></h3>
-<p>Menghentikan perulangan sepenuhnya.</p>
+<p>Perintah <code>break</code> <strong>menghentikan perulangan sepenuhnya</strong> saat kondisi tertentu terpenuhi.</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;i = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
 <span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>i = 1
+i = 2
 </code></pre></div>
 <h3 id="continue"><code>continue</code><a class="headerlink" href="#continue" title="Permanent link">&para;</a></h3>
-<p>Melewati 1 iterasi lalu lanjut ke berikutnya.</p>
+<p>Perintah <code>continue</code> <strong>melewati iterasi saat ini</strong> dan melanjutkan ke iterasi berikutnya.</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;i = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>i = 1
+i = 2
+i = 4
+i = 5
+</code></pre></div>
 <h2 id="studi-kasus-menjumlahkan-5-bilangan">🧪 Studi Kasus: Menjumlahkan 5 Bilangan<a class="headerlink" href="#studi-kasus-menjumlahkan-5-bilangan" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<p>Berikut adalah contoh program untuk menjumlahkan bilangan dari 1 hingga 5 menggunakan perulangan <code>for</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JumlahBilangan</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
 </code></pre></div>
-<p>💡 Output:</p>
+<p><strong>🖨️ Output:</strong></p>
 <div class="highlight"><pre><span></span><code>Total = 15
 </code></pre></div>
-<hr />
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>Perulangan adalah alat penting dalam pemrograman untuk menjalankan kode berulang kali. Berikut adalah ringkasan jenis perulangan di Java:</p>
 <table>
 <thead>
 <tr>
-<th>Jenis Loop</th>
-<th>Kapan Digunakan</th>
+<th><strong>Jenis Perulangan</strong></th>
+<th><strong>Kapan Digunakan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>for</code></td>
-<td>Jumlah iterasi pasti</td>
+<td>Jumlah iterasi diketahui sebelumnya</td>
 </tr>
 <tr>
 <td><code>while</code></td>
-<td>Jumlah iterasi tidak pasti</td>
+<td>Jumlah iterasi tidak diketahui pasti</td>
 </tr>
 <tr>
 <td><code>do-while</code></td>
-<td>Selalu dijalankan minimal 1 kali</td>
+<td>Blok kode dijalankan minimal satu kali</td>
 </tr>
 <tr>
 <td><code>break</code></td>
-<td>Hentikan perulangan</td>
+<td>Menghentikan perulangan sepenuhnya</td>
 </tr>
 <tr>
 <td><code>continue</code></td>
-<td>Lewati 1 iterasi</td>
+<td>Melewati satu iterasi dan melanjutkan lainnya</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Selanjutnya: <a href="../method/">Method &amp; Parameter dalam Java</a></p>
+<blockquote>
+<p>💡 <strong>Tips</strong>: Gunakan perulangan yang sesuai dengan kebutuhan program Anda untuk menjaga kode tetap efisien dan mudah dibaca.</p>
+</blockquote>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../method/">Method dan Parameter dalam Java</a> untuk memahami cara membuat fungsi dalam program.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
