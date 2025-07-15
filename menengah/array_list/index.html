@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami penggunaan Array dan ArrayList untuk menyimpan dan mengelola kumpulan data di Java">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>ArrayList - Dokumentasi Java Lengkap</title>
+        <title>Array dan ArrayList dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#array-arraylist-dalam-java" class="md-skip">
+        <a href="#array-dan-arraylist-dalam-java" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ArrayList
+              Array dan ArrayList dalam Java
             
           </span>
         </div>
@@ -1012,52 +1012,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-array-ukuran-tetap" class="md-nav__link">
+  <a href="#1-array-struktur-data-dengan-ukuran-tetap" class="md-nav__link">
     <span class="md-ellipsis">
-      1️⃣ Array: Ukuran Tetap
+      1️⃣ Array: Struktur Data dengan Ukuran Tetap
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1️⃣ Array: Ukuran Tetap">
+    <nav class="md-nav" aria-label="1️⃣ Array: Struktur Data dengan Ukuran Tetap">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#iterasi" class="md-nav__link">
+  <a href="#deklarasi-dan-inisialisasi-array" class="md-nav__link">
     <span class="md-ellipsis">
-      Iterasi:
+      Deklarasi dan Inisialisasi Array:
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#iterasi-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterasi Array:
+    </span>
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#keterbatasan-array" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Keterbatasan Array
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-arraylist-ukuran-fleksibel" class="md-nav__link">
-    <span class="md-ellipsis">
-      2️⃣ ArrayList: Ukuran Fleksibel
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2️⃣ ArrayList: Ukuran Fleksibel">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#deklarasi" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deklarasi:
+      Keterbatasan Array:
     </span>
   </a>
   
@@ -1069,19 +1054,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#method-penting-arraylist" class="md-nav__link">
+  <a href="#2-arraylist-struktur-data-dengan-ukuran-dinamis" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Method Penting ArrayList
+      2️⃣ ArrayList: Struktur Data dengan Ukuran Dinamis
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔄 Method Penting ArrayList">
+    <nav class="md-nav" aria-label="2️⃣ ArrayList: Struktur Data dengan Ukuran Dinamis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contoh" class="md-nav__link">
+  <a href="#deklarasi-dan-penggunaan" class="md-nav__link">
     <span class="md-ellipsis">
-      Contoh:
+      Deklarasi dan Penggunaan:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-penting-arraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method Penting ArrayList:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh-penggunaan-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Penggunaan Method:
     </span>
   </a>
   
@@ -1095,7 +1098,7 @@
         <li class="md-nav__item">
   <a href="#perbandingan-array-vs-arraylist" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Perbandingan Array vs ArrayList
+      ⚖️ Perbandingan Array vs. ArrayList
     </span>
   </a>
   
@@ -1112,18 +1115,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#array-arraylist" class="md-nav__link">
+  <a href="#array-ke-arraylist" class="md-nav__link">
     <span class="md-ellipsis">
-      Array → ArrayList
+      Array ke ArrayList:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#arraylist-array" class="md-nav__link">
+  <a href="#arraylist-ke-array" class="md-nav__link">
     <span class="md-ellipsis">
-      ArrayList → Array
+      ArrayList ke Array:
     </span>
   </a>
   
@@ -1135,9 +1138,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#studi-kasus-simpan-nama-pekerja" class="md-nav__link">
+  <a href="#studi-kasus-sistem-daftar-pekerja" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Studi Kasus: Simpan Nama Pekerja
+      🧪 Studi Kasus: Sistem Daftar Pekerja
     </span>
   </a>
   
@@ -1147,6 +1150,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1604,185 +1616,288 @@
   
 
 
-<h1 id="array-arraylist-dalam-java">🧮 Array &amp; ArrayList dalam Java<a class="headerlink" href="#array-arraylist-dalam-java" title="Permanent link">&para;</a></h1>
-<p>Saat kamu ingin menyimpan <strong>banyak data sekaligus</strong>, gunakan <strong>Array</strong> atau <strong>ArrayList</strong>.<br />
-Keduanya menyimpan data secara berurutan, namun punya perbedaan besar dari sisi fleksibilitas.</p>
-<hr />
-<h2 id="1-array-ukuran-tetap">1️⃣ Array: Ukuran Tetap<a class="headerlink" href="#1-array-ukuran-tetap" title="Permanent link">&para;</a></h2>
-<p>Deklarasi array:
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">angka</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// [0, 0, 0]</span>
-<span class="n">angka</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<span class="n">angka</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-<span class="n">angka</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
-<span class="err">````</span>
+<h1 id="array-dan-arraylist-dalam-java">🧮 Array dan ArrayList dalam Java<a class="headerlink" href="#array-dan-arraylist-dalam-java" title="Permanent link">&para;</a></h1>
+<p>Dalam pemrograman Java, <strong>Array</strong> dan <strong>ArrayList</strong> adalah dua struktur data yang digunakan untuk menyimpan <strong>kumpulan data</strong> secara berurutan. Keduanya memiliki kegunaan spesifik: Array cocok untuk data dengan ukuran tetap, sedangkan ArrayList menawarkan fleksibilitas dengan ukuran dinamis. Bagian ini menjelaskan cara menggunakan Array dan ArrayList, perbedaan utama, serta metode penting untuk mengelola data.</p>
+<h2 id="1-array-struktur-data-dengan-ukuran-tetap">1️⃣ Array: Struktur Data dengan Ukuran Tetap<a class="headerlink" href="#1-array-struktur-data-dengan-ukuran-tetap" title="Permanent link">&para;</a></h2>
+<p><strong>Array</strong> adalah struktur data yang menyimpan elemen-elemen dengan tipe data yang sama dalam ukuran yang <strong>tetap</strong> (tidak dapat diubah setelah dideklarasikan). Array efisien untuk akses cepat berdasarkan indeks, tetapi kurang fleksibel untuk operasi seperti penambahan atau penghapusan elemen.</p>
+<h3 id="deklarasi-dan-inisialisasi-array">Deklarasi dan Inisialisasi Array:<a class="headerlink" href="#deklarasi-dan-inisialisasi-array" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Deklarasi dengan ukuran</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">angka</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="n">angka</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">        </span><span class="n">angka</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="w">        </span><span class="n">angka</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
 
-<span class="err">###</span><span class="w"> </span><span class="n">Deklarasi</span><span class="w"> </span><span class="n">langsung</span><span class="p">:</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Ali&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Budi&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Cici&quot;</span><span class="p">};</span>
-</code></pre></div></p>
-<h3 id="iterasi">Iterasi:<a class="headerlink" href="#iterasi" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">angka</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">angka</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Deklarasi langsung</span>
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Ali&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Budi&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Cici&quot;</span><span class="p">};</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="keterbatasan-array">⚠️ Keterbatasan Array<a class="headerlink" href="#keterbatasan-array" title="Permanent link">&para;</a></h2>
+<h3 id="iterasi-array">Iterasi Array:<a class="headerlink" href="#iterasi-array" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayIterationDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">angka</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">};</span>
+
+<span class="w">        </span><span class="c1">// Menggunakan for loop</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">angka</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Angka ke-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">angka</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Menggunakan for-each</span>
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Ali&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Budi&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Cici&quot;</span><span class="p">};</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nama: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Angka ke-0: 10
+Angka ke-1: 20
+Angka ke-2: 30
+Nama: Ali
+Nama: Budi
+Nama: Cici
+</code></pre></div>
+<h3 id="keterbatasan-array">Keterbatasan Array:<a class="headerlink" href="#keterbatasan-array" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Ukuran tetap, tidak bisa diubah setelah dibuat</li>
-<li>Tidak punya method tambahan seperti tambah/hapus data</li>
+<li><strong>Ukuran Tetap</strong>: Tidak dapat menambah atau menghapus elemen setelah deklarasi.</li>
+<li><strong>Fungsionalitas Terbatas</strong>: Tidak memiliki method bawaan untuk operasi seperti pencarian atau penghapusan.</li>
+<li><strong>Rawan Kesalahan</strong>: Akses di luar batas array menyebabkan <code>ArrayIndexOutOfBoundsException</code>.</li>
 </ul>
-<hr />
-<h2 id="2-arraylist-ukuran-fleksibel">2️⃣ ArrayList: Ukuran Fleksibel<a class="headerlink" href="#2-arraylist-ukuran-fleksibel" title="Permanent link">&para;</a></h2>
-<p>Import dulu:</p>
+<h2 id="2-arraylist-struktur-data-dengan-ukuran-dinamis">2️⃣ ArrayList: Struktur Data dengan Ukuran Dinamis<a class="headerlink" href="#2-arraylist-struktur-data-dengan-ukuran-dinamis" title="Permanent link">&para;</a></h2>
+<p><strong>ArrayList</strong> adalah bagian dari <strong>Java Collection Framework (JCF)</strong> yang menyediakan struktur data dinamis untuk menyimpan elemen. ArrayList dapat mengubah ukurannya secara otomatis dan mendukung berbagai method untuk manipulasi data. ArrayList hanya dapat menyimpan objek (bukan tipe primitif), sehingga tipe primitif seperti <code>int</code> harus menggunakan <em>wrapper class</em> seperti <code>Integer</code>.</p>
+<h3 id="deklarasi-dan-penggunaan">Deklarasi dan Penggunaan:<a class="headerlink" href="#deklarasi-dan-penggunaan" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buah</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">buah</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Mangga&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">buah</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Durian&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">buah</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Kelapa&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Daftar buah: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">buah</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<h3 id="deklarasi">Deklarasi:<a class="headerlink" href="#deklarasi" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buah</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="n">buah</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Mangga&quot;</span><span class="p">);</span>
-<span class="n">buah</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Durian&quot;</span><span class="p">);</span>
-<span class="n">buah</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Kelapa&quot;</span><span class="p">);</span>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Daftar buah: [Mangga, Durian, Kelapa]
 </code></pre></div>
-<hr />
-<h2 id="method-penting-arraylist">🔄 Method Penting ArrayList<a class="headerlink" href="#method-penting-arraylist" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Pastikan untuk mengimpor <code>java.util.ArrayList</code> sebelum menggunakan ArrayList.</p>
+</blockquote>
+<h3 id="method-penting-arraylist">Method Penting ArrayList:<a class="headerlink" href="#method-penting-arraylist" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Method</th>
-<th>Keterangan</th>
+<th><strong>Method</strong></th>
+<th><strong>Keterangan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>add(item)</code></td>
-<td>Tambah item</td>
+<td>Menambahkan elemen ke akhir daftar.</td>
 </tr>
 <tr>
 <td><code>get(index)</code></td>
-<td>Ambil item</td>
+<td>Mengambil elemen pada indeks tertentu.</td>
 </tr>
 <tr>
 <td><code>set(index, item)</code></td>
-<td>Ubah item</td>
+<td>Mengganti elemen pada indeks tertentu.</td>
 </tr>
 <tr>
 <td><code>remove(index)</code></td>
-<td>Hapus item</td>
+<td>Menghapus elemen pada indeks tertentu.</td>
 </tr>
 <tr>
 <td><code>size()</code></td>
-<td>Jumlah elemen</td>
+<td>Mengembalikan jumlah elemen.</td>
 </tr>
 <tr>
 <td><code>clear()</code></td>
-<td>Kosongkan semua isi</td>
+<td>Menghapus semua elemen.</td>
 </tr>
 <tr>
 <td><code>contains(item)</code></td>
-<td>Cek apakah item ada</td>
+<td>Memeriksa apakah elemen ada di daftar.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="n">tim</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Mandor&quot;</span><span class="p">);</span>
-<span class="n">tim</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pemotong&quot;</span><span class="p">);</span>
-<span class="n">tim</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Penyusun&quot;</span><span class="p">);</span>
+<h3 id="contoh-penggunaan-method">Contoh Penggunaan Method:<a class="headerlink" href="#contoh-penggunaan-method" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">tim</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListMethodDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">tim</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Mandor&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">tim</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pemotong&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">tim</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Penyusun&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Mengakses elemen</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Elemen pertama: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tim</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Mengganti elemen</span>
+<span class="w">        </span><span class="n">tim</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pemanen&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Setelah diganti: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tim</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Menghapus elemen</span>
+<span class="w">        </span><span class="n">tim</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Setelah dihapus: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tim</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Mengecek ukuran</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Jumlah anggota tim: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tim</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="perbandingan-array-vs-arraylist">⚖️ Perbandingan Array vs ArrayList<a class="headerlink" href="#perbandingan-array-vs-arraylist" title="Permanent link">&para;</a></h2>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Elemen pertama: Mandor
+Setelah diganti: [Mandor, Pemanen, Penyusun]
+Setelah dihapus: [Mandor, Pemanen]
+Jumlah anggota tim: 2
+</code></pre></div>
+<h2 id="perbandingan-array-vs-arraylist">⚖️ Perbandingan Array vs. ArrayList<a class="headerlink" href="#perbandingan-array-vs-arraylist" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Fitur</th>
-<th>Array</th>
-<th>ArrayList</th>
+<th><strong>Fitur</strong></th>
+<th><strong>Array</strong></th>
+<th><strong>ArrayList</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Ukuran</td>
-<td>Tetap</td>
-<td>Dinamis</td>
+<td><strong>Ukuran</strong></td>
+<td>Tetap (tidak dapat diubah)</td>
+<td>Dinamis (dapat bertambah/kurang)</td>
 </tr>
 <tr>
-<td>Type data</td>
-<td>Bisa primitif</td>
-<td>Hanya objek/class</td>
+<td><strong>Tipe Data</strong></td>
+<td>Primitif atau objek</td>
+<td>Hanya objek (gunakan wrapper class untuk primitif)</td>
 </tr>
 <tr>
-<td>Import</td>
+<td><strong>Import</strong></td>
 <td>Tidak perlu</td>
-<td>Perlu (<code>java.util</code>)</td>
+<td>Perlu <code>java.util.ArrayList</code></td>
 </tr>
 <tr>
-<td>Method bantu</td>
-<td>Tidak banyak</td>
-<td>Banyak (<code>add</code>, <code>remove</code>, dll)</td>
+<td><strong>Method Bantu</strong></td>
+<td>Terbatas (hanya <code>.length</code>)</td>
+<td>Banyak (<code>add</code>, <code>remove</code>, dll.)</td>
+</tr>
+<tr>
+<td><strong>Performa</strong></td>
+<td>Lebih cepat untuk akses sederhana</td>
+<td>Sedikit lebih lambat, tapi fleksibel</td>
 </tr>
 </tbody>
 </table>
-<hr />
+<blockquote>
+<p>💡 <strong>Tips</strong>: Gunakan <strong>Array</strong> untuk data dengan ukuran tetap dan performa tinggi, dan <strong>ArrayList</strong> untuk data yang sering berubah atau memerlukan manipulasi.</p>
+</blockquote>
 <h2 id="konversi-antara-array-dan-arraylist">🔁 Konversi Antara Array dan ArrayList<a class="headerlink" href="#konversi-antara-array-dan-arraylist" title="Permanent link">&para;</a></h2>
-<h3 id="array-arraylist">Array → ArrayList<a class="headerlink" href="#array-arraylist" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">};</span>
-<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">data</span><span class="p">));</span>
-</code></pre></div>
-<h3 id="arraylist-array">ArrayList → Array<a class="headerlink" href="#arraylist-array" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">arrayBaru</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
-</code></pre></div>
-<hr />
-<h2 id="studi-kasus-simpan-nama-pekerja">🧪 Studi Kasus: Simpan Nama Pekerja<a class="headerlink" href="#studi-kasus-simpan-nama-pekerja" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pekerja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="n">pekerja</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ali&quot;</span><span class="p">);</span>
-<span class="n">pekerja</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">);</span>
-<span class="n">pekerja</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cici&quot;</span><span class="p">);</span>
+<h3 id="array-ke-arraylist">Array ke ArrayList:<a class="headerlink" href="#array-ke-arraylist" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
 
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pekerja</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pekerja &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pekerja</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayToArrayListDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">};</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">data</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ArrayList: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">list</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>ArrayList: [A, B, C]
+</code></pre></div>
+<h3 id="arraylist-ke-array">ArrayList ke Array:<a class="headerlink" href="#arraylist-ke-array" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListToArrayDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">arrayBaru</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Array: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">arrayBaru</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Array: [A, B]
+</code></pre></div>
+<h2 id="studi-kasus-sistem-daftar-pekerja">🧪 Studi Kasus: Sistem Daftar Pekerja<a class="headerlink" href="#studi-kasus-sistem-daftar-pekerja" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah contoh penggunaan ArrayList untuk mengelola daftar nama pekerja dalam proyek.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PekerjaDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pekerja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">pekerja</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ali&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">pekerja</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">pekerja</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cici&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Iterasi dengan for loop</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pekerja</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Pekerja %d: %s%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">pekerja</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Menambahkan pekerja baru</span>
+<span class="w">        </span><span class="n">pekerja</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Dedi&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Setelah menambah pekerja: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pekerja</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Pekerja 1: Ali
+Pekerja 2: Budi
+Pekerja 3: Cici
+Setelah menambah pekerja: [Ali, Budi, Cici, Dedi]
+</code></pre></div>
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>Array dan ArrayList adalah alat penting untuk mengelola kumpulan data:</p>
 <table>
 <thead>
 <tr>
-<th>Konsep</th>
-<th>Penjelasan</th>
+<th><strong>Konsep</strong></th>
+<th><strong>Penjelasan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Array</td>
-<td>Struktur data statis, efisien, tapi kurang fleksibel</td>
+<td><strong>Array</strong></td>
+<td>Struktur statis, efisien, cocok untuk ukuran tetap.</td>
 </tr>
 <tr>
-<td>ArrayList</td>
-<td>Struktur data dinamis, cocok untuk data harian</td>
+<td><strong>ArrayList</strong></td>
+<td>Struktur dinamis, fleksibel, cocok untuk manipulasi data.</td>
 </tr>
 <tr>
-<td>Gunakan</td>
-<td>ArrayList untuk kebanyakan kasus dalam aplikasi</td>
+<td><strong>Pilihan</strong></td>
+<td>Gunakan ArrayList untuk kebanyakan aplikasi modern.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Selanjutnya: <a href="../hashmap/">HashMap dan Struktur Data Key-Value</a></p>
+<blockquote>
+<p>🎯 <strong>Tujuan Utama</strong>: Memilih struktur data yang tepat (Array atau ArrayList) bergantung pada kebutuhan ukuran dan fleksibilitas.</p>
+</blockquote>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../hashmap/">HashMap dan Struktur Data Key-Value</a> untuk memahami cara menyimpan data dengan pasangan kunci-nilai.</p>
+<p>⬅️ Kembali: <a href="polymorphism.md">Polymorphism (Polimorfisme)</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 

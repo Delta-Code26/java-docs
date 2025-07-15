@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami konsep enkapsulasi dalam OOP untuk melindungi data dan mengontrol akses di Java">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Encapsulation - Dokumentasi Java Lengkap</title>
+        <title>Encapsulation (Enkapsulasi) dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Encapsulation
+              Encapsulation (Enkapsulasi) dalam Java
             
           </span>
         </div>
@@ -787,29 +787,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tujuan-enkapsulasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tujuan Enkapsulasi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#struktur-enkapsulasi" class="md-nav__link">
     <span class="md-ellipsis">
       🧱 Struktur Enkapsulasi
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🧱 Struktur Enkapsulasi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-class-dengan-enkapsulasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Class dengan Enkapsulasi:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#contoh" class="md-nav__link">
+  <a href="#penggunaan-di-kelas-lain" class="md-nav__link">
     <span class="md-ellipsis">
-      📦 Contoh:
+      🔍 Penggunaan di Kelas Lain
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#kenapa-harus-private" class="md-nav__link">
+  <a href="#mengapa-menggunakan-private" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Kenapa Harus private?
+      ❗ Mengapa Menggunakan private?
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="❗ Mengapa Menggunakan private?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-akses-langsung-yang-salah" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Akses Langsung yang Salah:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -823,13 +862,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#studi-kasus-validasi-umur" class="md-nav__link">
+  <a href="#studi-kasus-validasi-umur-siswa" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Studi Kasus: Validasi Umur
+      🧠 Studi Kasus: Validasi Umur Siswa
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧠 Studi Kasus: Validasi Umur">
+    <nav class="md-nav" aria-label="🧠 Studi Kasus: Validasi Umur Siswa">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -850,6 +889,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1533,153 +1581,181 @@
 
 
 <h1 id="encapsulation-enkapsulasi-dalam-java">🔒 Encapsulation (Enkapsulasi) dalam Java<a class="headerlink" href="#encapsulation-enkapsulasi-dalam-java" title="Permanent link">&para;</a></h1>
-<p><strong>Encapsulation</strong> atau enkapsulasi adalah konsep OOP yang menyatukan data dan method dalam satu unit, serta <strong>menyembunyikan data dari luar</strong>.</p>
-<p>Tujuan utamanya adalah:
-- Mengontrol akses ke data (melalui method)
-- Melindungi data dari perubahan sembarangan</p>
-<hr />
+<p><strong>Encapsulation</strong> (enkapsulasi) adalah pilar utama Object-Oriented Programming (OOP) yang menggabungkan data (field) dan method dalam satu unit (class) sambil <strong>menyembunyikan detail implementasi</strong> dari dunia luar. Dengan enkapsulasi, data hanya dapat diakses melalui method tertentu, seperti <strong>getter</strong> dan <strong>setter</strong>, untuk memastikan keamanan dan validasi.</p>
+<h3 id="tujuan-enkapsulasi">Tujuan Enkapsulasi<a class="headerlink" href="#tujuan-enkapsulasi" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Melindungi Data</strong>: Mencegah perubahan data yang tidak sah.</li>
+<li><strong>Mengontrol Akses</strong>: Mengatur bagaimana dan kapan data dapat diakses atau diubah.</li>
+<li><strong>Meningkatkan Perawatan</strong>: Memudahkan perubahan logika tanpa memengaruhi kode lain.</li>
+</ul>
 <h2 id="struktur-enkapsulasi">🧱 Struktur Enkapsulasi<a class="headerlink" href="#struktur-enkapsulasi" title="Permanent link">&para;</a></h2>
-<p>Untuk menerapkan enkapsulasi di Java:</p>
-<ol>
-<li>Buat field (atribut) sebagai <code>private</code></li>
-<li>Sediakan method <code>getter</code> dan <code>setter</code> untuk akses aman</li>
-</ol>
-<hr />
-<h2 id="contoh">📦 Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h2>
+<p>Untuk menerapkan enkapsulasi di Java:
+1. Deklarasikan field sebagai <code>private</code> untuk menyembunyikan dari akses langsung.
+2. Sediakan method <code>public</code> (getter dan setter) untuk mengakses dan memodifikasi data.
+3. (Opsional) Tambahkan logika validasi dalam setter untuk memastikan integritas data.</p>
+<h3 id="contoh-class-dengan-enkapsulasi">Contoh Class dengan Enkapsulasi:<a class="headerlink" href="#contoh-class-dengan-enkapsulasi" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mahasiswa</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Field private untuk enkapsulasi</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
 
+<span class="w">    </span><span class="c1">// Getter untuk nama</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNama</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNama</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">namaBaru</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">namaBaru</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Setter untuk nama</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNama</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="c1">// Getter untuk umur</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getUmur</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setUmur</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">umurBaru</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">umurBaru</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">umurBaru</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-<span class="err">````</span>
-
-<span class="o">---</span>
-
-<span class="err">##</span><span class="w"> </span><span class="err">🔍</span><span class="w"> </span><span class="n">Penggunaan</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">Kelas</span><span class="w"> </span><span class="n">Lain</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Mahasiswa</span><span class="w"> </span><span class="n">mhs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mahasiswa</span><span class="p">();</span>
-<span class="w">        </span><span class="n">mhs</span><span class="p">.</span><span class="na">setNama</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">mhs</span><span class="p">.</span><span class="na">setUmur</span><span class="p">(</span><span class="mi">21</span><span class="p">);</span>
-
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nama: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mhs</span><span class="p">.</span><span class="na">getNama</span><span class="p">());</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Umur: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mhs</span><span class="p">.</span><span class="na">getUmur</span><span class="p">());</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>💡 Output:</p>
-<div class="highlight"><pre><span></span><code>Nama: Marno
-Umur: 21
-</code></pre></div>
-<hr />
-<h2 id="kenapa-harus-private">❗ Kenapa Harus <code>private</code>?<a class="headerlink" href="#kenapa-harus-private" title="Permanent link">&para;</a></h2>
-<p>Dengan <code>private</code>, data tidak bisa diakses langsung dari luar class:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Mahasiswa</span><span class="w"> </span><span class="n">mhs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mahasiswa</span><span class="p">();</span>
-<span class="n">mhs</span><span class="p">.</span><span class="na">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Marno&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// ❌ ERROR: &#39;nama&#39; has private access</span>
-</code></pre></div>
-<hr />
-<h2 id="keuntungan-enkapsulasi">✅ Keuntungan Enkapsulasi<a class="headerlink" href="#keuntungan-enkapsulasi" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Keuntungan</th>
-<th>Penjelasan</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Keamanan Data</td>
-<td>Atribut hanya bisa diakses melalui method</td>
-</tr>
-<tr>
-<td>Validasi Nilai</td>
-<td>Bisa dicek dalam setter sebelum menyimpan</td>
-</tr>
-<tr>
-<td>Mudah Perawatan</td>
-<td>Perubahan logika cukup di setter/getter</td>
-</tr>
-<tr>
-<td>Modular &amp; Rapi</td>
-<td>Struktur kode lebih terorganisir</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="studi-kasus-validasi-umur">🧠 Studi Kasus: Validasi Umur<a class="headerlink" href="#studi-kasus-validasi-umur" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Siswa</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
-
+<span class="w">    </span><span class="c1">// Setter untuk umur dengan validasi</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setUmur</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">umur</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">umur</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">umur</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Umur tidak valid!&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="penggunaan-di-kelas-lain">🔍 Penggunaan di Kelas Lain<a class="headerlink" href="#penggunaan-di-kelas-lain" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MahasiswaDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Mahasiswa</span><span class="w"> </span><span class="n">mhs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mahasiswa</span><span class="p">();</span>
+<span class="w">        </span><span class="n">mhs</span><span class="p">.</span><span class="na">setNama</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mhs</span><span class="p">.</span><span class="na">setUmur</span><span class="p">(</span><span class="mi">21</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mhs</span><span class="p">.</span><span class="na">setUmur</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Akan menampilkan pesan error</span>
 
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Nama: %s, Umur: %d%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mhs</span><span class="p">.</span><span class="na">getNama</span><span class="p">(),</span><span class="w"> </span><span class="n">mhs</span><span class="p">.</span><span class="na">getUmur</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Umur tidak valid!
+Nama: Marno, Umur: 21
+</code></pre></div>
+<h2 id="mengapa-menggunakan-private">❗ Mengapa Menggunakan <code>private</code>?<a class="headerlink" href="#mengapa-menggunakan-private" title="Permanent link">&para;</a></h2>
+<p>Dengan menjadikan field <code>private</code>, data tidak dapat diakses atau diubah langsung dari luar class, mencegah perubahan yang tidak diinginkan.</p>
+<h3 id="contoh-akses-langsung-yang-salah">Contoh Akses Langsung yang Salah:<a class="headerlink" href="#contoh-akses-langsung-yang-salah" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MahasiswaErrorDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Mahasiswa</span><span class="w"> </span><span class="n">mhs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mahasiswa</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// mhs.nama = &quot;Marno&quot;; // ❌ Error: &#39;nama&#39; has private access</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>💡 <strong>Info</strong>: Enkapsulasi memastikan bahwa data hanya diubah melalui setter, yang dapat mencakup logika validasi.</p>
+</blockquote>
+<h2 id="keuntungan-enkapsulasi">✅ Keuntungan Enkapsulasi<a class="headerlink" href="#keuntungan-enkapsulasi" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Keuntungan</strong></th>
+<th><strong>Penjelasan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Keamanan Data</strong></td>
+<td>Hanya method getter/setter yang dapat mengakses data.</td>
+</tr>
+<tr>
+<td><strong>Validasi Nilai</strong></td>
+<td>Setter dapat memeriksa nilai sebelum menyimpan (misalnya, umur ≥ 0).</td>
+</tr>
+<tr>
+<td><strong>Mudah Perawatan</strong></td>
+<td>Perubahan logika hanya dilakukan di getter/setter, tidak memengaruhi kode lain.</td>
+</tr>
+<tr>
+<td><strong>Modularitas</strong></td>
+<td>Kode lebih terorganisir dan mudah dipahami.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="studi-kasus-validasi-umur-siswa">🧠 Studi Kasus: Validasi Umur Siswa<a class="headerlink" href="#studi-kasus-validasi-umur-siswa" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah contoh enkapsulasi dengan validasi ketat untuk umur siswa, memastikan umur berada dalam rentang yang sesuai untuk siswa sekolah.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Siswa</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Field private</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Setter dengan validasi</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setUmur</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">umur</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">umur</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Umur berhasil diatur ke: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">umur</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Umur tidak valid! Harus antara 5 dan 18 tahun.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Getter</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getUmur</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="penggunaan">Penggunaan:<a class="headerlink" href="#penggunaan" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">Siswa</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Siswa</span><span class="p">();</span>
-<span class="n">s</span><span class="p">.</span><span class="na">setUmur</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// Umur tidak valid!</span>
-<span class="n">s</span><span class="p">.</span><span class="na">setUmur</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Umur: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">getUmur</span><span class="p">());</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SiswaDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Siswa</span><span class="w"> </span><span class="n">siswa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Siswa</span><span class="p">();</span>
+<span class="w">        </span><span class="n">siswa</span><span class="p">.</span><span class="na">setUmur</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w">  </span><span class="c1">// Akan menampilkan pesan error</span>
+<span class="w">        </span><span class="n">siswa</span><span class="p">.</span><span class="na">setUmur</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span><span class="w"> </span><span class="c1">// Umur valid</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Umur siswa: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">siswa</span><span class="p">.</span><span class="na">getUmur</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Umur tidak valid! Harus antara 5 dan 18 tahun.
+Umur berhasil diatur ke: 12
+Umur siswa: 12
+</code></pre></div>
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>Enkapsulasi adalah fondasi untuk membangun kode yang aman dan terorganisir:</p>
 <table>
 <thead>
 <tr>
-<th>Konsep</th>
-<th>Penjelasan</th>
+<th><strong>Konsep</strong></th>
+<th><strong>Penjelasan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>private</code></td>
-<td>Menyembunyikan atribut</td>
+<td><strong><code>private</code></strong></td>
+<td>Menyembunyikan field dari akses langsung.</td>
 </tr>
 <tr>
-<td>Getter/Setter</td>
-<td>Akses data dengan aman dan validasi logika</td>
+<td><strong>Getter/Setter</strong></td>
+<td>Mengontrol akses dan memungkinkan validasi data.</td>
 </tr>
 <tr>
-<td>Enkapsulasi</td>
-<td>Menggabungkan data dan aksesnya</td>
+<td><strong>Enkapsulasi</strong></td>
+<td>Menggabungkan data dan logika dalam unit yang terlindungi.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Selanjutnya: <a href="../inheritance/">Inheritance (Pewarisan)</a></p>
+<blockquote>
+<p>🎯 <strong>Tujuan Utama</strong>: Enkapsulasi memastikan data hanya diubah dengan cara yang terkendali, meningkatkan keamanan dan fleksibilitas kode.</p>
+</blockquote>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../inheritance/">Inheritance (Pewarisan)</a> untuk memahami cara mewarisi fitur dari kelas lain.</p>
+<p>⬅️ Kembali: <a href="oop_konsep.md">Konsep Dasar OOP</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 

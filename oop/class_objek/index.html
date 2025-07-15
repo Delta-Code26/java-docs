@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami konsep dasar class, object, dan constructor dalam Object-Oriented Programming di Java">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Class & Objek - Dokumentasi Java Lengkap</title>
+        <title>Membuat Class dan Object dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Class & Objek
+              Membuat Class dan Object dalam Java
             
           </span>
         </div>
@@ -774,9 +774,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contoh" class="md-nav__link">
+  <a href="#contoh-class" class="md-nav__link">
     <span class="md-ellipsis">
-      Contoh:
+      Contoh Class:
     </span>
   </a>
   
@@ -788,14 +788,47 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-constructor-membuat-object-lebih-efisien" class="md-nav__link">
+  <a href="#2-membuat-dan-menggunakan-object" class="md-nav__link">
     <span class="md-ellipsis">
-      3. ⚙️ Constructor: Membuat Object Lebih Efisien
+      2. 🧪 Membuat dan Menggunakan Object
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. ⚙️ Constructor: Membuat Object Lebih Efisien">
+    <nav class="md-nav" aria-label="2. 🧪 Membuat dan Menggunakan Object">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-membuat-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Membuat Object:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-constructor-inisialisasi-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. ⚙️ Constructor: Inisialisasi Object
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. ⚙️ Constructor: Inisialisasi Object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-class-dengan-constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Class dengan Constructor:
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#contoh-pemanggilan" class="md-nav__link">
@@ -833,6 +866,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1539,156 +1581,183 @@
 
 
 <h1 id="membuat-class-dan-object-dalam-java">🏗️ Membuat Class dan Object dalam Java<a class="headerlink" href="#membuat-class-dan-object-dalam-java" title="Permanent link">&para;</a></h1>
-<p>Dalam OOP Java, semua dimulai dari <strong>class</strong> dan <strong>object</strong>.<br />
-Class adalah blueprint. Object adalah instance-nya — seperti cetakan dan hasil cetakannya.</p>
-<hr />
+<p>Dalam <strong>Object-Oriented Programming (OOP)</strong> di Java, <strong>class</strong> dan <strong>object</strong> adalah konsep dasar yang menjadi fondasi pembuatan program berbasis objek. <strong>Class</strong> adalah cetak biru (<em>blueprint</em>) yang mendefinisikan struktur dan perilaku, sedangkan <strong>object</strong> adalah instance nyata dari class tersebut. Bagian ini menjelaskan cara membuat class, object, dan constructor, serta peran field dan method dalam OOP.</p>
 <h2 id="1-membuat-class">1. ✏️ Membuat Class<a class="headerlink" href="#1-membuat-class" title="Permanent link">&para;</a></h2>
-<p>Class menyimpan:
-- <strong>Atribut (field)</strong> → data
-- <strong>Method (fungsi)</strong> → aksi</p>
-<h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
+<p><strong>Class</strong> adalah template yang mendefinisikan:
+- <strong>Field (atribut)</strong>: Data atau properti yang dimiliki class.
+- <strong>Method</strong>: Fungsi atau aksi yang dapat dilakukan oleh class.</p>
+<h3 id="contoh-class">Contoh Class:<a class="headerlink" href="#contoh-class" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mahasiswa</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Field</span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
 
+<span class="w">    </span><span class="c1">// Method</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Halo, saya &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nama</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-<span class="err">````</span>
-
-<span class="o">---</span>
-
-<span class="err">##</span><span class="w"> </span><span class="mf">2.</span><span class="w"> </span><span class="err">🧪</span><span class="w"> </span><span class="n">Membuat</span><span class="w"> </span><span class="n">dan</span><span class="w"> </span><span class="n">Menggunakan</span><span class="w"> </span><span class="n">Object</span>
-
-<span class="n">Gunakan</span><span class="w"> </span><span class="n">keyword</span><span class="w"> </span><span class="err">`</span><span class="k">new</span><span class="err">`</span><span class="w"> </span><span class="n">untuk</span><span class="w"> </span><span class="n">membuat</span><span class="w"> </span><span class="n">object</span><span class="p">.</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
+</code></pre></div>
+<ul>
+<li><strong>Field</strong>: <code>nama</code> (String) dan <code>umur</code> (int) menyimpan data mahasiswa.</li>
+<li><strong>Method</strong>: <code>sapa()</code> mendefinisikan perilaku untuk mencetak sapaan.</li>
+</ul>
+<h2 id="2-membuat-dan-menggunakan-object">2. 🧪 Membuat dan Menggunakan Object<a class="headerlink" href="#2-membuat-dan-menggunakan-object" title="Permanent link">&para;</a></h2>
+<p><strong>Object</strong> adalah instance dari class yang dibuat menggunakan kata kunci <code>new</code>. Object memungkinkan kita untuk menggunakan field dan method yang didefinisikan dalam class.</p>
+<h3 id="contoh-membuat-object">Contoh Membuat Object:<a class="headerlink" href="#contoh-membuat-object" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MahasiswaDemo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Membuat object dari class Mahasiswa</span>
 <span class="w">        </span><span class="n">Mahasiswa</span><span class="w"> </span><span class="n">mhs1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mahasiswa</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Mengisi field</span>
 <span class="w">        </span><span class="n">mhs1</span><span class="p">.</span><span class="na">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Marno&quot;</span><span class="p">;</span>
 <span class="w">        </span><span class="n">mhs1</span><span class="p">.</span><span class="na">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span>
 
-<span class="w">        </span><span class="n">mhs1</span><span class="p">.</span><span class="na">sapa</span><span class="p">();</span><span class="w"> </span><span class="c1">// output: Halo, saya Marno</span>
+<span class="w">        </span><span class="c1">// Memanggil method</span>
+<span class="w">        </span><span class="n">mhs1</span><span class="p">.</span><span class="na">sapa</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="3-constructor-membuat-object-lebih-efisien">3. ⚙️ Constructor: Membuat Object Lebih Efisien<a class="headerlink" href="#3-constructor-membuat-object-lebih-efisien" title="Permanent link">&para;</a></h2>
-<p><strong>Constructor</strong> adalah method khusus yang otomatis dipanggil saat object dibuat.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Mahasiswa</span><span class="w"> </span><span class="p">{</span>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Halo, saya Marno
+</code></pre></div>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Object dibuat dengan <code>new</code> diikuti oleh nama class dan tanda kurung, misalnya <code>new Mahasiswa()</code>.</p>
+</blockquote>
+<h2 id="3-constructor-inisialisasi-object">3. ⚙️ Constructor: Inisialisasi Object<a class="headerlink" href="#3-constructor-inisialisasi-object" title="Permanent link">&para;</a></h2>
+<p><strong>Constructor</strong> adalah method khusus yang dipanggil secara otomatis saat object dibuat. Constructor memiliki nama yang sama dengan class dan tidak memiliki tipe kembalian. Constructor biasanya digunakan untuk menginisialisasi field.</p>
+<h3 id="contoh-class-dengan-constructor">Contoh Class dengan Constructor:<a class="headerlink" href="#contoh-class-dengan-constructor" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mahasiswa</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// Constructor</span>
-<span class="w">    </span><span class="n">Mahasiswa</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="w">        </span><span class="n">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Mahasiswa</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="c1">// Method</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Saya &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, umur &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">umur</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="contoh-pemanggilan">Contoh Pemanggilan:<a class="headerlink" href="#contoh-pemanggilan" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">Mahasiswa</span><span class="w"> </span><span class="n">mhs1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mahasiswa</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">);</span>
-<span class="n">mhs1</span><span class="p">.</span><span class="na">sapa</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MahasiswaConstructorDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Membuat object dengan constructor</span>
+<span class="w">        </span><span class="n">Mahasiswa</span><span class="w"> </span><span class="n">mhs1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mahasiswa</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mhs1</span><span class="p">.</span><span class="na">sapa</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>💡 Output:</p>
+<p><strong>🖨️ Output:</strong></p>
 <div class="highlight"><pre><span></span><code>Saya Marno, umur 21
 </code></pre></div>
-<hr />
+<blockquote>
+<p>💡 <strong>Tips</strong>: Gunakan kata kunci <code>this</code> untuk membedakan field class dari parameter constructor dengan nama yang sama.</p>
+</blockquote>
 <h2 id="4-perbedaan-field-method-dan-constructor">4. 🧱 Perbedaan Field, Method, dan Constructor<a class="headerlink" href="#4-perbedaan-field-method-dan-constructor" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Elemen</th>
-<th>Fungsi</th>
+<th><strong>Elemen</strong></th>
+<th><strong>Fungsi</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Field</td>
-<td>Menyimpan data dalam class</td>
+<td><strong>Field</strong></td>
+<td>Menyimpan data atau properti class.</td>
 </tr>
 <tr>
-<td>Method</td>
-<td>Menjalankan aksi atau logika</td>
+<td><strong>Method</strong></td>
+<td>Mendefinisikan perilaku atau aksi class.</td>
 </tr>
 <tr>
-<td>Constructor</td>
-<td>Inisialisasi object saat dibuat (<code>new</code>)</td>
+<td><strong>Constructor</strong></td>
+<td>Menginisialisasi object saat dibuat dengan <code>new</code>.</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="5-studi-kasus-class-mobil">5. 🧠 Studi Kasus: Class <code>Mobil</code><a class="headerlink" href="#5-studi-kasus-class-mobil" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Mobil</span><span class="w"> </span><span class="p">{</span>
+<p>Berikut adalah contoh lengkap yang menggabungkan class, object, dan constructor untuk memodelkan mobil.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mobil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Field</span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">merk</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tahun</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">Mobil</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">merk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
-<span class="w">        </span><span class="n">tahun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Mobil</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">merk</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tahun</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">merk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">merk</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">tahun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tahun</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="c1">// Method</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Merk: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">merk</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Tahun: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tahun</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Merk: %s, Tahun: %d%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">merk</span><span class="p">,</span><span class="w"> </span><span class="n">tahun</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DemoMobil</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">class</span> <span class="nc">DemoMobil</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Membuat object</span>
 <span class="w">        </span><span class="n">Mobil</span><span class="w"> </span><span class="n">m1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mobil</span><span class="p">(</span><span class="s">&quot;Toyota&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2020</span><span class="p">);</span>
 <span class="w">        </span><span class="n">Mobil</span><span class="w"> </span><span class="n">m2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mobil</span><span class="p">(</span><span class="s">&quot;Honda&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2022</span><span class="p">);</span>
 
+<span class="w">        </span><span class="c1">// Memanggil method</span>
 <span class="w">        </span><span class="n">m1</span><span class="p">.</span><span class="na">info</span><span class="p">();</span>
 <span class="w">        </span><span class="n">m2</span><span class="p">.</span><span class="na">info</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>💡 Output:</p>
-<div class="highlight"><pre><span></span><code>Merk: Toyota, Tahun: 2020  
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Merk: Toyota, Tahun: 2020
 Merk: Honda, Tahun: 2022
 </code></pre></div>
-<hr />
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>Class dan object adalah fondasi OOP di Java:</p>
 <table>
 <thead>
 <tr>
-<th>Konsep</th>
-<th>Penjelasan</th>
+<th><strong>Konsep</strong></th>
+<th><strong>Penjelasan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Class</td>
-<td>Blueprint: berisi data dan method</td>
+<td><strong>Class</strong></td>
+<td>Blueprint yang mendefinisikan field dan method.</td>
 </tr>
 <tr>
-<td>Object</td>
-<td>Wujud nyata class (hasil <code>new</code>)</td>
+<td><strong>Object</strong></td>
+<td>Instance nyata dari class, dibuat dengan <code>new</code>.</td>
 </tr>
 <tr>
-<td>Constructor</td>
-<td>Method khusus untuk inisialisasi</td>
+<td><strong>Constructor</strong></td>
+<td>Method khusus untuk menginisialisasi object.</td>
 </tr>
 <tr>
-<td>Field &amp; Method</td>
-<td>Properti dan aksi dari sebuah object</td>
+<td><strong>Field &amp; Method</strong></td>
+<td>Menyimpan data dan mendefinisikan perilaku.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Selanjutnya: <a href="../encapsulation/">Encapsulation (Enkapsulasi)</a></p>
+<p>Memahami cara membuat class dan object adalah langkah awal untuk menguasai OOP dan membangun aplikasi yang terstruktur.</p>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../encapsulation/">Encapsulation (Enkapsulasi)</a> untuk memahami cara melindungi data dalam class.</p>
+<p>⬅️ Kembali: <a href="../ringkasan/">Ringkasan OOP dan Studi Kasus</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 

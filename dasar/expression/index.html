@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami konsep ekspresi, jenis-jenisnya, dan peranannya dalam logika program Java">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Ekspresi - Dokumentasi Java Lengkap</title>
+        <title>Ekspresi dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ekspresi-expression-dalam-java" class="md-skip">
+        <a href="#ekspresi-dalam-java" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ekspresi
+              Ekspresi dalam Java
             
           </span>
         </div>
@@ -585,27 +585,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#apa-itu-ekspresi" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Apa Itu Ekspresi?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Apa Itu Ekspresi?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#contoh-ekspresi-sederhana" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Contoh Ekspresi Sederhana
+      Contoh Ekspresi Sederhana:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenis-jenis-ekspresi-dalam-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 Jenis-Jenis Ekspresi dalam Java
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#ekspresi-vs-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Ekspresi vs. Statement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 Ekspresi vs. Statement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#penggunaan-ekspresi-dalam-struktur-kontrol" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Penggunaan Ekspresi dalam Struktur Kontrol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Penggunaan Ekspresi dalam Struktur Kontrol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#contoh-dalam-if-dan-while" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Contoh dalam if dan while
+      Contoh dalam if dan while:
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh-dengan-operator-ternary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh dengan Operator Ternary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#kenapa-penting" class="md-nav__link">
+  <a href="#mengapa-ekspresi-penting" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Kenapa Penting?
+      📌 Mengapa Ekspresi Penting?
     </span>
   </a>
   
@@ -624,6 +696,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1508,107 +1589,190 @@
   
 
 
-<h1 id="ekspresi-expression-dalam-java">🧠 Ekspresi (Expression) dalam Java<a class="headerlink" href="#ekspresi-expression-dalam-java" title="Permanent link">&para;</a></h1>
-<p><strong>Expression</strong> adalah pernyataan dalam kode yang <strong>menghasilkan suatu nilai</strong>.<br />
-Setiap ekspresi memiliki tipe data tertentu (int, boolean, String, dll.) dan bisa digunakan dalam operasi, pengambilan keputusan, dan logika program.</p>
-<hr />
-<h2 id="contoh-ekspresi-sederhana">📌 Contoh Ekspresi Sederhana<a class="headerlink" href="#contoh-ekspresi-sederhana" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// a + b adalah ekspresi</span>
-<span class="err">````</span>
-
-<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="mi">5</span><span class="err">`</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">ekspresi</span><span class="w"> </span><span class="n">literal</span>
-<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="err">`</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">ekspresi</span><span class="w"> </span><span class="n">aritmatika</span>
-<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="err">`</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">ekspresi</span><span class="w"> </span><span class="nf">penugasan</span><span class="w"> </span><span class="p">(</span><span class="n">assignment</span><span class="p">)</span>
-
-<span class="o">---</span>
-
-<span class="err">##</span><span class="w"> </span><span class="err">🧮</span><span class="w"> </span><span class="n">Jenis</span><span class="w"> </span><span class="n">Ekspresi</span><span class="w"> </span><span class="n">dalam</span><span class="w"> </span><span class="n">Java</span>
-
-<span class="o">|</span><span class="w"> </span><span class="n">Jenis</span><span class="w">       </span><span class="o">|</span><span class="w"> </span><span class="n">Contoh</span><span class="w">                     </span><span class="o">|</span><span class="w"> </span><span class="n">Penjelasan</span><span class="w">                   </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="o">-----------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">--------------------------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">----------------------------</span><span class="w"> </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="n">Literal</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="mi">42</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="s">&quot;Halo&quot;</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="kc">true</span><span class="err">`</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="n">Nilai</span><span class="w"> </span><span class="n">tetap</span><span class="w">                  </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="n">Aritmatika</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="err">`</span><span class="w">          </span><span class="o">|</span><span class="w"> </span><span class="n">Operasi</span><span class="w"> </span><span class="n">matematika</span><span class="w">           </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="n">Relasional</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="err">`</span><span class="w">          </span><span class="o">|</span><span class="w"> </span><span class="n">Menghasilkan</span><span class="w"> </span><span class="kt">boolean</span><span class="w">         </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="n">Logika</span><span class="w">      </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="err">`</span><span class="w">          </span><span class="o">|</span><span class="w"> </span><span class="n">Kombinasi</span><span class="w"> </span><span class="n">ekspresi</span><span class="w"> </span><span class="kt">boolean</span><span class="w">   </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="n">Penugasan</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="err">`</span><span class="w">      </span><span class="o">|</span><span class="w"> </span><span class="n">Menyimpan</span><span class="w"> </span><span class="n">nilai</span><span class="w"> </span><span class="n">ke</span><span class="w"> </span><span class="n">variabel</span><span class="w">  </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="n">Unary</span><span class="w">       </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">-</span><span class="n">a</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="o">!</span><span class="n">isBenar</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="o">++</span><span class="n">x</span><span class="err">`</span><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">Satu</span><span class="w"> </span><span class="n">operand</span><span class="w">                 </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="n">Ternary</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">b</span><span class="err">`</span><span class="w">          </span><span class="o">|</span><span class="w"> </span><span class="n">Pemilihan</span><span class="w"> </span><span class="n">nilai</span><span class="w">              </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="n">Method</span><span class="w"> </span><span class="n">Call</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi&quot;</span><span class="p">)</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Ekspresi</span><span class="w"> </span><span class="n">dengan</span><span class="w"> </span><span class="n">efek</span><span class="w"> </span><span class="n">samping</span><span class="w"> </span><span class="o">|</span>
-
-<span class="o">---</span>
-
-<span class="err">##</span><span class="w"> </span><span class="err">🔁</span><span class="w"> </span><span class="n">Ekspresi</span><span class="w"> </span><span class="n">vs</span><span class="w"> </span><span class="n">Statement</span>
-
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">Ekspresi</span><span class="o">**</span><span class="w"> </span><span class="n">menghasilkan</span><span class="w"> </span><span class="n">nilai</span>
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">Statement</span><span class="o">**</span><span class="w"> </span><span class="n">adalah</span><span class="w"> </span><span class="n">perintah</span><span class="w"> </span><span class="nf">lengkap</span><span class="w"> </span><span class="p">(</span><span class="n">bisa</span><span class="w"> </span><span class="n">mengandung</span><span class="w"> </span><span class="n">ekspresi</span><span class="p">)</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// Statement, mengandung ekspresi &quot;3 + 4&quot;</span>
-</code></pre></div>
-<hr />
-<h2 id="contoh-dalam-if-dan-while">🧪 Contoh dalam <code>if</code> dan <code>while</code><a class="headerlink" href="#contoh-dalam-if-dan-while" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nilai</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">75</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// nilai &gt;= 75 adalah ekspresi boolean</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Lulus&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// i &lt; 10 adalah ekspresi boolean</span>
-<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">          </span><span class="c1">// i++ adalah ekspresi unary</span>
+<h1 id="ekspresi-dalam-java">🧠 Ekspresi dalam Java<a class="headerlink" href="#ekspresi-dalam-java" title="Permanent link">&para;</a></h1>
+<p><strong>Ekspresi</strong> adalah kombinasi variabel, nilai, dan operator dalam Java yang <strong>menghasilkan nilai</strong> tunggal dengan tipe data tertentu (misalnya, <code>int</code>, <code>boolean</code>, <code>String</code>). Ekspresi merupakan elemen dasar dalam pemrograman yang digunakan untuk perhitungan, pengambilan keputusan, dan logika program. Bagian ini menjelaskan jenis-jenis ekspresi, perbedaan dengan <em>statement</em>, dan penggunaannya dalam Java.</p>
+<h2 id="apa-itu-ekspresi">📌 Apa Itu Ekspresi?<a class="headerlink" href="#apa-itu-ekspresi" title="Permanent link">&para;</a></h2>
+<p>Ekspresi adalah pernyataan kode yang dievaluasi untuk menghasilkan nilai. Setiap ekspresi memiliki <strong>tipe data</strong> yang ditentukan oleh hasilnya, seperti <code>int</code>, <code>boolean</code>, atau <code>String</code>.</p>
+<h3 id="contoh-ekspresi-sederhana">Contoh Ekspresi Sederhana:<a class="headerlink" href="#contoh-ekspresi-sederhana" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExpressionDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// Ekspresi a + b menghasilkan nilai 15</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hasil a + b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="kenapa-penting">📌 Kenapa Penting?<a class="headerlink" href="#kenapa-penting" title="Permanent link">&para;</a></h2>
-<p>Memahami ekspresi:</p>
-<ul>
-<li>Membantu menulis kode yang ringkas dan efisien</li>
-<li>Penting saat debugging atau membaca logika</li>
-<li>Dasar untuk memahami operator dan control flow</li>
-</ul>
-<hr />
-<h2 id="tips">💡 Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Semua ekspresi punya <strong>tipe data</strong>: int, boolean, double, dll.</li>
-<li>Jangan bingung dengan <strong>statement</strong> — ekspresi bisa menjadi bagian dari statement</li>
-<li>Beberapa ekspresi punya <strong>efek samping</strong> (misal: <code>x++</code>, <code>System.out.println()</code>)</li>
-</ul>
-<hr />
-<h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Hasil a + b = 15
+</code></pre></div>
+<p>Dalam contoh di atas:
+- <code>5</code> dan <code>10</code>: Ekspresi literal.
+- <code>a + b</code>: Ekspresi aritmatika, menghasilkan nilai <code>15</code>.
+- <code>c = a + b</code>: Ekspresi penugasan, menetapkan hasil ke variabel <code>c</code>.</p>
+<h2 id="jenis-jenis-ekspresi-dalam-java">🧮 Jenis-Jenis Ekspresi dalam Java<a class="headerlink" href="#jenis-jenis-ekspresi-dalam-java" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah jenis-jenis ekspresi yang umum digunakan di Java:</p>
 <table>
 <thead>
 <tr>
-<th>Konsep</th>
-<th>Penjelasan</th>
+<th><strong>Jenis Ekspresi</strong></th>
+<th><strong>Contoh</strong></th>
+<th><strong>Penjelasan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Expression</td>
-<td>Pernyataan yang menghasilkan nilai</td>
+<td><strong>Literal</strong></td>
+<td><code>42</code>, <code>"Halo"</code>, <code>true</code></td>
+<td>Nilai konstan atau tetap.</td>
 </tr>
 <tr>
-<td>Digunakan di</td>
-<td>Penugasan, percabangan, perulangan, return</td>
+<td><strong>Aritmatika</strong></td>
+<td><code>a + b</code>, <code>x * 10</code></td>
+<td>Operasi matematika seperti penjumlahan, perkalian.</td>
 </tr>
 <tr>
-<td>Jenis umum</td>
-<td>Aritmatika, logika, relasional, unary, dst.</td>
+<td><strong>Relasional</strong></td>
+<td><code>a &gt; b</code>, <code>x == y</code></td>
+<td>Membandingkan nilai, menghasilkan <code>true</code>/<code>false</code>.</td>
 </tr>
 <tr>
-<td>Dasar dari</td>
-<td>Operator, perhitungan, dan struktur logika</td>
+<td><strong>Logika</strong></td>
+<td><code>a &gt; 5 &amp;&amp; b &lt; 10</code></td>
+<td>Menggabungkan ekspresi boolean dengan <code>&amp;&amp;</code>, <code>||</code>.</td>
+</tr>
+<tr>
+<td><strong>Penugasan</strong></td>
+<td><code>x = 7</code>, <code>total += 1</code></td>
+<td>Menetapkan atau memperbarui nilai variabel.</td>
+</tr>
+<tr>
+<td><strong>Unary</strong></td>
+<td><code>-a</code>, <code>!isBenar</code>, <code>++x</code></td>
+<td>Operasi pada satu operand (misalnya, negasi).</td>
+</tr>
+<tr>
+<td><strong>Ternary</strong></td>
+<td><code>(a &gt; b) ? a : b</code></td>
+<td>Memilih nilai berdasarkan kondisi boolean.</td>
+</tr>
+<tr>
+<td><strong>Method Call</strong></td>
+<td><code>System.out.println("Hi")</code></td>
+<td>Memanggil method, mungkin dengan efek samping.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Lanjut ke: <a href="../operator/">operator.md</a> atau <a href="../kontrol_alur/">kontrol_alur.md</a></p>
-<p>```</p>
+<blockquote>
+<p>💡 <strong>Info</strong>: Beberapa ekspresi, seperti <code>x++</code> atau <code>System.out.println()</code>, memiliki <strong>efek samping</strong> (mengubah nilai variabel atau menghasilkan output).</p>
+</blockquote>
+<h2 id="ekspresi-vs-statement">🔁 Ekspresi vs. Statement<a class="headerlink" href="#ekspresi-vs-statement" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Ekspresi</strong>: Menghasilkan nilai tunggal dan memiliki tipe data (misalnya, <code>3 + 4</code> menghasilkan <code>7</code>).</li>
+<li><strong>Statement</strong>: Pernyataan lengkap yang menjalankan aksi, bisa mengandung ekspresi (misalnya, <code>int x = 3 + 4;</code> adalah statement yang mengandung ekspresi <code>3 + 4</code>).</li>
+</ul>
+<h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExprVsStmtDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// Statement, dengan ekspresi 3 + 4</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>x = 7
+</code></pre></div>
+<h2 id="penggunaan-ekspresi-dalam-struktur-kontrol">🧪 Penggunaan Ekspresi dalam Struktur Kontrol<a class="headerlink" href="#penggunaan-ekspresi-dalam-struktur-kontrol" title="Permanent link">&para;</a></h2>
+<p>Ekspresi sering digunakan dalam struktur kontrol seperti <code>if</code>, <code>while</code>, atau sebagai bagian dari pernyataan <code>return</code>.</p>
+<h3 id="contoh-dalam-if-dan-while">Contoh dalam <code>if</code> dan <code>while</code>:<a class="headerlink" href="#contoh-dalam-if-dan-while" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ControlFlowExprDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nilai</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nilai</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">75</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Ekspresi relasional: nilai &gt;= 75</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Lulus&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Ekspresi relasional: i &lt; 3</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Iterasi: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">            </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// Ekspresi unary: i++</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Lulus
+Iterasi: 0
+Iterasi: 1
+Iterasi: 2
+</code></pre></div>
+<h3 id="contoh-dengan-operator-ternary">Contoh dengan Operator Ternary:<a class="headerlink" href="#contoh-dengan-operator-ternary" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TernaryDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// Ekspresi ternary</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nilai maksimum: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">max</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Nilai maksimum: 10
+</code></pre></div>
+<h2 id="mengapa-ekspresi-penting">📌 Mengapa Ekspresi Penting?<a class="headerlink" href="#mengapa-ekspresi-penting" title="Permanent link">&para;</a></h2>
+<p>Memahami ekspresi penting karena:</p>
+<ul>
+<li><strong>Kode yang Ringkas</strong>: Ekspresi memungkinkan penulisan kode yang efisien dan langsung.</li>
+<li><strong>Dasar Logika Program</strong>: Ekspresi digunakan dalam perhitungan, pengambilan keputusan, dan perulangan.</li>
+<li><strong>Debugging</strong>: Memahami tipe data dan hasil ekspresi membantu menemukan kesalahan logika.</li>
+<li><strong>Fleksibilitas</strong>: Ekspresi dapat digabungkan untuk membentuk logika kompleks.</li>
+</ul>
+<h2 id="tips">💡 Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Pastikan ekspresi memiliki <strong>tipe data</strong> yang sesuai dengan konteks penggunaannya (misalnya, <code>boolean</code> untuk <code>if</code>).</li>
+<li>Waspadai <strong>efek samping</strong> pada ekspresi seperti <code>x++</code> atau pemanggilan method.</li>
+<li>Gunakan tanda kurung <code>()</code> untuk mengatur prioritas operasi dalam ekspresi kompleks, seperti <code>(a + b) * c</code>.</li>
+<li>Bedakan ekspresi dari statement untuk memahami struktur kode dengan lebih baik.</li>
+</ul>
+<h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah ringkasan konsep ekspresi dalam Java:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Konsep</strong></th>
+<th><strong>Penjelasan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ekspresi</strong></td>
+<td>Pernyataan kode yang menghasilkan nilai tunggal.</td>
+</tr>
+<tr>
+<td><strong>Jenis Umum</strong></td>
+<td>Literal, aritmatika, relasional, logika, dll.</td>
+</tr>
+<tr>
+<td><strong>Digunakan di</strong></td>
+<td>Penugasan, perulangan, percabangan, dan return.</td>
+</tr>
+<tr>
+<td><strong>Penting untuk</strong></td>
+<td>Logika program, debugging, dan efisiensi kode.</td>
+</tr>
+</tbody>
+</table>
+<p>Ekspresi adalah fondasi penting untuk membangun logika dan fungsionalitas dalam program Java.</p>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../../oop/konsep/">Konsep OOP: Object-Oriented Programming</a> untuk memahami cara membangun program berbasis objek.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

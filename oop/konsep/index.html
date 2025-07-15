@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami prinsip dasar Object-Oriented Programming (OOP) di Java, termasuk class, object, dan empat pilar OOP">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Konsep OOP - Dokumentasi Java Lengkap</title>
+        <title>Konsep Dasar OOP dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Konsep OOP
+              Konsep Dasar OOP dalam Java
             
           </span>
         </div>
@@ -741,19 +741,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-apa-itu-object-dan-class" class="md-nav__link">
+  <a href="#1-apa-itu-class-dan-object" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 1. Apa Itu Object dan Class?
+      🧠 1. Apa Itu Class dan Object?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧠 1. Apa Itu Object dan Class?">
+    <nav class="md-nav" aria-label="🧠 1. Apa Itu Class dan Object?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#class" class="md-nav__link">
     <span class="md-ellipsis">
       Class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object
     </span>
   </a>
   
@@ -784,9 +793,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#penggunaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penggunaan:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#b-inheritance-pewarisan" class="md-nav__link">
     <span class="md-ellipsis">
       b) Inheritance (Pewarisan)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penggunaan_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penggunaan:
     </span>
   </a>
   
@@ -802,9 +829,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#method-overriding" class="md-nav__link">
+  <a href="#penggunaan_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Method Overriding
+      Penggunaan:
     </span>
   </a>
   
@@ -814,6 +841,15 @@
   <a href="#d-abstraction-abstraksi" class="md-nav__link">
     <span class="md-ellipsis">
       d) Abstraction (Abstraksi)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penggunaan_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penggunaan:
     </span>
   </a>
   
@@ -837,6 +873,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1566,102 +1611,170 @@
 
 
 <h1 id="konsep-dasar-oop-object-oriented-programming-dalam-java">🧭 Konsep Dasar OOP (Object-Oriented Programming) dalam Java<a class="headerlink" href="#konsep-dasar-oop-object-oriented-programming-dalam-java" title="Permanent link">&para;</a></h1>
-<p>Java adalah bahasa pemrograman <strong>berorientasi objek</strong>, yang berarti semuanya dibangun atas dasar <strong>kelas (class)</strong> dan <strong>objek (object)</strong>.</p>
-<p>Dengan OOP, kita bisa membuat kode yang <strong>modular, fleksibel, dan mudah dirawat</strong>.</p>
-<hr />
-<h2 id="1-apa-itu-object-dan-class">🧠 1. Apa Itu Object dan Class?<a class="headerlink" href="#1-apa-itu-object-dan-class" title="Permanent link">&para;</a></h2>
+<p>Java adalah bahasa pemrograman <strong>berorientasi objek</strong> (Object-Oriented Programming, OOP), yang berfokus pada pembuatan <strong>kelas (class)</strong> dan <strong>objek (object)</strong> untuk membangun kode yang <strong>modular</strong>, <strong>fleksibel</strong>, dan <strong>mudah dipelihara</strong>. OOP memungkinkan pengembang untuk memodelkan entitas dunia nyata dalam kode, seperti mobil, mahasiswa, atau hewan. Bagian ini menjelaskan konsep dasar OOP, termasuk class, object, dan empat pilar utama: Encapsulation, Inheritance, Polymorphism, dan Abstraction.</p>
+<h2 id="1-apa-itu-class-dan-object">🧠 1. Apa Itu Class dan Object?<a class="headerlink" href="#1-apa-itu-class-dan-object" title="Permanent link">&para;</a></h2>
 <h3 id="class">Class<a class="headerlink" href="#class" title="Permanent link">&para;</a></h3>
-<p>Blueprint atau cetakan untuk membuat objek.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Mobil</span><span class="w"> </span><span class="p">{</span>
+<p><strong>Class</strong> adalah cetak biru (<em>blueprint</em>) atau template yang mendefinisikan struktur (data) dan perilaku (aksi) dari sebuah entitas. Class berisi <strong>field</strong> (atribut) dan <strong>method</strong> (fungsi).</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mobil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Field</span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">merk</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tahun</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="err">````</span>
-
-<span class="err">###</span><span class="w"> </span><span class="n">Object</span>
-
-<span class="n">Hasil</span><span class="w"> </span><span class="n">nyata</span><span class="w"> </span><span class="n">dari</span><span class="w"> </span><span class="nf">class</span><span class="w"> </span><span class="p">(</span><span class="n">instansiasi</span><span class="p">).</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="n">Mobil</span><span class="w"> </span><span class="n">m1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mobil</span><span class="p">();</span>
 </code></pre></div>
-<hr />
-<h2 id="2-empat-pilar-oop">🎯 2. Empat Pilar OOP<a class="headerlink" href="#2-empat-pilar-oop" title="Permanent link">&para;</a></h2>
-<h3 id="a-encapsulation-enkapsulasi">a) <strong>Encapsulation (Enkapsulasi)</strong><a class="headerlink" href="#a-encapsulation-enkapsulasi" title="Permanent link">&para;</a></h3>
-<p>Menyembunyikan detail implementasi, hanya memberikan akses yang diperlukan melalui <strong>method getter/setter</strong>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Mahasiswa</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNama</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNama</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
+<h3 id="object">Object<a class="headerlink" href="#object" title="Permanent link">&para;</a></h3>
+<p><strong>Object</strong> adalah instance nyata dari class, dibuat menggunakan kata kunci <code>new</code>. Object mewakili wujud konkret dari class.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MobilDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Membuat object dari class Mobil</span>
+<span class="w">        </span><span class="n">Mobil</span><span class="w"> </span><span class="n">m1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mobil</span><span class="p">();</span>
+<span class="w">        </span><span class="n">m1</span><span class="p">.</span><span class="na">merk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Toyota&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">m1</span><span class="p">.</span><span class="na">tahun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2020</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mobil: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">m1</span><span class="p">.</span><span class="na">merk</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Tahun: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">m1</span><span class="p">.</span><span class="na">tahun</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Mobil: Toyota, Tahun: 2020
+</code></pre></div>
 <blockquote>
-<p>✅ Gunakan <code>private</code> untuk menjaga keamanan data, dan <code>public</code> untuk akses terkontrol.</p>
+<p>📌 <strong>Catatan</strong>: Class seperti desain rumah, sedangkan object adalah rumah yang dibangun berdasarkan desain tersebut.</p>
 </blockquote>
-<hr />
-<h3 id="b-inheritance-pewarisan">b) <strong>Inheritance (Pewarisan)</strong><a class="headerlink" href="#b-inheritance-pewarisan" title="Permanent link">&para;</a></h3>
-<p>Mewarisi atribut dan method dari class induk ke class anak.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Hewan</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">makan</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<h2 id="2-empat-pilar-oop">🎯 2. Empat Pilar OOP<a class="headerlink" href="#2-empat-pilar-oop" title="Permanent link">&para;</a></h2>
+<p>OOP di Java dibangun di atas empat pilar utama yang memungkinkan pembuatan kode yang terstruktur dan efisien.</p>
+<h3 id="a-encapsulation-enkapsulasi">a) Encapsulation (Enkapsulasi)<a class="headerlink" href="#a-encapsulation-enkapsulasi" title="Permanent link">&para;</a></h3>
+<p><strong>Encapsulation</strong> menyembunyikan detail implementasi data dan hanya memberikan akses terkontrol melalui <strong>getter</strong> dan <strong>setter</strong>. Ini meningkatkan keamanan dan fleksibilitas kode.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mahasiswa</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Field private untuk encapsulation</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Getter</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNama</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Setter</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNama</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="penggunaan">Penggunaan:<a class="headerlink" href="#penggunaan" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EncapsulationDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Mahasiswa</span><span class="w"> </span><span class="n">mhs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mahasiswa</span><span class="p">();</span>
+<span class="w">        </span><span class="n">mhs</span><span class="p">.</span><span class="na">setNama</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nama: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mhs</span><span class="p">.</span><span class="na">getNama</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Nama: Marno
+</code></pre></div>
+<blockquote>
+<p>💡 <strong>Tips</strong>: Gunakan modifier <code>private</code> untuk field dan sediakan method <code>public</code> (getter/setter) untuk mengontrol akses.</p>
+</blockquote>
+<h3 id="b-inheritance-pewarisan">b) Inheritance (Pewarisan)<a class="headerlink" href="#b-inheritance-pewarisan" title="Permanent link">&para;</a></h3>
+<p><strong>Inheritance</strong> memungkinkan kelas anak mewarisi field dan method dari kelas induk, mempromosikan <em>reuse</em> kode.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Hewan</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">makan</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hewan sedang makan&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Kucing</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Hewan</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">suara</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">suara</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Meong&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="penggunaan_1">Penggunaan:<a class="headerlink" href="#penggunaan_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">InheritanceDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Kucing</span><span class="w"> </span><span class="n">kucing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Kucing</span><span class="p">();</span>
+<span class="w">        </span><span class="n">kucing</span><span class="p">.</span><span class="na">makan</span><span class="p">();</span><span class="w"> </span><span class="c1">// Diwarisi dari Hewan</span>
+<span class="w">        </span><span class="n">kucing</span><span class="p">.</span><span class="na">suara</span><span class="p">();</span><span class="w"> </span><span class="c1">// Method khusus Kucing</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Hewan sedang makan
+Meong
+</code></pre></div>
 <blockquote>
-<p>💡 Gunakan keyword <code>extends</code> untuk pewarisan.</p>
+<p>📌 <strong>Catatan</strong>: Gunakan kata kunci <code>extends</code> untuk mewarisi kelas induk.</p>
 </blockquote>
-<hr />
-<h3 id="c-polymorphism-polimorfisme">c) <strong>Polymorphism (Polimorfisme)</strong><a class="headerlink" href="#c-polymorphism-polimorfisme" title="Permanent link">&para;</a></h3>
-<p>Satu method bisa memiliki <strong>banyak bentuk</strong> tergantung objeknya.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Bentuk</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">gambar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<h3 id="c-polymorphism-polimorfisme">c) Polymorphism (Polimorfisme)<a class="headerlink" href="#c-polymorphism-polimorfisme" title="Permanent link">&para;</a></h3>
+<p><strong>Polymorphism</strong> memungkinkan satu method memiliki banyak perilaku tergantung pada objek yang memanggilnya, biasanya melalui <strong>method overriding</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bentuk</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">gambar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Menggambar bentuk&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Lingkaran</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Bentuk</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">gambar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">gambar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Menggambar lingkaran&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="method-overriding">Method Overriding<a class="headerlink" href="#method-overriding" title="Permanent link">&para;</a></h3>
-<p>Mengubah perilaku method di class anak.</p>
-<hr />
-<h3 id="d-abstraction-abstraksi">d) <strong>Abstraction (Abstraksi)</strong><a class="headerlink" href="#d-abstraction-abstraksi" title="Permanent link">&para;</a></h3>
-<p>Menyembunyikan kompleksitas dan hanya menunjukkan fitur penting.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Kendaraan</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jalan</span><span class="p">();</span>
+<h3 id="penggunaan_2">Penggunaan:<a class="headerlink" href="#penggunaan_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PolymorphismDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Bentuk</span><span class="w"> </span><span class="n">bentuk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Lingkaran</span><span class="p">();</span><span class="w"> </span><span class="c1">// Polymorphism</span>
+<span class="w">        </span><span class="n">bentuk</span><span class="p">.</span><span class="na">gambar</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Menggambar lingkaran
+</code></pre></div>
 <blockquote>
-<p>Gunakan <code>abstract</code> untuk mendefinisikan class/metode yang belum memiliki implementasi.</p>
+<p>💡 <strong>Info</strong>: Polymorphism memungkinkan fleksibilitas dengan menggunakan tipe induk untuk merujuk ke objek anak.</p>
 </blockquote>
-<hr />
+<h3 id="d-abstraction-abstraksi">d) Abstraction (Abstraksi)<a class="headerlink" href="#d-abstraction-abstraksi" title="Permanent link">&para;</a></h3>
+<p><strong>Abstraction</strong> menyembunyikan kompleksitas implementasi dan hanya menampilkan fungsi esensial melalui kelas abstrak atau interface.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Kendaraan</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jalan</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mobil</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Kendaraan</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jalan</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mobil berjalan di jalan raya&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="penggunaan_3">Penggunaan:<a class="headerlink" href="#penggunaan_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractionDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Kendaraan</span><span class="w"> </span><span class="n">kendaraan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mobil</span><span class="p">();</span>
+<span class="w">        </span><span class="n">kendaraan</span><span class="p">.</span><span class="na">jalan</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Mobil berjalan di jalan raya
+</code></pre></div>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Gunakan kata kunci <code>abstract</code> untuk kelas atau method yang tidak memiliki implementasi langsung.</p>
+</blockquote>
 <h2 id="studi-kasus-class-dan-object">🧪 Studi Kasus: Class dan Object<a class="headerlink" href="#studi-kasus-class-dan-object" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Mahasiswa</span><span class="w"> </span><span class="p">{</span>
+<p>Berikut adalah contoh sederhana yang menggabungkan konsep class dan object.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mahasiswa</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Field</span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Halo, nama saya &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nama</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Method</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Halo, nama saya &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, umur &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">umur</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">class</span> <span class="nc">MahasiswaDemo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Membuat object</span>
 <span class="w">        </span><span class="n">Mahasiswa</span><span class="w"> </span><span class="n">m1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mahasiswa</span><span class="p">();</span>
 <span class="w">        </span><span class="n">m1</span><span class="p">.</span><span class="na">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Marno&quot;</span><span class="p">;</span>
 <span class="w">        </span><span class="n">m1</span><span class="p">.</span><span class="na">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="p">;</span>
@@ -1669,53 +1782,58 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>💡 Output:</p>
-<div class="highlight"><pre><span></span><code>Halo, nama saya Marno
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Halo, nama saya Marno, umur 22
 </code></pre></div>
-<hr />
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>Empat pilar OOP membentuk dasar untuk membangun aplikasi Java yang terstruktur:</p>
 <table>
 <thead>
 <tr>
-<th>Konsep</th>
-<th>Arti Sederhana</th>
+<th><strong>Konsep</strong></th>
+<th><strong>Penjelasan Sederhana</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Class</td>
-<td>Cetakan/desain</td>
+<td><strong>Class</strong></td>
+<td>Cetak biru untuk mendefinisikan struktur dan perilaku.</td>
 </tr>
 <tr>
-<td>Object</td>
-<td>Wujud nyata dari class</td>
+<td><strong>Object</strong></td>
+<td>Instance nyata dari class.</td>
 </tr>
 <tr>
-<td>Encapsulation</td>
-<td>Proteksi dan pengaturan akses data</td>
+<td><strong>Encapsulation</strong></td>
+<td>Melindungi data dengan akses terkontrol.</td>
 </tr>
 <tr>
-<td>Inheritance</td>
-<td>Pewarisan fitur dari class lain</td>
+<td><strong>Inheritance</strong></td>
+<td>Mewarisi fitur dari kelas induk untuk reuse kode.</td>
 </tr>
 <tr>
-<td>Polymorphism</td>
-<td>Satu nama method, banyak perilaku</td>
+<td><strong>Polymorphism</strong></td>
+<td>Satu nama method dengan banyak perilaku.</td>
 </tr>
 <tr>
-<td>Abstraction</td>
-<td>Menyederhanakan kompleksitas</td>
+<td><strong>Abstraction</strong></td>
+<td>Menyembunyikan kompleksitas, menampilkan esensi.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Selanjutnya: <a href="../class_objek/">Membuat Class dan Objek</a></p>
+<p>Memahami konsep-konsep ini adalah langkah awal untuk menguasai OOP di Java.</p>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../encapsulation/">Encapsulation (Enkapsulasi)</a> untuk memahami cara melindungi data dalam class dengan lebih mendalam.</p>
+<p>⬅️ Kembali: <a href="../class_objek/">Membuat Class dan Object</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 
