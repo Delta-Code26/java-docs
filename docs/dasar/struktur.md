@@ -1,9 +1,15 @@
+---
+title: Struktur Dasar Program Java
+description: Memahami fondasi dasar penulisan program Java dengan contoh sederhana
+---
+
 # 🧱 Struktur Dasar Program Java
 
-Sebelum membangun aplikasi besar, mari kuasai dulu *fondasi* dari program Java.
+Sebelum membangun aplikasi besar, penting untuk memahami *fondasi* penulisan kode dalam bahasa pemrograman Java. Bagian ini akan menjelaskan struktur dasar program Java dengan contoh sederhana dan penjelasan rinci.
 
+## 🔍 Contoh Program Java Sederhana
 
-## 🔍 Contoh Program Java Paling Sederhana
+Berikut adalah contoh program Java paling dasar yang menampilkan teks "Halo, dunia!" ke layar:
 
 ```java
 public class HelloWorld {
@@ -11,9 +17,9 @@ public class HelloWorld {
         System.out.println("Halo, dunia!");
     }
 }
-````
+```
 
-🖨️ Output:
+**🖨️ Output:**
 
 ```text
 Halo, dunia!
@@ -21,83 +27,100 @@ Halo, dunia!
 
 ## 🧩 Penjelasan Baris per Baris
 
-### ✅ 1. `public class HelloWorld`
+Mari kita bedah setiap baris dari kode di atas untuk memahami struktur dasarnya.
 
-* `class` → mendefinisikan sebuah kelas (*wadah utama* dalam Java)
-* `HelloWorld` → nama kelas (**harus sama dengan nama file**)
-* `public` → kelas dapat diakses dari mana saja
+### 1. `public class HelloWorld`
 
-> 📌 **Catatan:**
-> Satu file `.java` hanya boleh memiliki **satu `public class`**, dan nama filenya **harus sama** dengan nama kelasnya.
+- **`class`**: Mendefinisikan sebuah kelas, yang merupakan *wadah utama* untuk kode dalam Java.
+- **`HelloWorld`**: Nama kelas, yang **harus sama** dengan nama file (dalam hal ini, `HelloWorld.java`).
+- **`public`**: Menandakan bahwa kelas ini dapat diakses dari mana saja.
 
-### ✅ 2. `public static void main(String[] args)`
+> 📌 **Catatan**:  
+> Satu file `.java` hanya boleh memiliki **satu `public class`**, dan nama file harus **identik** dengan nama kelas tersebut.
 
-* `public` → bisa dipanggil dari luar
-* `static` → dapat dijalankan tanpa membuat objek
-* `void` → tidak mengembalikan nilai
-* `main` → titik masuk program (entry point)
-* `String[] args` → parameter dari command line
+### 2. `public static void main(String[] args)`
 
-> 💬 *Tanpa method `main()`, program Java tidak akan bisa dijalankan.*
+- **`public`**: Method ini dapat diakses dari luar kelas.
+- **`static`**: Method dapat dijalankan tanpa perlu membuat objek dari kelas.
+- **`void`**: Method tidak mengembalikan nilai apa pun.
+- **`main`**: Nama method yang menjadi **titik masuk** (entry point) program Java.
+- **`String[] args`**: Parameter untuk menerima argumen dari *command line*.
 
-### ✅ 3. `System.out.println("Halo, dunia!");`
+> 💡 **Info**:  
+> Method `main` wajib ada dalam setiap program Java yang dapat dijalankan. Tanpa method ini, program tidak akan bisa dijalankan.
 
-* `System` → kelas utilitas Java untuk sistem standar
-* `out` → output standar (biasanya ke layar)
-* `println()` → mencetak teks dan membuat baris baru
+### 3. `System.out.println("Halo, dunia!");`
+
+- **`System`**: Kelas bawaan Java untuk mengakses fungsi sistem standar.
+- **`out`**: Objek yang mewakili output standar (biasanya layar atau konsol).
+- **`println`**: Method untuk mencetak teks ke layar dan menambahkan baris baru setelahnya.
 
 ---
 
-## 📁 Struktur File & Folder
+## 📁 Struktur File dan Folder
+
+Struktur file yang umum digunakan untuk program Java sederhana adalah sebagai berikut:
 
 ```
 BelajarJava/
 └── HelloWorld.java
 ```
 
+> **Catatan**: Pastikan file `.java` disimpan dengan nama yang sesuai dengan nama kelas `public`.
+
 ---
 
-## 🛠️ Cara Kompilasi & Menjalankan Program
+## 🛠️ Cara Kompilasi dan Menjalankan Program
 
-### 🧱 1. Kompilasi Program
+Berikut adalah langkah-langkah untuk mengompilasi dan menjalankan program Java:
+
+### 1. Kompilasi Program
+
+Gunakan perintah berikut untuk mengompilasi file `HelloWorld.java`:
 
 ```bash
 javac HelloWorld.java
 ```
 
-📦 Output: File `HelloWorld.class` akan terbentuk jika tidak ada error.
+**📦 Hasil**: Jika tidak ada error, akan dihasilkan file `HelloWorld.class`, yang merupakan bytecode yang dapat dijalankan oleh JVM (Java Virtual Machine).
 
-### ▶️ 2. Jalankan Program
+### 2. Jalankan Program
+
+Setelah dikompilasi, jalankan program dengan perintah berikut:
 
 ```bash
 java HelloWorld
 ```
 
+**🖨️ Output**: Program akan mencetak teks `Halo, dunia!` ke konsol.
+
 ---
 
-## ⚠️ Hal-Hal yang Wajib Diingat
+## ⚠️ Hal-Hal Penting yang Harus Diingat
 
-| ⚙️ Hal Penting                                        | 💡 Penjelasan                                 |
-| ----------------------------------------------------- | --------------------------------------------- |
-| Nama file = nama kelas `public`                       | `HelloWorld.java` → `public class HelloWorld` |
-| Java bersifat **case-sensitive**                      | `HelloWorld` ≠ `helloworld`                   |
-| Setiap statement diakhiri dengan **titik koma (`;`)** | Seperti tanda titik dalam kalimat             |
-| Blok kode dibuka `{` dan ditutup `}`                  | Harus seimbang, jangan ada yang tertinggal    |
+Berikut adalah beberapa aturan penting dalam penulisan program Java:
+
+| **⚙️ Aspek**                                | **💡 Penjelasan**                                                                 |
+|---------------------------------------------|-----------------------------------------------------------------------------------|
+| Nama file = nama kelas `public`             | Nama file (`HelloWorld.java`) harus sama dengan nama kelas `public` (`HelloWorld`).|
+| Java bersifat **case-sensitive**            | `HelloWorld` ≠ `helloworld`. Huruf besar dan kecil dibedakan.                      |
+| Statement diakhiri **titik koma (`;`)**     | Setiap pernyataan kode harus diakhiri dengan tanda titik koma.                     |
+| Blok kode menggunakan `{` dan `}`           | Setiap blok kode harus dibuka dengan `{` dan ditutup dengan `}`, harus seimbang.   |
 
 ---
 
 ## 🧭 Kesimpulan
 
-Struktur dasar program Java selalu terdiri dari:
+Struktur dasar program Java terdiri dari tiga elemen utama:
 
-✅ Satu **kelas** (`class`)
-✅ Satu method utama **`main()`**
-✅ Satu atau lebih **statement** di dalamnya, misalnya:
+1. **Kelas** (`class`): Wadah utama kode program.
+2. **Method `main`**: Titik masuk eksekusi program.
+3. **Statement**: Perintah-perintah seperti `System.out.println` untuk menjalankan logika program.
 
-```java
-System.out.println("Halo, dunia!");
-```
+Contoh di atas (`System.out.println("Halo, dunia!");`) adalah langkah awal untuk memahami Java.
 
 ---
 
-📚 Selanjutnya → [Tipe Data & Variabel](tipe_data.md)
+## 📚 Langkah Selanjutnya
+
+Pelajari lebih lanjut tentang [Tipe Data & Variabel](tipe_data.md) untuk memperdalam pemahaman Anda tentang Java.
