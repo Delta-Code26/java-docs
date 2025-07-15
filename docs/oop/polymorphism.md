@@ -1,151 +1,209 @@
+---
+title: Polymorphism (Polimorfisme) dalam Java
+description: Memahami konsep polimorfisme dalam OOP untuk mendukung fleksibilitas kode melalui method overloading dan overriding di Java
+---
+
 # 🌀 Polymorphism (Polimorfisme) dalam Java
 
-**Polymorphism** berasal dari bahasa Yunani:
-> *poly* = banyak, *morph* = bentuk
+**Polymorphism** (polimorfisme) berasal dari kata Yunani *poly* (banyak) dan *morph* (bentuk), yang berarti kemampuan sebuah method atau objek untuk memiliki **banyak bentuk perilaku**. Dalam Java, polimorfisme memungkinkan method yang sama untuk berperilaku berbeda tergantung pada objek yang memanggilnya. Ini meningkatkan fleksibilitas dan reusabilitas kode, mendukung prinsip **Open/Closed** dalam desain OOP (kode terbuka untuk ekstensi, tertutup untuk modifikasi).
 
-Dalam Java, polymorphism memungkinkan **satu method/objek** memiliki **banyak bentuk**.  
-Artinya, method yang sama bisa bekerja dengan cara berbeda tergantung objeknya.
+Polimorfisme di Java terdiri dari dua jenis utama:
+1. **Compile-time Polymorphism** (Static): Dicapai melalui *method overloading*.
+2. **Runtime Polymorphism** (Dynamic): Dicapai melalui *method overriding*.
 
----
+## 🔧 Jenis-Jenis Polimorfisme
 
-## 🔧 Dua Jenis Polymorphism:
+### 1. Compile-Time Polymorphism (Method Overloading)
+**Method overloading** terjadi ketika sebuah kelas memiliki beberapa method dengan **nama yang sama** tetapi **parameter yang berbeda** (dalam jumlah, tipe, atau urutan). Kompiler menentukan method mana yang dipanggil berdasarkan parameter saat kode dikompilasi.
 
-### 1. **Compile-time Polymorphism** (Static) → *Method Overloading*
-### 2. **Runtime Polymorphism** (Dynamic) → *Method Overriding*
-
----
-
-## 1. 🧱 Compile-Time Polymorphism (Method Overloading)
-
-**Overloading** terjadi ketika beberapa method memiliki nama yang sama, namun dengan **parameter berbeda**.
+#### Contoh Overloading:
 
 ```java
-class Kalkulator {
-    int tambah(int a, int b) {
+public class Kalkulator {
+    public int tambah(int a, int b) {
         return a + b;
     }
 
-    double tambah(double a, double b) {
+    public double tambah(double a, double b) {
         return a + b;
     }
 
-    int tambah(int a, int b, int c) {
+    public int tambah(int a, int b, int c) {
         return a + b + c;
     }
 }
-````
-
-### Penggunaan:
-
-```java
-Kalkulator k = new Kalkulator();
-System.out.println(k.tambah(2, 3));       // 5
-System.out.println(k.tambah(2.5, 3.5));   // 6.0
-System.out.println(k.tambah(1, 2, 3));    // 6
 ```
 
-> 🧠 Overloading terjadi saat **compile time**, karena compiler bisa membedakan berdasarkan parameter.
-
----
-
-## 2. 🔄 Runtime Polymorphism (Method Overriding)
-
-**Overriding** terjadi saat subclass memberikan implementasi ulang terhadap method dari superclass.
+#### Penggunaan:
 
 ```java
-class Hewan {
-    void suara() {
-        System.out.println("Hewan bersuara");
+public class KalkulatorDemo {
+    public static void main(String[] args) {
+        Kalkulator k = new Kalkulator();
+        System.out.println("2 + 3 = " + k.tambah(2, 3));
+        System.out.println("2.5 + 3.5 = " + k.tambah(2.5, 3.5));
+        System.out.println("1 + 2 + 3 = " + k.tambah(1, 2, 3));
+    }
+}
+```
+
+**🖨️ Output:**
+
+```text
+2 + 3 = 5
+2.5 + 3.5 = 6.0
+1 + 2 + 3 = 6
+```
+
+> 📌 **Catatan**: Overloading terjadi saat **compile-time**, karena kompiler memilih method berdasarkan tanda tangan (*signature*) method.
+
+### 2. Runtime Polymorphism (Method Overriding)
+**Method overriding** terjadi ketika subclass menyediakan implementasi baru untuk method yang diwarisi dari superclass. Method yang di-*override* harus memiliki nama, parameter, dan tipe kembalian yang sama, ditandai dengan anotasi `@Override` untuk kejelasan.
+
+#### Contoh Overriding:
+
+```java
+public class Hewan {
+    public void suara() {
+        System.out.println("Hewan bersuara...");
     }
 }
 
 class Kucing extends Hewan {
     @Override
-    void suara() {
+    public void suara() {
         System.out.println("Meong");
     }
 }
 
 class Anjing extends Hewan {
     @Override
-    void suara() {
+    public void suara() {
         System.out.println("Guk Guk");
     }
 }
 ```
 
----
-
-## 🎯 Polymorphism dengan Referensi Superclass
+#### Penggunaan:
 
 ```java
-public class Demo {
+public class HewanDemo {
     public static void main(String[] args) {
-        Hewan h1 = new Kucing();
-        Hewan h2 = new Anjing();
+        Hewan h1 = new Kucing(); // Polymorphism
+        Hewan h2 = new Anjing(); // Polymorphism
 
-        h1.suara(); // Meong
-        h2.suara(); // Guk Guk
+        h1.suara();
+        h2.suara();
     }
 }
 ```
 
-> 🧠 Di sini, method `suara()` dieksekusi sesuai dengan **objek aktual**, bukan tipe referensi-nya.
+**🖨️ Output:**
 
----
+```text
+Meong
+Guk Guk
+```
 
-## ⚠️ Kenapa Polymorphism Penting?
+> 💡 **Info**: Method yang dipanggil ditentukan saat **runtime** berdasarkan tipe objek aktual, bukan tipe referensi (Hewan).
 
-* ✅ Membuat kode lebih **modular & scalable**
-* ✅ Mendukung prinsip **Open/Closed** (OOP Design Principle)
-* ✅ Memungkinkan satu antarmuka dipakai untuk banyak implementasi
+## 🎯 Polymorphism dengan Referensi Superclass
 
----
+Polimorfisme sering digunakan dengan referensi superclass untuk merujuk ke objek subclass, memungkinkan fleksibilitas dalam menangani berbagai tipe objek secara seragam.
 
-## 🧪 Studi Kasus: Kendaraan
+### Contoh:
 
 ```java
-class Kendaraan {
-    void jalan() {
+public class PolymorphismDemo {
+    public static void main(String[] args) {
+        Hewan[] hewan = { new Kucing(), new Anjing() };
+        for (Hewan h : hewan) {
+            h.suara(); // Memanggil method sesuai tipe objek
+        }
+    }
+}
+```
+
+**🖨️ Output:**
+
+```text
+Meong
+Guk Guk
+```
+
+> 📌 **Catatan**: Polimorfisme runtime memungkinkan kode untuk bekerja dengan tipe yang berbeda tanpa perlu tahu tipe spesifiknya.
+
+## ⚠️ Mengapa Polimorfisme Penting?
+
+Polimorfisme adalah kunci untuk membangun kode yang fleksibel dan mudah diperluas:
+
+| **Manfaat**            | **Penjelasan**                                              |
+|------------------------|------------------------------------------------------------|
+| **Modularitas**        | Kode dapat menangani berbagai tipe objek dengan antarmuka yang sama. |
+| **Skalabilitas**       | Mudah menambahkan subclass baru tanpa mengubah kode utama.  |
+| **Prinsip Open/Closed**| Kelas dapat diperluas tanpa memodifikasi kode yang ada.     |
+| **Reusabilitas**       | Satu antarmuka dapat digunakan untuk banyak implementasi.   |
+
+## 🧪 Studi Kasus: Sistem Kendaraan
+
+Berikut adalah contoh polimorfisme yang memodelkan kendaraan dengan perilaku berbeda untuk setiap jenis.
+
+```java
+public class Kendaraan {
+    public void jalan() {
         System.out.println("Kendaraan bergerak...");
     }
 }
 
 class Mobil extends Kendaraan {
     @Override
-    void jalan() {
-        System.out.println("Mobil melaju di jalan");
+    public void jalan() {
+        System.out.println("Mobil melaju di jalan raya");
     }
 }
 
 class Motor extends Kendaraan {
     @Override
-    void jalan() {
+    public void jalan() {
         System.out.println("Motor menyusuri gang kecil");
-    }
-}
-
-public class DemoKendaraan {
-    public static void main(String[] args) {
-        Kendaraan k1 = new Mobil();
-        Kendaraan k2 = new Motor();
-
-        k1.jalan(); // Mobil melaju di jalan
-        k2.jalan(); // Motor menyusuri gang kecil
     }
 }
 ```
 
----
+### Penggunaan:
+
+```java
+public class KendaraanDemo {
+    public static void main(String[] args) {
+        Kendaraan[] kendaraan = { new Mobil(), new Motor() };
+        for (Kendaraan k : kendaraan) {
+            k.jalan(); // Memanggil method sesuai tipe objek
+        }
+    }
+}
+```
+
+**🖨️ Output:**
+
+```text
+Mobil melaju di jalan raya
+Motor menyusuri gang kecil
+```
 
 ## 📌 Kesimpulan
 
-| Jenis Polymorphism | Teknik                            | Waktu Terjadi      |
-| ------------------ | --------------------------------- | ------------------ |
-| Compile-time       | Method Overloading                | Saat kompilasi     |
-| Runtime            | Method Overriding                 | Saat program jalan |
-| Tujuan Umum        | Fleksibilitas & Reusabilitas Kode |                    |
+Polimorfisme memungkinkan fleksibilitas dalam desain kode:
 
----
+| **Jenis Polimorfisme** | **Teknik**               | **Waktu Terjadi**      |
+|------------------------|--------------------------|------------------------|
+| **Compile-time**       | Method Overloading       | Saat kompilasi         |
+| **Runtime**            | Method Overriding        | Saat program berjalan  |
+| **Tujuan Umum**        | Fleksibilitas dan reusabilitas kode |                    |
 
-➡️ Selanjutnya: [Abstraction (Abstraksi)](abstraction.md)
+> 🎯 **Tujuan Utama**: Polimorfisme memungkinkan satu antarmuka untuk mendukung banyak implementasi, membuat kode lebih modular dan mudah diperluas.
+
+## 📚 Langkah Selanjutnya
+
+Pelajari lebih lanjut tentang [Abstraction (Abstraksi)](abstraction.md) untuk memahami cara menyembunyikan kompleksitas implementasi.
+
+⬅️ Kembali: [Inheritance (Pewarisan)](inheritance.md)
