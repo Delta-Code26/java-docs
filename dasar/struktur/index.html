@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami fondasi dasar penulisan program Java dengan contoh sederhana">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Struktur Program - Dokumentasi Java Lengkap</title>
+        <title>Struktur Dasar Program Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Struktur Program
+              Struktur Dasar Program Java
             
           </span>
         </div>
@@ -516,9 +516,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contoh-program-java-paling-sederhana" class="md-nav__link">
+  <a href="#contoh-program-java-sederhana" class="md-nav__link">
     <span class="md-ellipsis">
-      🔍 Contoh Program Java Paling Sederhana
+      🔍 Contoh Program Java Sederhana
     </span>
   </a>
   
@@ -537,7 +537,7 @@
           <li class="md-nav__item">
   <a href="#1-public-class-helloworld" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ 1. public class HelloWorld
+      1. public class HelloWorld
     </span>
   </a>
   
@@ -546,7 +546,7 @@
           <li class="md-nav__item">
   <a href="#2-public-static-void-mainstring-args" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ 2. public static void main(String[] args)
+      2. public static void main(String[] args)
     </span>
   </a>
   
@@ -555,7 +555,7 @@
           <li class="md-nav__item">
   <a href="#3-systemoutprintlnhalo-dunia" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ 3. System.out.println("Halo, dunia!");
+      3. System.out.println("Halo, dunia!");
     </span>
   </a>
   
@@ -567,28 +567,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#struktur-file-folder" class="md-nav__link">
+  <a href="#struktur-file-dan-folder" class="md-nav__link">
     <span class="md-ellipsis">
-      📁 Struktur File &amp; Folder
+      📁 Struktur File dan Folder
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cara-kompilasi-menjalankan-program" class="md-nav__link">
+  <a href="#cara-kompilasi-dan-menjalankan-program" class="md-nav__link">
     <span class="md-ellipsis">
-      🛠️ Cara Kompilasi &amp; Menjalankan Program
+      🛠️ Cara Kompilasi dan Menjalankan Program
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🛠️ Cara Kompilasi &amp; Menjalankan Program">
+    <nav class="md-nav" aria-label="🛠️ Cara Kompilasi dan Menjalankan Program">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1-kompilasi-program" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 1. Kompilasi Program
+      1. Kompilasi Program
     </span>
   </a>
   
@@ -597,7 +597,7 @@
           <li class="md-nav__item">
   <a href="#2-jalankan-program" class="md-nav__link">
     <span class="md-ellipsis">
-      ▶️ 2. Jalankan Program
+      2. Jalankan Program
     </span>
   </a>
   
@@ -609,9 +609,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hal-hal-yang-wajib-diingat" class="md-nav__link">
+  <a href="#hal-hal-penting-yang-harus-diingat" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Hal-Hal yang Wajib Diingat
+      ⚠️ Hal-Hal Penting yang Harus Diingat
     </span>
   </a>
   
@@ -621,6 +621,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       🧭 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1575,106 +1584,120 @@
 
 
 <h1 id="struktur-dasar-program-java">🧱 Struktur Dasar Program Java<a class="headerlink" href="#struktur-dasar-program-java" title="Permanent link">&para;</a></h1>
-<p>Sebelum membangun aplikasi besar, mari kuasai dulu <em>fondasi</em> dari program Java.</p>
-<h2 id="contoh-program-java-paling-sederhana">🔍 Contoh Program Java Paling Sederhana<a class="headerlink" href="#contoh-program-java-paling-sederhana" title="Permanent link">&para;</a></h2>
+<p>Sebelum membangun aplikasi besar, penting untuk memahami <em>fondasi</em> penulisan kode dalam bahasa pemrograman Java. Bagian ini akan menjelaskan struktur dasar program Java dengan contoh sederhana dan penjelasan rinci.</p>
+<h2 id="contoh-program-java-sederhana">🔍 Contoh Program Java Sederhana<a class="headerlink" href="#contoh-program-java-sederhana" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah contoh program Java paling dasar yang menampilkan teks "Halo, dunia!" ke layar:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorld</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Halo, dunia!&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-<span class="err">````</span>
-
-<span class="err">🖨️</span><span class="w"> </span><span class="n">Output</span><span class="p">:</span>
-
-<span class="err">```</span><span class="n">text</span>
-<span class="n">Halo</span><span class="p">,</span><span class="w"> </span><span class="n">dunia</span><span class="o">!</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Halo, dunia!
 </code></pre></div>
 <h2 id="penjelasan-baris-per-baris">🧩 Penjelasan Baris per Baris<a class="headerlink" href="#penjelasan-baris-per-baris" title="Permanent link">&para;</a></h2>
-<h3 id="1-public-class-helloworld">✅ 1. <code>public class HelloWorld</code><a class="headerlink" href="#1-public-class-helloworld" title="Permanent link">&para;</a></h3>
+<p>Mari kita bedah setiap baris dari kode di atas untuk memahami struktur dasarnya.</p>
+<h3 id="1-public-class-helloworld">1. <code>public class HelloWorld</code><a class="headerlink" href="#1-public-class-helloworld" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>class</code> → mendefinisikan sebuah kelas (<em>wadah utama</em> dalam Java)</li>
-<li><code>HelloWorld</code> → nama kelas (<strong>harus sama dengan nama file</strong>)</li>
-<li><code>public</code> → kelas dapat diakses dari mana saja</li>
+<li><strong><code>class</code></strong>: Mendefinisikan sebuah kelas, yang merupakan <em>wadah utama</em> untuk kode dalam Java.</li>
+<li><strong><code>HelloWorld</code></strong>: Nama kelas, yang <strong>harus sama</strong> dengan nama file (dalam hal ini, <code>HelloWorld.java</code>).</li>
+<li><strong><code>public</code></strong>: Menandakan bahwa kelas ini dapat diakses dari mana saja.</li>
 </ul>
 <blockquote>
-<p>📌 <strong>Catatan:</strong>
-Satu file <code>.java</code> hanya boleh memiliki <strong>satu <code>public class</code></strong>, dan nama filenya <strong>harus sama</strong> dengan nama kelasnya.</p>
+<p>📌 <strong>Catatan</strong>:<br />
+Satu file <code>.java</code> hanya boleh memiliki <strong>satu <code>public class</code></strong>, dan nama file harus <strong>identik</strong> dengan nama kelas tersebut.</p>
 </blockquote>
-<h3 id="2-public-static-void-mainstring-args">✅ 2. <code>public static void main(String[] args)</code><a class="headerlink" href="#2-public-static-void-mainstring-args" title="Permanent link">&para;</a></h3>
+<h3 id="2-public-static-void-mainstring-args">2. <code>public static void main(String[] args)</code><a class="headerlink" href="#2-public-static-void-mainstring-args" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>public</code> → bisa dipanggil dari luar</li>
-<li><code>static</code> → dapat dijalankan tanpa membuat objek</li>
-<li><code>void</code> → tidak mengembalikan nilai</li>
-<li><code>main</code> → titik masuk program (entry point)</li>
-<li><code>String[] args</code> → parameter dari command line</li>
+<li><strong><code>public</code></strong>: Method ini dapat diakses dari luar kelas.</li>
+<li><strong><code>static</code></strong>: Method dapat dijalankan tanpa perlu membuat objek dari kelas.</li>
+<li><strong><code>void</code></strong>: Method tidak mengembalikan nilai apa pun.</li>
+<li><strong><code>main</code></strong>: Nama method yang menjadi <strong>titik masuk</strong> (entry point) program Java.</li>
+<li><strong><code>String[] args</code></strong>: Parameter untuk menerima argumen dari <em>command line</em>.</li>
 </ul>
 <blockquote>
-<p>💬 <em>Tanpa method <code>main()</code>, program Java tidak akan bisa dijalankan.</em></p>
+<p>💡 <strong>Info</strong>:<br />
+Method <code>main</code> wajib ada dalam setiap program Java yang dapat dijalankan. Tanpa method ini, program tidak akan bisa dijalankan.</p>
 </blockquote>
-<h3 id="3-systemoutprintlnhalo-dunia">✅ 3. <code>System.out.println("Halo, dunia!");</code><a class="headerlink" href="#3-systemoutprintlnhalo-dunia" title="Permanent link">&para;</a></h3>
+<h3 id="3-systemoutprintlnhalo-dunia">3. <code>System.out.println("Halo, dunia!");</code><a class="headerlink" href="#3-systemoutprintlnhalo-dunia" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>System</code> → kelas utilitas Java untuk sistem standar</li>
-<li><code>out</code> → output standar (biasanya ke layar)</li>
-<li><code>println()</code> → mencetak teks dan membuat baris baru</li>
+<li><strong><code>System</code></strong>: Kelas bawaan Java untuk mengakses fungsi sistem standar.</li>
+<li><strong><code>out</code></strong>: Objek yang mewakili output standar (biasanya layar atau konsol).</li>
+<li><strong><code>println</code></strong>: Method untuk mencetak teks ke layar dan menambahkan baris baru setelahnya.</li>
 </ul>
 <hr />
-<h2 id="struktur-file-folder">📁 Struktur File &amp; Folder<a class="headerlink" href="#struktur-file-folder" title="Permanent link">&para;</a></h2>
+<h2 id="struktur-file-dan-folder">📁 Struktur File dan Folder<a class="headerlink" href="#struktur-file-dan-folder" title="Permanent link">&para;</a></h2>
+<p>Struktur file yang umum digunakan untuk program Java sederhana adalah sebagai berikut:</p>
 <div class="highlight"><pre><span></span><code>BelajarJava/
 └── HelloWorld.java
 </code></pre></div>
+<blockquote>
+<p><strong>Catatan</strong>: Pastikan file <code>.java</code> disimpan dengan nama yang sesuai dengan nama kelas <code>public</code>.</p>
+</blockquote>
 <hr />
-<h2 id="cara-kompilasi-menjalankan-program">🛠️ Cara Kompilasi &amp; Menjalankan Program<a class="headerlink" href="#cara-kompilasi-menjalankan-program" title="Permanent link">&para;</a></h2>
-<h3 id="1-kompilasi-program">🧱 1. Kompilasi Program<a class="headerlink" href="#1-kompilasi-program" title="Permanent link">&para;</a></h3>
+<h2 id="cara-kompilasi-dan-menjalankan-program">🛠️ Cara Kompilasi dan Menjalankan Program<a class="headerlink" href="#cara-kompilasi-dan-menjalankan-program" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah langkah-langkah untuk mengompilasi dan menjalankan program Java:</p>
+<h3 id="1-kompilasi-program">1. Kompilasi Program<a class="headerlink" href="#1-kompilasi-program" title="Permanent link">&para;</a></h3>
+<p>Gunakan perintah berikut untuk mengompilasi file <code>HelloWorld.java</code>:</p>
 <div class="highlight"><pre><span></span><code>javac<span class="w"> </span>HelloWorld.java
 </code></pre></div>
-<p>📦 Output: File <code>HelloWorld.class</code> akan terbentuk jika tidak ada error.</p>
-<h3 id="2-jalankan-program">▶️ 2. Jalankan Program<a class="headerlink" href="#2-jalankan-program" title="Permanent link">&para;</a></h3>
+<p><strong>📦 Hasil</strong>: Jika tidak ada error, akan dihasilkan file <code>HelloWorld.class</code>, yang merupakan bytecode yang dapat dijalankan oleh JVM (Java Virtual Machine).</p>
+<h3 id="2-jalankan-program">2. Jalankan Program<a class="headerlink" href="#2-jalankan-program" title="Permanent link">&para;</a></h3>
+<p>Setelah dikompilasi, jalankan program dengan perintah berikut:</p>
 <div class="highlight"><pre><span></span><code>java<span class="w"> </span>HelloWorld
 </code></pre></div>
+<p><strong>🖨️ Output</strong>: Program akan mencetak teks <code>Halo, dunia!</code> ke konsol.</p>
 <hr />
-<h2 id="hal-hal-yang-wajib-diingat">⚠️ Hal-Hal yang Wajib Diingat<a class="headerlink" href="#hal-hal-yang-wajib-diingat" title="Permanent link">&para;</a></h2>
+<h2 id="hal-hal-penting-yang-harus-diingat">⚠️ Hal-Hal Penting yang Harus Diingat<a class="headerlink" href="#hal-hal-penting-yang-harus-diingat" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah beberapa aturan penting dalam penulisan program Java:</p>
 <table>
 <thead>
 <tr>
-<th>⚙️ Hal Penting</th>
-<th>💡 Penjelasan</th>
+<th><strong>⚙️ Aspek</strong></th>
+<th><strong>💡 Penjelasan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Nama file = nama kelas <code>public</code></td>
-<td><code>HelloWorld.java</code> → <code>public class HelloWorld</code></td>
+<td>Nama file (<code>HelloWorld.java</code>) harus sama dengan nama kelas <code>public</code> (<code>HelloWorld</code>).</td>
 </tr>
 <tr>
 <td>Java bersifat <strong>case-sensitive</strong></td>
-<td><code>HelloWorld</code> ≠ <code>helloworld</code></td>
+<td><code>HelloWorld</code> ≠ <code>helloworld</code>. Huruf besar dan kecil dibedakan.</td>
 </tr>
 <tr>
-<td>Setiap statement diakhiri dengan <strong>titik koma (<code>;</code>)</strong></td>
-<td>Seperti tanda titik dalam kalimat</td>
+<td>Statement diakhiri <strong>titik koma (<code>;</code>)</strong></td>
+<td>Setiap pernyataan kode harus diakhiri dengan tanda titik koma.</td>
 </tr>
 <tr>
-<td>Blok kode dibuka <code>{</code> dan ditutup <code>}</code></td>
-<td>Harus seimbang, jangan ada yang tertinggal</td>
+<td>Blok kode menggunakan <code>{</code> dan <code>}</code></td>
+<td>Setiap blok kode harus dibuka dengan <code>{</code> dan ditutup dengan <code>}</code>, harus seimbang.</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="kesimpulan">🧭 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
-<p>Struktur dasar program Java selalu terdiri dari:</p>
-<p>✅ Satu <strong>kelas</strong> (<code>class</code>)
-✅ Satu method utama <strong><code>main()</code></strong>
-✅ Satu atau lebih <strong>statement</strong> di dalamnya, misalnya:</p>
-<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Halo, dunia!&quot;</span><span class="p">);</span>
-</code></pre></div>
+<p>Struktur dasar program Java terdiri dari tiga elemen utama:</p>
+<ol>
+<li><strong>Kelas</strong> (<code>class</code>): Wadah utama kode program.</li>
+<li><strong>Method <code>main</code></strong>: Titik masuk eksekusi program.</li>
+<li><strong>Statement</strong>: Perintah-perintah seperti <code>System.out.println</code> untuk menjalankan logika program.</li>
+</ol>
+<p>Contoh di atas (<code>System.out.println("Halo, dunia!");</code>) adalah langkah awal untuk memahami Java.</p>
 <hr />
-<p>📚 Selanjutnya → <a href="../tipe_data/">Tipe Data &amp; Variabel</a></p>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../tipe_data/">Tipe Data &amp; Variabel</a> untuk memperdalam pemahaman Anda tentang Java.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
