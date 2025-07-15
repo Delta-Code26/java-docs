@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami jenis-jenis operator di Java dan cara menggunakannya untuk membentuk ekspresi">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Operator - Dokumentasi Java Lengkap</title>
+        <title>Operator dan Ekspresi dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#operator-ekspresi-dalam-java" class="md-skip">
+        <a href="#operator-dan-ekspresi-dalam-java" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Operator
+              Operator dan Ekspresi dalam Java
             
           </span>
         </div>
@@ -562,13 +562,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jenis-jenis-operator-java" class="md-nav__link">
+  <a href="#jenis-jenis-operator-di-java" class="md-nav__link">
     <span class="md-ellipsis">
-      🎛️ Jenis-Jenis Operator Java
+      🎛️ Jenis-Jenis Operator di Java
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🎛️ Jenis-Jenis Operator Java">
+    <nav class="md-nav" aria-label="🎛️ Jenis-Jenis Operator di Java">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -608,9 +608,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-operator-inkrement-dekrement" class="md-nav__link">
+  <a href="#5-operator-inkrement-dan-dekrement" class="md-nav__link">
     <span class="md-ellipsis">
-      5. ⬆️ Operator Inkrement &amp; Dekrement
+      5. ⬆️ Operator Inkrement dan Dekrement
     </span>
   </a>
   
@@ -634,6 +634,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1541,20 +1550,19 @@
   
 
 
-<h1 id="operator-ekspresi-dalam-java">➕ Operator &amp; Ekspresi dalam Java<a class="headerlink" href="#operator-ekspresi-dalam-java" title="Permanent link">&para;</a></h1>
-<p>Dalam Java, <strong>operator</strong> digunakan untuk melakukan operasi terhadap nilai atau variabel.<br />
-Sementara <strong>ekspresi</strong> adalah kombinasi dari nilai, variabel, dan operator yang menghasilkan nilai baru.</p>
-<hr />
-<h2 id="jenis-jenis-operator-java">🎛️ Jenis-Jenis Operator Java<a class="headerlink" href="#jenis-jenis-operator-java" title="Permanent link">&para;</a></h2>
+<h1 id="operator-dan-ekspresi-dalam-java">➕ Operator dan Ekspresi dalam Java<a class="headerlink" href="#operator-dan-ekspresi-dalam-java" title="Permanent link">&para;</a></h1>
+<p><strong>Operator</strong> adalah simbol atau kata kunci yang digunakan untuk melakukan operasi terhadap variabel atau nilai dalam Java. <strong>Ekspresi</strong> adalah kombinasi dari variabel, nilai, dan operator yang menghasilkan nilai baru. Bagian ini menjelaskan jenis-jenis operator utama di Java dan cara penggunaannya dalam program.</p>
+<h2 id="jenis-jenis-operator-di-java">🎛️ Jenis-Jenis Operator di Java<a class="headerlink" href="#jenis-jenis-operator-di-java" title="Permanent link">&para;</a></h2>
+<p>Java menyediakan beberapa kategori operator untuk berbagai keperluan, mulai dari operasi matematika hingga logika.</p>
 <h3 id="1-operator-aritmatika">1. 🧮 Operator Aritmatika<a class="headerlink" href="#1-operator-aritmatika" title="Permanent link">&para;</a></h3>
-<p>Digunakan untuk operasi matematika dasar:</p>
+<p>Operator aritmatika digunakan untuk operasi matematika dasar.</p>
 <table>
 <thead>
 <tr>
-<th>Operator</th>
-<th>Nama</th>
-<th>Contoh <code>a = 10</code>, <code>b = 3</code></th>
-<th>Hasil</th>
+<th><strong>Operator</strong></th>
+<th><strong>Nama</strong></th>
+<th><strong>Contoh</strong> (<code>a = 10</code>, <code>b = 3</code>)</th>
+<th><strong>Hasil</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1591,62 +1599,60 @@ Sementara <strong>ekspresi</strong> adalah kombinasi dari nilai, variabel, dan o
 </tbody>
 </table>
 <blockquote>
-<p>💡 Modulo sering digunakan untuk mengecek genap/ganjil: <code>if (x % 2 == 0)</code></p>
+<p>💡 <strong>Tips</strong>: Operator modulo (<code>%</code>) sering digunakan untuk mengecek bilangan genap/ganjil. Contoh: <code>if (x % 2 == 0)</code> untuk mengecek bilangan genap.</p>
 </blockquote>
-<hr />
 <h3 id="2-operator-perbandingan-relasional">2. ⚖️ Operator Perbandingan (Relasional)<a class="headerlink" href="#2-operator-perbandingan-relasional" title="Permanent link">&para;</a></h3>
-<p>Digunakan untuk membandingkan dua nilai dan menghasilkan <code>true</code> atau <code>false</code>.</p>
+<p>Operator perbandingan digunakan untuk membandingkan dua nilai dan menghasilkan nilai boolean (<code>true</code> atau <code>false</code>).</p>
 <table>
 <thead>
 <tr>
-<th>Operator</th>
-<th>Arti</th>
-<th>Contoh</th>
+<th><strong>Operator</strong></th>
+<th><strong>Arti</strong></th>
+<th><strong>Contoh</strong> (<code>a = 10</code>, <code>b = 3</code>)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>==</code></td>
 <td>Sama dengan</td>
-<td><code>a == b</code></td>
+<td><code>a == b</code> → <code>false</code></td>
 </tr>
 <tr>
 <td><code>!=</code></td>
 <td>Tidak sama dengan</td>
-<td><code>a != b</code></td>
+<td><code>a != b</code> → <code>true</code></td>
 </tr>
 <tr>
 <td><code>&gt;</code></td>
 <td>Lebih besar</td>
-<td><code>a &gt; b</code></td>
+<td><code>a &gt; b</code> → <code>true</code></td>
 </tr>
 <tr>
 <td><code>&lt;</code></td>
 <td>Lebih kecil</td>
-<td><code>a &lt; b</code></td>
+<td><code>a &lt; b</code> → <code>false</code></td>
 </tr>
 <tr>
 <td><code>&gt;=</code></td>
-<td>Lebih besar sama</td>
-<td><code>a &gt;= b</code></td>
+<td>Lebih besar atau sama dengan</td>
+<td><code>a &gt;= b</code> → <code>true</code></td>
 </tr>
 <tr>
 <td><code>&lt;=</code></td>
-<td>Lebih kecil sama</td>
-<td><code>a &lt;= b</code></td>
+<td>Lebih kecil atau sama dengan</td>
+<td><code>a &lt;= b</code> → <code>false</code></td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="3-operator-logika-boolean">3. 💡 Operator Logika (Boolean)<a class="headerlink" href="#3-operator-logika-boolean" title="Permanent link">&para;</a></h3>
-<p>Digunakan untuk operasi logika, sering digunakan dalam <code>if</code>, <code>while</code>, dan ekspresi boolean.</p>
+<p>Operator logika digunakan untuk menggabungkan ekspresi boolean, sering digunakan dalam struktur seperti <code>if</code> atau <code>while</code>.</p>
 <table>
 <thead>
 <tr>
-<th>Operator</th>
-<th>Nama</th>
-<th>Contoh</th>
-<th>Hasil</th>
+<th><strong>Operator</strong></th>
+<th><strong>Nama</strong></th>
+<th><strong>Contoh</strong></th>
+<th><strong>Hasil</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1670,22 +1676,24 @@ Sementara <strong>ekspresi</strong> adalah kombinasi dari nilai, variabel, dan o
 </tr>
 </tbody>
 </table>
-<hr />
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Operator <code>&amp;&amp;</code> hanya mengembalikan <code>true</code> jika kedua kondisi benar, sedangkan <code>||</code> mengembalikan <code>true</code> jika salah satu kondisi benar.</p>
+</blockquote>
 <h3 id="4-operator-penugasan">4. 🖊️ Operator Penugasan<a class="headerlink" href="#4-operator-penugasan" title="Permanent link">&para;</a></h3>
-<p>Digunakan untuk memberikan dan memperbarui nilai variabel.</p>
+<p>Operator penugasan digunakan untuk menetapkan atau memperbarui nilai variabel.</p>
 <table>
 <thead>
 <tr>
-<th>Operator</th>
-<th>Contoh</th>
-<th>Sama Dengan</th>
+<th><strong>Operator</strong></th>
+<th><strong>Contoh</strong></th>
+<th><strong>Sama Dengan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>=</code></td>
 <td><code>x = 5</code></td>
-<td>menetapkan 5 ke x</td>
+<td>Menetapkan 5 ke <code>x</code></td>
 </tr>
 <tr>
 <td><code>+=</code></td>
@@ -1714,70 +1722,89 @@ Sementara <strong>ekspresi</strong> adalah kombinasi dari nilai, variabel, dan o
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="5-operator-inkrement-dekrement">5. ⬆️ Operator Inkrement &amp; Dekrement<a class="headerlink" href="#5-operator-inkrement-dekrement" title="Permanent link">&para;</a></h3>
-<p>Digunakan untuk menambah/mengurangi nilai satu per satu.</p>
+<h3 id="5-operator-inkrement-dan-dekrement">5. ⬆️ Operator Inkrement dan Dekrement<a class="headerlink" href="#5-operator-inkrement-dan-dekrement" title="Permanent link">&para;</a></h3>
+<p>Operator inkrement dan dekrement digunakan untuk menambah atau mengurangi nilai variabel sebesar 1.</p>
 <table>
 <thead>
 <tr>
-<th>Operator</th>
-<th>Contoh</th>
-<th>Efek</th>
+<th><strong>Operator</strong></th>
+<th><strong>Contoh</strong></th>
+<th><strong>Efek</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>++</code></td>
 <td><code>x++</code></td>
-<td>Tambah 1</td>
+<td>Menambah <code>x</code> sebesar 1</td>
 </tr>
 <tr>
 <td><code>--</code></td>
 <td><code>x--</code></td>
-<td>Kurangi 1</td>
+<td>Mengurangi <code>x</code> sebesar 1</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>💡 <code>x++</code> (post-increment) berbeda dengan <code>++x</code> (pre-increment)</p>
+<p>💡 <strong>Info</strong>:<br />
+- <code>x++</code> (post-increment) mengembalikan nilai <code>x</code> sebelum ditambah.<br />
+- <code>++x</code> (pre-increment) mengembalikan nilai <code>x</code> setelah ditambah.<br />
+Contoh: Jika <code>x = 5</code>, maka <code>System.out.println(x++)</code> mencetak <code>5</code>, tetapi <code>System.out.println(++x)</code> mencetak <code>6</code>.</p>
 </blockquote>
-<hr />
 <h2 id="contoh-program">🧪 Contoh Program<a class="headerlink" href="#contoh-program" title="Permanent link">&para;</a></h2>
-<p>```java
-public class OperatorDemo {
-    public static void main(String[] args) {
-        int a = 10, b = 3;
-        boolean hasil;</p>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nt">System</span><span class="p">.</span><span class="nc">out</span><span class="p">.</span><span class="nc">println</span><span class="o">(</span><span class="s2">&quot;a + b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">b</span><span class="o">));</span>
-<span class="w">    </span><span class="nt">System</span><span class="p">.</span><span class="nc">out</span><span class="p">.</span><span class="nc">println</span><span class="o">(</span><span class="s2">&quot;a &gt; b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">b</span><span class="o">));</span>
-<span class="w">    </span><span class="nt">System</span><span class="p">.</span><span class="nc">out</span><span class="p">.</span><span class="nc">println</span><span class="o">(</span><span class="s2">&quot;a % b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nt">b</span><span class="o">));</span>
+<p>Berikut adalah contoh program yang menggunakan berbagai jenis operator:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OperatorDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">hasil</span><span class="p">;</span>
 
-<span class="w">    </span><span class="nt">hasil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="nt">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">5</span><span class="o">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">(</span><span class="nt">b</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nt">5</span><span class="o">);</span>
-<span class="w">    </span><span class="nt">System</span><span class="p">.</span><span class="nc">out</span><span class="p">.</span><span class="nc">println</span><span class="o">(</span><span class="s2">&quot;Logika AND: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">hasil</span><span class="o">);</span>
+<span class="w">        </span><span class="c1">// Operator Aritmatika</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a + b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">));</span><span class="w"> </span><span class="c1">// Penjumlahan</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a % b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">));</span><span class="w"> </span><span class="c1">// Modulo</span>
 
-<span class="w">    </span><span class="nt">int</span><span class="w"> </span><span class="nt">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">5</span><span class="o">;</span>
-<span class="w">    </span><span class="nt">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nt">3</span><span class="o">;</span>
-<span class="w">    </span><span class="nt">System</span><span class="p">.</span><span class="nc">out</span><span class="p">.</span><span class="nc">println</span><span class="o">(</span><span class="s2">&quot;x setelah += 3: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">x</span><span class="o">);</span>
-<span class="err">}</span>
+<span class="w">        </span><span class="c1">// Operator Perbandingan</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a &gt; b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">));</span><span class="w"> </span><span class="c1">// Lebih besar</span>
+
+<span class="w">        </span><span class="c1">// Operator Logika</span>
+<span class="w">        </span><span class="n">hasil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Logika AND (a &gt; 5 &amp;&amp; b &lt; 5): &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hasil</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Operator Penugasan</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x setelah += 3: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Operator Inkrement</span>
+<span class="w">        </span><span class="n">x</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x setelah x++: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-
-<p>}
-````</p>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>a + b = 13
+a % b = 1
+a &gt; b = true
+Logika AND (a &gt; 5 &amp;&amp; b &lt; 5): true
+x setelah += 3: 8
+x setelah x++: 9
+</code></pre></div>
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Java menyediakan berbagai jenis operator: aritmatika, logika, perbandingan, dan penugasan.</li>
-<li>Operator membantu kita membuat ekspresi dan logika dalam program.</li>
-<li>Kombinasi operator membentuk <em>ekspresi</em> yang menghasilkan suatu nilai.</li>
+<li>Java menyediakan berbagai jenis operator: <strong>aritmatika</strong>, <strong>perbandingan</strong>, <strong>logika</strong>, <strong>penugasan</strong>, dan <strong>inkrement/dekrement</strong>.</li>
+<li>Operator digunakan untuk membentuk <strong>ekspresi</strong> yang menghasilkan nilai baru.</li>
+<li>Pemahaman operator penting untuk memanipulasi data dan membuat logika dalam program.</li>
 </ul>
-<hr />
-<p>➡️ Selanjutnya: <a href="../kontrol_alur/">Kontrol Alur: If, Else, dan Switch</a></p>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../kontrol_alur/">Kontrol Alur: If, Else, dan Switch</a> untuk memahami cara mengatur alur program berdasarkan kondisi.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
