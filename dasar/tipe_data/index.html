@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami tipe data primitif, tipe data referensi, dan aturan penamaan variabel dalam Java">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Tipe Data - Dokumentasi Java Lengkap</title>
+        <title>Tipe Data dan Variabel dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tipe-data-variabel-dalam-java" class="md-skip">
+        <a href="#tipe-data-dan-variabel-dalam-java" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tipe Data
+              Tipe Data dan Variabel dalam Java
             
           </span>
         </div>
@@ -541,35 +541,92 @@
         <li class="md-nav__item">
   <a href="#apa-itu-variabel" class="md-nav__link">
     <span class="md-ellipsis">
-      🔤 Apa itu Variabel?
+      🔤 Apa Itu Variabel?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔤 Apa itu Variabel?">
+    <nav class="md-nav" aria-label="🔤 Apa Itu Variabel?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contoh" class="md-nav__link">
+  <a href="#contoh-deklarasi-dan-inisialisasi-variabel" class="md-nav__link">
     <span class="md-ellipsis">
-      Contoh:
+      Contoh Deklarasi dan Inisialisasi Variabel:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenis-jenis-tipe-data-di-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Jenis-Jenis Tipe Data di Java
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Jenis-Jenis Tipe Data di Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tipe-data-primitif" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 📊 Tipe Data Primitif
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-inisialisasi-sekaligus" class="md-nav__link">
+  <a href="#2-tipe-data-referensi" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Inisialisasi Sekaligus
+      2. 🧱 Tipe Data Referensi
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deklarasi-dan-inisialisasi-variabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Deklarasi dan Inisialisasi Variabel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Deklarasi dan Inisialisasi Variabel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-deklarasi-tanpa-inisialisasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Deklarasi Tanpa Inisialisasi
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-deklarasi-banyak-sekaligus" class="md-nav__link">
+  <a href="#2-deklarasi-dengan-inisialisasi" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Deklarasi Banyak Sekaligus
+      2. Deklarasi dengan Inisialisasi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-deklarasi-banyak-variabel-sekaligus" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Deklarasi Banyak Variabel Sekaligus
     </span>
   </a>
   
@@ -591,18 +648,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contoh-valid" class="md-nav__link">
+  <a href="#contoh-nama-variabel-yang-valid" class="md-nav__link">
     <span class="md-ellipsis">
-      Contoh valid:
+      Contoh Nama Variabel yang Valid:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#contoh-tidak-valid" class="md-nav__link">
+  <a href="#contoh-nama-variabel-yang-tidak-valid" class="md-nav__link">
     <span class="md-ellipsis">
-      Contoh tidak valid:
+      Contoh Nama Variabel yang Tidak Valid:
     </span>
   </a>
   
@@ -626,6 +683,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1556,87 +1622,159 @@
   
 
 
-<h1 id="tipe-data-variabel-dalam-java">🧠 Tipe Data &amp; Variabel dalam Java<a class="headerlink" href="#tipe-data-variabel-dalam-java" title="Permanent link">&para;</a></h1>
-<p>Dalam pemrograman, <strong>tipe data</strong> digunakan untuk menentukan jenis nilai (angka, huruf, logika) yang dapat disimpan dalam sebuah <strong>variabel</strong>.</p>
-<h2 id="apa-itu-variabel">🔤 Apa itu Variabel?<a class="headerlink" href="#apa-itu-variabel" title="Permanent link">&para;</a></h2>
-<p>Variabel adalah <strong>wadah</strong> untuk menyimpan data dalam memori.<br />
-Setiap variabel memiliki:
-- Nama (identifier)
-- Tipe data
-- Nilai</p>
-<h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
+<h1 id="tipe-data-dan-variabel-dalam-java">🧠 Tipe Data dan Variabel dalam Java<a class="headerlink" href="#tipe-data-dan-variabel-dalam-java" title="Permanent link">&para;</a></h1>
+<p>Dalam pemrograman Java, <strong>tipe data</strong> menentukan jenis nilai yang dapat disimpan oleh sebuah <strong>variabel</strong>, seperti angka, teks, atau nilai logika. Variabel berfungsi sebagai <em>wadah</em> untuk menyimpan data di memori komputer. Bagian ini menjelaskan tipe data, aturan penamaan variabel, dan cara penggunaannya dengan contoh.</p>
+<h2 id="apa-itu-variabel">🔤 Apa Itu Variabel?<a class="headerlink" href="#apa-itu-variabel" title="Permanent link">&para;</a></h2>
+<p>Variabel adalah <em>wadah</em> dalam memori untuk menyimpan data. Setiap variabel memiliki tiga komponen utama:</p>
+<ul>
+<li><strong>Nama</strong> (identifier): Nama unik untuk mengidentifikasi variabel.</li>
+<li><strong>Tipe data</strong>: Jenis data yang dapat disimpan (misalnya, angka, teks, atau logika).</li>
+<li><strong>Nilai</strong>: Data yang disimpan dalam variabel.</li>
+</ul>
+<h3 id="contoh-deklarasi-dan-inisialisasi-variabel">Contoh Deklarasi dan Inisialisasi Variabel:<a class="headerlink" href="#contoh-deklarasi-dan-inisialisasi-variabel" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
 <span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Marno&quot;</span><span class="p">;</span>
 <span class="kt">boolean</span><span class="w"> </span><span class="n">aktif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<span class="err">````</span>
-
-<span class="err">##</span><span class="w"> </span><span class="err">📦</span><span class="w"> </span><span class="n">Jenis</span><span class="o">-</span><span class="n">Jenis</span><span class="w"> </span><span class="n">Tipe</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">Java</span>
-
-<span class="err">###</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="err">📊</span><span class="w"> </span><span class="o">**</span><span class="n">Tipe</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">Primitif</span><span class="o">**</span>
-
-<span class="n">Java</span><span class="w"> </span><span class="n">memiliki</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">tipe</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">primitif</span><span class="w"> </span><span class="n">bawaan</span><span class="p">:</span>
-
-<span class="o">|</span><span class="w"> </span><span class="n">Tipe</span><span class="w">      </span><span class="o">|</span><span class="w"> </span><span class="n">Ukuran</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Contoh</span><span class="w"> </span><span class="n">Nilai</span><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="n">Keterangan</span><span class="w">               </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="o">---------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">-------------------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">------------------------</span><span class="w"> </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="kt">byte</span><span class="err">`</span><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">bit</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="mi">127</span><span class="w">                 </span><span class="o">|</span><span class="w"> </span><span class="n">Bilangan</span><span class="w"> </span><span class="n">kecil</span><span class="w">           </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="kt">short</span><span class="err">`</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">32000</span><span class="w">               </span><span class="o">|</span><span class="w"> </span><span class="n">Bilangan</span><span class="w"> </span><span class="n">sedang</span><span class="w">          </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="kt">int</span><span class="err">`</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">2</span><span class="err">\</span><span class="mf">.147</span><span class="err">\</span><span class="mf">.483</span><span class="err">\</span><span class="mf">.647</span><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">Bilangan</span><span class="w"> </span><span class="n">bulat</span><span class="w"> </span><span class="n">umum</span><span class="w">      </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="kt">long</span><span class="err">`</span><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="mi">64</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">9</span><span class="err">\</span><span class="mf">.223</span><span class="err">\</span><span class="mf">.372</span><span class="err">\</span><span class="mf">.036</span><span class="p">...</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Bilangan</span><span class="w"> </span><span class="n">bulat</span><span class="w"> </span><span class="n">besar</span><span class="w">     </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="kt">float</span><span class="err">`</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">3.14f</span><span class="w">               </span><span class="o">|</span><span class="w"> </span><span class="n">Bilangan</span><span class="w"> </span><span class="n">desimal</span><span class="w"> </span><span class="n">kecil</span><span class="w">   </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="kt">double</span><span class="err">`</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="mi">64</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">3.1415926535</span><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="n">Bilangan</span><span class="w"> </span><span class="n">desimal</span><span class="w"> </span><span class="n">presisi</span><span class="w"> </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="kt">char</span><span class="err">`</span><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="w">                 </span><span class="o">|</span><span class="w"> </span><span class="n">Karakter</span><span class="w"> </span><span class="n">tunggal</span><span class="w">         </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="kt">boolean</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">bit</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="kc">false</span><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="n">Logika</span><span class="w"> </span><span class="n">benar</span><span class="o">/</span><span class="n">salah</span><span class="w">       </span><span class="o">|</span>
-
-<span class="o">&gt;</span><span class="w"> </span><span class="err">🔍</span><span class="w"> </span><span class="n">Catatan</span><span class="p">:</span><span class="w"> </span><span class="err">`</span><span class="kt">float</span><span class="err">`</span><span class="w"> </span><span class="n">harus</span><span class="w"> </span><span class="n">ditulis</span><span class="w"> </span><span class="n">dengan</span><span class="w"> </span><span class="n">akhiran</span><span class="w"> </span><span class="err">`</span><span class="n">f</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">misalnya</span><span class="w"> </span><span class="err">`</span><span class="kt">float</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14f</span><span class="p">;</span><span class="err">`</span>
-
-<span class="o">---</span>
-
-<span class="err">###</span><span class="w"> </span><span class="mf">2.</span><span class="w"> </span><span class="err">🧱</span><span class="w"> </span><span class="o">**</span><span class="n">Tipe</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">Referensi</span><span class="o">**</span>
-
-<span class="n">Selain</span><span class="w"> </span><span class="n">tipe</span><span class="w"> </span><span class="n">primitif</span><span class="p">,</span><span class="w"> </span><span class="n">Java</span><span class="w"> </span><span class="n">juga</span><span class="w"> </span><span class="n">punya</span><span class="w"> </span><span class="n">tipe</span><span class="w"> </span><span class="n">referensi</span><span class="p">,</span><span class="w"> </span><span class="n">misalnya</span><span class="p">:</span>
-
-<span class="o">|</span><span class="w"> </span><span class="n">Tipe</span><span class="w"> </span><span class="n">Referensi</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Contoh</span><span class="w">            </span><span class="o">|</span><span class="w"> </span><span class="n">Keterangan</span><span class="w">            </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="o">--------------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">-----------------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">---------------------</span><span class="w"> </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="n">String</span><span class="err">`</span><span class="w">       </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="s">&quot;Halo&quot;</span><span class="err">`</span><span class="w">          </span><span class="o">|</span><span class="w"> </span><span class="n">Teks</span><span class="w"> </span><span class="n">atau</span><span class="w"> </span><span class="n">kata</span><span class="w">        </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="n">Array</span><span class="err">`</span><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span><span class="err">`</span><span class="w">         </span><span class="o">|</span><span class="w"> </span><span class="n">Kumpulan</span><span class="w"> </span><span class="n">elemen</span><span class="w">       </span><span class="o">|</span>
-<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="n">Class</span><span class="err">`</span><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="n">Scanner</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="n">Math</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Objek</span><span class="w"> </span><span class="n">dari</span><span class="w"> </span><span class="kd">class</span> <span class="nc">lain</span><span class="w"> </span><span class="o">|</span>
-
-<span class="o">---</span>
-
-<span class="err">##</span><span class="w"> </span><span class="err">📝</span><span class="w"> </span><span class="n">Deklarasi</span><span class="w"> </span><span class="n">dan</span><span class="w"> </span><span class="n">Inisialisasi</span><span class="w"> </span><span class="n">Variabel</span>
-
-<span class="err">###</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="n">Deklarasi</span><span class="w"> </span><span class="n">Saja</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="jenis-jenis-tipe-data-di-java">📦 Jenis-Jenis Tipe Data di Java<a class="headerlink" href="#jenis-jenis-tipe-data-di-java" title="Permanent link">&para;</a></h2>
+<p>Java memiliki dua kategori utama tipe data: <strong>primitif</strong> dan <strong>referensi</strong>.</p>
+<h3 id="1-tipe-data-primitif">1. 📊 Tipe Data Primitif<a class="headerlink" href="#1-tipe-data-primitif" title="Permanent link">&para;</a></h3>
+<p>Tipe data primitif adalah tipe dasar bawaan Java yang menyimpan nilai langsung di memori. Berikut adalah 8 tipe data primitif:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Tipe</strong></th>
+<th><strong>Ukuran</strong></th>
+<th><strong>Rentang Nilai / Contoh</strong></th>
+<th><strong>Keterangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td>8 bit</td>
+<td>-128 hingga 127</td>
+<td>Bilangan bulat kecil</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>16 bit</td>
+<td>-32.768 hingga 32.767</td>
+<td>Bilangan bulat sedang</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>32 bit</td>
+<td>-2.147.483.648 hingga 2.147.483.647</td>
+<td>Bilangan bulat umum</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>64 bit</td>
+<td>-2⁶³ hingga 2⁶³-1</td>
+<td>Bilangan bulat sangat besar</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>32 bit</td>
+<td>3.14f</td>
+<td>Bilangan desimal presisi rendah</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>64 bit</td>
+<td>3.1415926535</td>
+<td>Bilangan desimal presisi tinggi</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>16 bit</td>
+<td>'A', '\u0041'</td>
+<td>Karakter tunggal (Unicode)</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td>1 bit</td>
+<td><code>true</code> atau <code>false</code></td>
+<td>Nilai logika benar/salah</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📌 <strong>Catatan</strong>:<br />
+- Nilai <code>float</code> harus diakhiri dengan huruf <code>f</code> (contoh: <code>3.14f</code>).<br />
+- Nilai <code>long</code> diakhiri dengan huruf <code>L</code> untuk membedakannya dari <code>int</code> (contoh: <code>123456789L</code>).</p>
+</blockquote>
+<h3 id="2-tipe-data-referensi">2. 🧱 Tipe Data Referensi<a class="headerlink" href="#2-tipe-data-referensi" title="Permanent link">&para;</a></h3>
+<p>Tipe data referensi menyimpan alamat memori dari objek, bukan nilai langsung. Beberapa contohnya meliputi:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Tipe Referensi</strong></th>
+<th><strong>Contoh</strong></th>
+<th><strong>Keterangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td><code>"Halo, Java!"</code></td>
+<td>Teks atau rangkaian karakter</td>
+</tr>
+<tr>
+<td><code>Array</code></td>
+<td><code>{1, 2, 3}</code></td>
+<td>Kumpulan elemen dengan tipe sama</td>
+</tr>
+<tr>
+<td><code>Class</code></td>
+<td><code>Scanner</code>, <code>Math</code></td>
+<td>Objek dari kelas tertentu</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>Info</strong>:<br />
+Tipe data referensi biasanya digunakan untuk struktur data yang lebih kompleks, seperti objek atau koleksi.</p>
+</blockquote>
+<h2 id="deklarasi-dan-inisialisasi-variabel">📝 Deklarasi dan Inisialisasi Variabel<a class="headerlink" href="#deklarasi-dan-inisialisasi-variabel" title="Permanent link">&para;</a></h2>
+<h3 id="1-deklarasi-tanpa-inisialisasi">1. Deklarasi Tanpa Inisialisasi<a class="headerlink" href="#1-deklarasi-tanpa-inisialisasi" title="Permanent link">&para;</a></h3>
+<p>Mendeklarasikan variabel tanpa memberikan nilai awal:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
 <span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="2-inisialisasi-sekaligus">2. Inisialisasi Sekaligus<a class="headerlink" href="#2-inisialisasi-sekaligus" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Catatan</strong>: Variabel yang hanya dideklarasikan tanpa inisialisasi tidak dapat digunakan sampai diberi nilai.</p>
+</blockquote>
+<h3 id="2-deklarasi-dengan-inisialisasi">2. Deklarasi dengan Inisialisasi<a class="headerlink" href="#2-deklarasi-dengan-inisialisasi" title="Permanent link">&para;</a></h3>
+<p>Mendeklarasikan sekaligus memberikan nilai awal:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
 <span class="kt">boolean</span><span class="w"> </span><span class="n">aktif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="3-deklarasi-banyak-sekaligus">3. Deklarasi Banyak Sekaligus<a class="headerlink" href="#3-deklarasi-banyak-sekaligus" title="Permanent link">&para;</a></h3>
+<h3 id="3-deklarasi-banyak-variabel-sekaligus">3. Deklarasi Banyak Variabel Sekaligus<a class="headerlink" href="#3-deklarasi-banyak-variabel-sekaligus" title="Permanent link">&para;</a></h3>
+<p>Mendeklarasikan beberapa variabel dengan tipe yang sama dalam satu baris:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 </code></pre></div>
-<hr />
 <h2 id="aturan-penamaan-variabel">🔐 Aturan Penamaan Variabel<a class="headerlink" href="#aturan-penamaan-variabel" title="Permanent link">&para;</a></h2>
+<p>Agar kode tetap valid dan mudah dibaca, ikuti aturan penamaan variabel berikut:</p>
 <ul>
-<li>Harus dimulai dengan huruf atau underscore</li>
-<li>Tidak boleh pakai spasi</li>
-<li>Case-sensitive (<code>umur</code> ≠ <code>Umur</code>)</li>
-<li>Hindari kata kunci Java (<code>int</code>, <code>class</code>, <code>public</code>, dll)</li>
+<li><strong>Dimulai dengan huruf atau underscore (<code>_</code>)</strong>: Tidak boleh dimulai dengan angka.</li>
+<li><strong>Tanpa spasi</strong>: Gunakan camelCase atau underscore untuk nama yang panjang.</li>
+<li><strong>Case-sensitive</strong>: <code>umur</code> ≠ <code>Umur</code>.</li>
+<li><strong>Hindari kata kunci Java</strong>: Kata seperti <code>int</code>, <code>class</code>, <code>public</code>, dll., tidak boleh digunakan sebagai nama variabel.</li>
 </ul>
-<h3 id="contoh-valid">Contoh valid:<a class="headerlink" href="#contoh-valid" title="Permanent link">&para;</a></h3>
+<h3 id="contoh-nama-variabel-yang-valid">Contoh Nama Variabel yang Valid:<a class="headerlink" href="#contoh-nama-variabel-yang-valid" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">namaLengkap</span><span class="p">;</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">_nilaiAkhir</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">tinggiBadan</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="contoh-tidak-valid">Contoh tidak valid:<a class="headerlink" href="#contoh-tidak-valid" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="mi">1</span><span class="n">angka</span><span class="p">;</span><span class="w">       </span><span class="c1">// Error: tidak boleh mulai dengan angka</span>
-<span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="n">lengkap</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error: tidak boleh ada spasi</span>
+<h3 id="contoh-nama-variabel-yang-tidak-valid">Contoh Nama Variabel yang Tidak Valid:<a class="headerlink" href="#contoh-nama-variabel-yang-tidak-valid" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="mi">1</span><span class="n">angka</span><span class="p">;</span><span class="w">           </span><span class="c1">// Error: Tidak boleh dimulai dengan angka</span>
+<span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="n">lengkap</span><span class="p">;</span><span class="w">  </span><span class="c1">// Error: Tidak boleh ada spasi</span>
+<span class="kt">int</span><span class="w"> </span><span class="kd">class</span><span class="err">;</span>            <span class="err">//</span> <span class="nc">Error</span><span class="p">:</span><span class="w"> </span><span class="n">Menggunakan</span><span class="w"> </span><span class="n">kata</span><span class="w"> </span><span class="n">kunci</span><span class="w"> </span><span class="n">Java</span>
 </code></pre></div>
-<!-- --- -->
-
 <h2 id="contoh-program-lengkap">🧪 Contoh Program Lengkap<a class="headerlink" href="#contoh-program-lengkap" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah contoh program yang menggunakan berbagai tipe data dan variabel:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TipeDataDemo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span>
@@ -1653,22 +1791,31 @@ Setiap variabel memiliki:
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Nama: Marno
+Umur: 21 tahun
+Tinggi: 172.5 cm
+Inisial: M
+Status Mahasiswa: true
+</code></pre></div>
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Java memiliki tipe data <strong>primitif</strong> dan <strong>referensi</strong></li>
-<li>Variabel digunakan untuk menyimpan nilai</li>
-<li>Penamaan variabel harus mengikuti aturan sintaks</li>
-<li>Tipe data menentukan seberapa banyak memori digunakan dan bagaimana data diproses</li>
+<li>Java memiliki dua jenis tipe data: <strong>primitif</strong> (nilai langsung) dan <strong>referensi</strong> (alamat memori objek).</li>
+<li>Variabel digunakan untuk menyimpan data dengan tipe tertentu.</li>
+<li>Penamaan variabel harus mengikuti aturan sintaks Java agar kode valid dan mudah dibaca.</li>
+<li>Tipe data menentukan jumlah memori yang digunakan dan cara data diproses.</li>
 </ul>
-<hr />
-<p>➡️ Selanjutnya: <a href="../operator/">Operator dan Ekspresi dalam Java</a></p>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../operator/">Operator dan Ekspresi dalam Java</a> untuk memahami cara memanipulasi data dalam program.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
