@@ -1,165 +1,228 @@
-# 🧬 Inner Class (Class di Dalam Class)
-
-Java memungkinkan kita untuk membuat **class di dalam class lain**. Ini disebut **inner class**.  
-Tujuannya adalah untuk mengelompokkan class yang **hanya digunakan di dalam induknya**, menjaga struktur kode tetap rapi dan relevan.
-
+---
+title: Inner Class (Class di Dalam Class) dalam Java
+description: Memahami berbagai jenis inner class untuk mengelompokkan logika terkait dalam Java
 ---
 
-## 🧩 4 Jenis Inner Class di Java
+# 🧬 Inner Class (Class di Dalam Class) dalam Java
 
-| Jenis                  | Penjelasan Singkat                                |
-|------------------------|---------------------------------------------------|
-| Inner Class Biasa      | Class di dalam class                              |
-| Static Nested Class    | Inner class yang bersifat static                  |
-| Local Inner Class      | Class di dalam method                             |
-| Anonymous Inner Class  | Class tanpa nama, langsung digunakan              |
+**Inner class** adalah kelas yang didefinisikan di dalam kelas lain (*outer class*). Inner class digunakan untuk mengelompokkan logika yang hanya relevan dalam konteks kelas luar, meningkatkan enkapsulasi, dan membuat kode lebih terorganisir. Java mendukung empat jenis kelas bersarang (*nested class*): inner class biasa, static nested class, local inner class, dan anonymous inner class.
 
----
+### Tujuan Inner Class
+- **Enkapsulasi**: Menyembunyikan logika spesifik dalam kelas luar.
+- **Organisasi Kode**: Mengelompokkan kelas terkait untuk meningkatkan keterbacaan.
+- **Fleksibilitas**: Mendukung implementasi cepat untuk kasus khusus, seperti *event listener*.
+
+## 🧩 Jenis-Jenis Inner Class
+
+Java memiliki empat jenis kelas bersarang:
+
+| **Jenis**                 | **Penjelasan**                                    |
+|---------------------------|--------------------------------------------------|
+| **Inner Class Biasa**     | Kelas non-static di dalam kelas luar.            |
+| **Static Nested Class**   | Kelas static di dalam kelas luar.               |
+| **Local Inner Class**     | Kelas yang didefinisikan di dalam method.       |
+| **Anonymous Inner Class** | Kelas tanpa nama untuk implementasi sekali pakai. |
 
 ## 1️⃣ Inner Class Biasa
 
+Inner class biasa didefinisikan di dalam kelas luar dan memiliki akses ke semua anggota (termasuk `private`) dari kelas luar. Inner class memerlukan instance kelas luar untuk dibuat.
+
+### Contoh:
+
 ```java
-public class Luar {
-    class Dalam {
-        void tampil() {
-            System.out.println("Ini class dalam.");
+public class Outer {
+    private String message = "Halo dari kelas luar";
+
+    class Inner {
+        void display() {
+            System.out.println("Pesan dari inner class: " + message);
         }
     }
 
-    void jalan() {
-        Dalam d = new Dalam();
-        d.tampil();
+    public void createInner() {
+        Inner inner = new Inner();
+        inner.display();
     }
 
     public static void main(String[] args) {
-        Luar l = new Luar();
-        l.jalan();
+        Outer outer = new Outer();
+        outer.createInner();
     }
 }
-````
+```
 
----
+**🖨️ Output:**
+
+```text
+Pesan dari inner class: Halo dari kelas luar
+```
+
+> 📌 **Catatan**: Inner class biasa hanya dapat dibuat melalui instance kelas luar, misalnya `Outer.Inner inner = new Outer().new Inner()`.
 
 ## 2️⃣ Static Nested Class
 
+**Static nested class** adalah kelas bersarang yang dideklarasikan dengan kata kunci `static`. Kelas ini tidak memerlukan instance kelas luar untuk dibuat dan tidak dapat mengakses anggota non-static dari kelas luar secara langsung.
+
+### Contoh:
+
 ```java
-public class Luar {
-    static class Dalam {
-        void tampil() {
-            System.out.println("Ini static inner class.");
+public class Outer {
+    private static String staticMessage = "Halo dari static";
+
+    static class StaticNested {
+        void display() {
+            System.out.println("Pesan dari static nested class: " + staticMessage);
         }
     }
 
     public static void main(String[] args) {
-        Luar.Dalam d = new Luar.Dalam();
-        d.tampil();
+        Outer.StaticNested nested = new Outer.StaticNested();
+        nested.display();
     }
 }
 ```
 
-* Bisa dibuat **tanpa membuat objek class luar**
-* Tidak bisa akses anggota non-static dari class luar
+**🖨️ Output:**
 
----
+```text
+Pesan dari static nested class: Halo dari static
+```
 
-## 3️⃣ Local Inner Class (Dalam Method)
+> 💡 **Tips**: Gunakan static nested class untuk logika yang mandiri tetapi masih terkait dengan kelas luar.
+
+## 3️⃣ Local Inner Class
+
+**Local inner class** didefinisikan di dalam blok method atau scope tertentu. Kelas ini hanya dapat digunakan dalam scope tempat didefinisikannya dan sering digunakan untuk logika sementara.
+
+### Contoh:
 
 ```java
-public class Demo {
-    void tampil() {
-        class Lokal {
-            void sapa() {
-                System.out.println("Halo dari dalam method.");
+public class LocalInnerDemo {
+    public void display() {
+        class Local {
+            void sayHello() {
+                System.out.println("Halo dari local inner class");
             }
         }
 
-        Lokal l = new Lokal();
-        l.sapa();
+        Local local = new Local();
+        local.sayHello();
     }
 
     public static void main(String[] args) {
-        new Demo().tampil();
+        LocalInnerDemo demo = new LocalInnerDemo();
+        demo.display();
     }
 }
 ```
 
----
+**🖨️ Output:**
+
+```text
+Halo dari local inner class
+```
+
+> 📌 **Catatan**: Local inner class hanya dapat mengakses variabel lokal method jika variabel tersebut bersifat `final` atau *effectively final* (tidak diubah setelah inisialisasi).
 
 ## 4️⃣ Anonymous Inner Class
 
-* Digunakan saat membuat **implementasi cepat satu kali pakai**
-* Sering dipakai pada listener atau callback
+**Anonymous inner class** adalah kelas tanpa nama yang didefinisikan dan diinstansiasi langsung, biasanya untuk mengimplementasikan interface atau memperluas kelas secara sekali pakai, seperti untuk *event listener*.
+
+### Contoh:
 
 ```java
-interface Sapa {
-    void ucap();
+interface Greeting {
+    void say();
 }
 
-public class Demo {
+public class AnonymousInnerDemo {
     public static void main(String[] args) {
-        Sapa s = new Sapa() {
-            public void ucap() {
-                System.out.println("Halo dunia!");
+        Greeting greeting = new Greeting() {
+            @Override
+            public void say() {
+                System.out.println("Halo dari anonymous inner class!");
             }
         };
-
-        s.ucap();
+        greeting.say();
     }
 }
 ```
 
----
+**🖨️ Output:**
+
+```text
+Halo dari anonymous inner class!
+```
+
+> 💡 **Tips**: Anonymous inner class sering digunakan dalam GUI (misalnya, Swing) atau callback untuk implementasi cepat.
 
 ## 📌 Kapan Menggunakan Inner Class?
 
-| Situasi                                   | Jenis Inner Class yang Cocok |
-| ----------------------------------------- | ---------------------------- |
-| Struktur hanya digunakan dalam satu class | Inner Class biasa            |
-| Tidak butuh akses luar                    | Static Nested Class          |
-| Hanya dibutuhkan dalam satu method        | Local Inner Class            |
-| Implementasi cepat (1x pakai)             | Anonymous Inner Class        |
+| **Situasi**                                   | **Jenis Inner Class**         |
+|-----------------------------------------------|-------------------------------|
+| Logika hanya relevan dalam kelas luar          | Inner Class Biasa            |
+| Kelas mandiri tapi terkait kelas luar         | Static Nested Class          |
+| Logika sementara dalam satu method             | Local Inner Class            |
+| Implementasi cepat untuk interface atau kelas  | Anonymous Inner Class        |
 
----
+## 🧪 Studi Kasus: Validasi Formulir
 
-## 🧪 Studi Kasus: Form Validasi
+Berikut adalah contoh penggunaan inner class biasa untuk memvalidasi data formulir.
 
 ```java
 public class Form {
     private String nama;
+    private String email;
 
     class Validator {
         boolean isValid() {
-            return nama != null && !nama.isEmpty();
+            return nama != null && !nama.isEmpty() &&
+                   email != null && email.contains("@");
         }
     }
 
-    public Form(String nama) {
+    public Form(String nama, String email) {
         this.nama = nama;
+        this.email = email;
     }
 
-    public boolean validasi() {
-        Validator v = new Validator();
-        return v.isValid();
+    public boolean validate() {
+        Validator validator = new Validator();
+        return validator.isValid();
     }
 
     public static void main(String[] args) {
-        Form f = new Form("Marno");
-        System.out.println("Valid: " + f.validasi());
+        Form form = new Form("Marno", "marno@example.com");
+        System.out.println("Form valid: " + form.validate());
+
+        Form invalidForm = new Form("", "invalid");
+        System.out.println("Form invalid: " + invalidForm.validate());
     }
 }
 ```
 
----
+**🖨️ Output:**
+
+```text
+Form valid: true
+Form invalid: false
+```
 
 ## 📌 Kesimpulan
 
-| Jenis Inner Class     | Bisa Static? | Bisa Akses Anggota Luar? | Digunakan Saat               |
-| --------------------- | ------------ | ------------------------ | ---------------------------- |
-| Inner Class           | ❌ Tidak      | ✅ Ya                     | Class bantu untuk outer      |
-| Static Nested Class   | ✅ Ya         | ❌ Tidak                  | Class mandiri tapi terhubung |
-| Local Inner Class     | ❌ Tidak      | ✅ Ya (jika final)        | Di dalam method              |
-| Anonymous Inner Class | ❌ Tidak      | ✅ Ya                     | Callback, event listener     |
+Inner class membantu mengelompokkan logika terkait dalam kode yang terorganisir:
 
----
+| **Jenis Inner Class**     | **Bisa Static?** | **Akses Anggota Luar?** | **Penggunaan**                     |
+|---------------------------|------------------|-------------------------|------------------------------------|
+| **Inner Class Biasa**     | ❌ Tidak          | ✅ Ya                    | Logika terkait instance kelas luar |
+| **Static Nested Class**   | ✅ Ya             | ❌ Hanya static          | Kelas mandiri terkait kelas luar  |
+| **Local Inner Class**     | ❌ Tidak          | ✅ Ya (jika final)       | Logika sementara dalam method     |
+| **Anonymous Inner Class** | ❌ Tidak          | ✅ Ya                    | Implementasi sekali pakai         |
 
-➡️ Selanjutnya: [Level Mahir atau Framework Java](../lanjutan/overview.md)
+> 🎯 **Tujuan Utama**: Inner class meningkatkan enkapsulasi dan organisasi kode dengan mengelompokkan logika yang terkait erat dengan kelas luar.
+
+## 📚 Langkah Selanjutnya
+
+Pelajari lebih lanjut tentang [Level Mahir atau Framework Java](../lanjutan/overview.md) untuk memahami topik lanjutan atau pengenalan ke framework seperti Spring atau Java EE.
+
+⬅️ Kembali: [Enum (Enumerasi)](enum.md)

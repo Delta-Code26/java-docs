@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami penggunaan HashMap untuk menyimpan dan mengelola data dengan pasangan kunci-nilai di Java">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>HashMap - Dokumentasi Java Lengkap</title>
+        <title>HashMap dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HashMap
+              HashMap dalam Java
             
           </span>
         </div>
@@ -1035,6 +1035,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#deklarasi-dan-inisialisasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Deklarasi dan Inisialisasi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operasi-dasar-hashmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Operasi Dasar HashMap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Operasi Dasar HashMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-operasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Operasi:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#iterasi-hashmap" class="md-nav__link">
     <span class="md-ellipsis">
       🔁 Iterasi HashMap
@@ -1045,18 +1078,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-dengan-keyset" class="md-nav__link">
+  <a href="#1-iterasi-dengan-keyset" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Dengan keySet():
+      1. Iterasi dengan keySet():
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-dengan-entryset" class="md-nav__link">
+  <a href="#2-iterasi-dengan-entryset" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Dengan entrySet():
+      2. Iterasi dengan entrySet():
     </span>
   </a>
   
@@ -1079,7 +1112,7 @@
         <li class="md-nav__item">
   <a href="#hashmap-vs-arraylist" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ HashMap vs ArrayList
+      ⚖️ HashMap vs. ArrayList
     </span>
   </a>
   
@@ -1098,6 +1131,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1533,143 +1575,257 @@
 
 
 <h1 id="hashmap-dalam-java">🗂️ HashMap dalam Java<a class="headerlink" href="#hashmap-dalam-java" title="Permanent link">&para;</a></h1>
-<p><strong>HashMap</strong> adalah struktur data dari Java Collection Framework yang menyimpan <strong>pasangan kunci-nilai (key-value)</strong>.</p>
-<p>Mirip seperti:
-<div class="highlight"><pre><span></span><code>&quot;NIM&quot;  -&gt; &quot;12345&quot;
-&quot;Nama&quot; -&gt; &quot;Marno&quot;
-&quot;Role&quot; -&gt; &quot;Pekerja&quot;
+<p><strong>HashMap</strong> adalah bagian dari <strong>Java Collection Framework (JCF)</strong> yang digunakan untuk menyimpan data dalam bentuk <strong>pasangan kunci-nilai (key-value)</strong>. Setiap kunci bersifat <strong>unik</strong> dan dipetakan ke satu nilai, memungkinkan akses data yang cepat berdasarkan kunci. HashMap sangat cocok untuk kasus seperti konfigurasi, pencarian (<em>lookup</em>), atau penyimpanan data asosiatif.</p>
+<p>Contoh analogi:
+- Kunci: "NIM" → Nilai: "12345"
+- Kunci: "Nama" → Nilai: "Marno"
+- Kunci: "Role" → Nilai: "Pekerja"</p>
+<h2 id="deklarasi-dan-inisialisasi">🧱 Deklarasi dan Inisialisasi<a class="headerlink" href="#deklarasi-dan-inisialisasi" title="Permanent link">&para;</a></h2>
+<p>Untuk menggunakan HashMap, impor <code>java.util.HashMap</code> dan deklarasikan instance dengan tipe kunci dan nilai.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
 
-````
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashMapDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">data</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;001&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">data</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;nama&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marno&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">data</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;role&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mandor&quot;</span><span class="p">);</span>
 
----
-
-## 🧱 Deklarasi Dasar
-
-```java
-import java.util.HashMap;
-
-HashMap&lt;String, String&gt; data = new HashMap&lt;&gt;();
-````
-
----
-
-## 🔧 Operasi Dasar HashMap
-
-| Method                 | Keterangan                           |
-| ---------------------- | ------------------------------------ |
-| `put(key, value)`      | Menambahkan pasangan kunci-nilai     |
-| `get(key)`             | Mengambil nilai berdasarkan kunci    |
-| `remove(key)`          | Menghapus pasangan berdasarkan kunci |
-| `containsKey(key)`     | Mengecek apakah kunci tersedia       |
-| `containsValue(value)` | Mengecek apakah nilai tersedia       |
-| `size()`               | Jumlah pasangan                      |
-| `clear()`              | Menghapus semua data                 |
-
----
-
-## 📘 Contoh:
-
-```java
-HashMap&lt;String, String&gt; user = new HashMap&lt;&gt;();
-
-user.put(&quot;id&quot;, &quot;001&quot;);
-user.put(&quot;nama&quot;, &quot;Marno&quot;);
-user.put(&quot;role&quot;, &quot;Mandor&quot;);
-
-System.out.println(user.get(&quot;nama&quot;)); // Output: Marno
-</code></pre></div></p>
-<hr />
-<h2 id="iterasi-hashmap">🔁 Iterasi HashMap<a class="headerlink" href="#iterasi-hashmap" title="Permanent link">&para;</a></h2>
-<h3 id="1-dengan-keyset">1. Dengan <code>keySet()</code>:<a class="headerlink" href="#1-dengan-keyset" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">key</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nama: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;nama&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="2-dengan-entryset">2. Dengan <code>entrySet()</code>:<a class="headerlink" href="#2-dengan-entryset" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; =&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
-<span class="p">}</span>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Nama: Marno
 </code></pre></div>
-<hr />
-<h2 id="studi-kasus-rekap-gaji-pekerja">🧪 Studi Kasus: Rekap Gaji Pekerja<a class="headerlink" href="#studi-kasus-rekap-gaji-pekerja" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gaji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-
-<span class="n">gaji</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ali&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">500.0</span><span class="p">);</span>
-<span class="n">gaji</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">450.0</span><span class="p">);</span>
-<span class="n">gaji</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Cici&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">470.0</span><span class="p">);</span>
-
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">gaji</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nama</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; menerima RM &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">gaji</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">nama</span><span class="p">));</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr />
-<h2 id="hashmap-vs-arraylist">⚖️ HashMap vs ArrayList<a class="headerlink" href="#hashmap-vs-arraylist" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: HashMap hanya dapat menyimpan objek, sehingga tipe primitif (seperti <code>int</code>) harus menggunakan <em>wrapper class</em> (seperti <code>Integer</code>).</p>
+</blockquote>
+<h2 id="operasi-dasar-hashmap">🔧 Operasi Dasar HashMap<a class="headerlink" href="#operasi-dasar-hashmap" title="Permanent link">&para;</a></h2>
+<p>HashMap menyediakan method untuk mengelola pasangan kunci-nilai:</p>
 <table>
 <thead>
 <tr>
-<th>Fitur</th>
-<th>HashMap</th>
-<th>ArrayList</th>
+<th><strong>Method</strong></th>
+<th><strong>Keterangan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Akses data</td>
-<td>Berdasarkan <code>key</code></td>
-<td>Berdasarkan <code>index</code></td>
+<td><code>put(key, value)</code></td>
+<td>Menambahkan atau memperbarui pasangan kunci-nilai.</td>
 </tr>
 <tr>
-<td>Struktur</td>
-<td>Tidak berurutan (unordered)</td>
-<td>Urutan tetap</td>
+<td><code>get(key)</code></td>
+<td>Mengambil nilai berdasarkan kunci.</td>
 </tr>
 <tr>
-<td>Cocok untuk</td>
-<td>Lookup cepat, data acak</td>
-<td>Koleksi berurutan</td>
+<td><code>remove(key)</code></td>
+<td>Menghapus pasangan berdasarkan kunci.</td>
+</tr>
+<tr>
+<td><code>containsKey(key)</code></td>
+<td>Memeriksa apakah kunci ada.</td>
+</tr>
+<tr>
+<td><code>containsValue(value)</code></td>
+<td>Memeriksa apakah nilai ada.</td>
+</tr>
+<tr>
+<td><code>size()</code></td>
+<td>Mengembalikan jumlah pasangan kunci-nilai.</td>
+</tr>
+<tr>
+<td><code>clear()</code></td>
+<td>Menghapus semua pasangan kunci-nilai.</td>
 </tr>
 </tbody>
 </table>
-<hr />
+<h3 id="contoh-operasi">Contoh Operasi:<a class="headerlink" href="#contoh-operasi" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashMapOperationsDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;001&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;nama&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marno&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;role&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mandor&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Mengambil nilai</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Role: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;role&quot;</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Memeriksa kunci</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ada kunci &#39;id&#39;? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Menghapus pasangan</span>
+<span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Setelah menghapus &#39;id&#39;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">user</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Mengecek ukuran</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Jumlah pasangan: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Role: Mandor
+Ada kunci &#39;id&#39;? true
+Setelah menghapus &#39;id&#39;: {nama=Marno, role=Mandor}
+Jumlah pasangan: 2
+</code></pre></div>
+<h2 id="iterasi-hashmap">🔁 Iterasi HashMap<a class="headerlink" href="#iterasi-hashmap" title="Permanent link">&para;</a></h2>
+<p>HashMap dapat diiterasi menggunakan dua pendekatan utama: <code>keySet()</code> untuk mengakses kunci atau <code>entrySet()</code> untuk mengakses pasangan kunci-nilai secara langsung.</p>
+<h3 id="1-iterasi-dengan-keyset">1. Iterasi dengan <code>keySet()</code>:<a class="headerlink" href="#1-iterasi-dengan-keyset" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KeySetDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;001&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;nama&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marno&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;role&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mandor&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s: %s%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">key</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>id: 001
+nama: Marno
+role: Mandor
+</code></pre></div>
+<h3 id="2-iterasi-dengan-entryset">2. Iterasi dengan <code>entrySet()</code>:<a class="headerlink" href="#2-iterasi-dengan-entryset" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EntrySetDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;001&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;nama&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marno&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;role&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mandor&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s =&gt; %s%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="na">getKey</span><span class="p">(),</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>id =&gt; 001
+nama =&gt; Marno
+role =&gt; Mandor
+</code></pre></div>
+<blockquote>
+<p>💡 <strong>Tips</strong>: Gunakan <code>entrySet()</code> untuk iterasi yang lebih efisien, karena tidak perlu memanggil <code>get(key)</code> berulang kali.</p>
+</blockquote>
+<h2 id="studi-kasus-rekap-gaji-pekerja">🧪 Studi Kasus: Rekap Gaji Pekerja<a class="headerlink" href="#studi-kasus-rekap-gaji-pekerja" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah contoh penggunaan HashMap untuk menyimpan dan menampilkan data gaji pekerja berdasarkan nama sebagai kunci.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GajiDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gaji</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">gaji</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Ali&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">500.0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">gaji</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">450.0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">gaji</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Cici&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">470.0</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">gaji</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s menerima RM %.2f%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="na">getKey</span><span class="p">(),</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Menambahkan pekerja baru</span>
+<span class="w">        </span><span class="n">gaji</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Dedi&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">480.0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Setelah menambah Dedi: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">gaji</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Ali menerima RM 500.00
+Budi menerima RM 450.00
+Cici menerima RM 470.00
+Setelah menambah Dedi: {Ali=500.0, Budi=450.0, Cici=470.0, Dedi=480.0}
+</code></pre></div>
+<h2 id="hashmap-vs-arraylist">⚖️ HashMap vs. ArrayList<a class="headerlink" href="#hashmap-vs-arraylist" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Fitur</strong></th>
+<th><strong>HashMap</strong></th>
+<th><strong>ArrayList</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Akses Data</strong></td>
+<td>Berdasarkan kunci (<em>key</em>)</td>
+<td>Berdasarkan indeks</td>
+</tr>
+<tr>
+<td><strong>Struktur</strong></td>
+<td>Tidak berurutan (<em>unordered</em>)</td>
+<td>Berurutan (<em>ordered</em>)</td>
+</tr>
+<tr>
+<td><strong>Cocok Untuk</strong></td>
+<td>Pencarian cepat, data asosiatif</td>
+<td>Koleksi data berurutan</td>
+</tr>
+<tr>
+<td><strong>Duplikasi</strong></td>
+<td>Kunci harus unik, nilai bisa duplikat</td>
+<td>Elemen bisa duplikat</td>
+</tr>
+</tbody>
+</table>
 <h2 id="catatan-penting">⚠️ Catatan Penting<a class="headerlink" href="#catatan-penting" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Kunci harus <strong>unik</strong></li>
-<li>Nilai bisa <strong>berulang</strong></li>
-<li>HashMap <strong>tidak menjaga urutan input</strong></li>
-<li>Gunakan <code>LinkedHashMap</code> jika ingin versi yang menjaga urutan</li>
+<li><strong>Kunci Unik</strong>: Setiap kunci dalam HashMap harus unik; jika kunci ditambahkan ulang, nilai lama akan ditimpa.</li>
+<li><strong>Urutan Tidak Terjamin</strong>: HashMap tidak menjaga urutan input. Gunakan <code>LinkedHashMap</code> untuk mempertahankan urutan.</li>
+<li><strong>Null Values</strong>: HashMap mengizinkan satu kunci <code>null</code> dan beberapa nilai <code>null</code>.</li>
+<li><strong>Performa</strong>: HashMap menawarkan pencarian cepat (O(1) rata-rata) berkat struktur hash table-nya.</li>
+<li><strong>Thread Safety</strong>: HashMap tidak <em>thread-safe</em>. Gunakan <code>ConcurrentHashMap</code> untuk aplikasi multi-threaded.</li>
 </ul>
-<hr />
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>HashMap adalah struktur data yang kuat untuk mengelola pasangan kunci-nilai:</p>
 <table>
 <thead>
 <tr>
-<th>Konsep</th>
-<th>Penjelasan</th>
+<th><strong>Konsep</strong></th>
+<th><strong>Penjelasan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>HashMap</td>
-<td>Struktur data untuk pasangan key-value</td>
+<td><strong>HashMap</strong></td>
+<td>Struktur data untuk menyimpan pasangan kunci-nilai.</td>
 </tr>
 <tr>
-<td>Keunggulan</td>
-<td>Akses cepat, fleksibel, cocok untuk lookup</td>
+<td><strong>Keunggulan</strong></td>
+<td>Akses cepat, fleksibel, cocok untuk <em>lookup</em>.</td>
 </tr>
 <tr>
-<td>Biasa digunakan untuk</td>
-<td>Konfigurasi, user, mapping, cache</td>
+<td><strong>Penggunaan</strong></td>
+<td>Konfigurasi, data pengguna, cache, atau mapping.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Selanjutnya: <a href="../file_io/">File I/O (Baca &amp; Tulis File)</a></p>
+<blockquote>
+<p>🎯 <strong>Tujuan Utama</strong>: HashMap memungkinkan pengelolaan data asosiatif dengan efisiensi tinggi untuk pencarian dan manipulasi.</p>
+</blockquote>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../file_io/">File I/O (Baca &amp; Tulis File)</a> untuk memahami cara membaca dan menulis data ke file di Java.</p>
+<p>⬅️ Kembali: <a href="array_arraylist.md">Array dan ArrayList</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 

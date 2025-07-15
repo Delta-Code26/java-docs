@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami konsep polimorfisme dalam OOP untuk mendukung fleksibilitas kode melalui method overloading dan overriding di Java">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Polymorphism - Dokumentasi Java Lengkap</title>
+        <title>Polymorphism (Polimorfisme) dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Polymorphism
+              Polymorphism (Polimorfisme) dalam Java
             
           </span>
         </div>
@@ -833,28 +833,100 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dua-jenis-polymorphism" class="md-nav__link">
+  <a href="#jenis-jenis-polimorfisme" class="md-nav__link">
     <span class="md-ellipsis">
-      🔧 Dua Jenis Polymorphism:
+      🔧 Jenis-Jenis Polimorfisme
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔧 Dua Jenis Polymorphism:">
+    <nav class="md-nav" aria-label="🔧 Jenis-Jenis Polimorfisme">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-compile-time-polymorphism-static-method-overloading" class="md-nav__link">
+  <a href="#1-compile-time-polymorphism-method-overloading" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Compile-time Polymorphism (Static) → Method Overloading
+      1. Compile-Time Polymorphism (Method Overloading)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Compile-Time Polymorphism (Method Overloading)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-overloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Overloading:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-runtime-polymorphism-dynamic-method-overriding" class="md-nav__link">
+  <a href="#penggunaan" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Runtime Polymorphism (Dynamic) → Method Overriding
+      Penggunaan:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-runtime-polymorphism-method-overriding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Runtime Polymorphism (Method Overriding)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Runtime Polymorphism (Method Overriding)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-overriding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Overriding:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penggunaan_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penggunaan:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polymorphism-dengan-referensi-superclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Polymorphism dengan Referensi Superclass
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Polymorphism dengan Referensi Superclass">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
     </span>
   </a>
   
@@ -866,47 +938,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-compile-time-polymorphism-method-overloading" class="md-nav__link">
+  <a href="#mengapa-polimorfisme-penting" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 🧱 Compile-Time Polymorphism (Method Overloading)
+      ⚠️ Mengapa Polimorfisme Penting?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-runtime-polymorphism-method-overriding" class="md-nav__link">
+  <a href="#studi-kasus-sistem-kendaraan" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 🔄 Runtime Polymorphism (Method Overriding)
+      🧪 Studi Kasus: Sistem Kendaraan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Studi Kasus: Sistem Kendaraan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#penggunaan_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penggunaan:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#polymorphism-dengan-referensi-superclass" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 Polymorphism dengan Referensi Superclass
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kenapa-polymorphism-penting" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Kenapa Polymorphism Penting?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#studi-kasus-kendaraan" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 Studi Kasus: Kendaraan
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -914,6 +974,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1551,158 +1620,213 @@
 
 
 <h1 id="polymorphism-polimorfisme-dalam-java">🌀 Polymorphism (Polimorfisme) dalam Java<a class="headerlink" href="#polymorphism-polimorfisme-dalam-java" title="Permanent link">&para;</a></h1>
-<p><strong>Polymorphism</strong> berasal dari bahasa Yunani:</p>
-<blockquote>
-<p><em>poly</em> = banyak, <em>morph</em> = bentuk</p>
-</blockquote>
-<p>Dalam Java, polymorphism memungkinkan <strong>satu method/objek</strong> memiliki <strong>banyak bentuk</strong>.<br />
-Artinya, method yang sama bisa bekerja dengan cara berbeda tergantung objeknya.</p>
-<hr />
-<h2 id="dua-jenis-polymorphism">🔧 Dua Jenis Polymorphism:<a class="headerlink" href="#dua-jenis-polymorphism" title="Permanent link">&para;</a></h2>
-<h3 id="1-compile-time-polymorphism-static-method-overloading">1. <strong>Compile-time Polymorphism</strong> (Static) → <em>Method Overloading</em><a class="headerlink" href="#1-compile-time-polymorphism-static-method-overloading" title="Permanent link">&para;</a></h3>
-<h3 id="2-runtime-polymorphism-dynamic-method-overriding">2. <strong>Runtime Polymorphism</strong> (Dynamic) → <em>Method Overriding</em><a class="headerlink" href="#2-runtime-polymorphism-dynamic-method-overriding" title="Permanent link">&para;</a></h3>
-<hr />
-<h2 id="1-compile-time-polymorphism-method-overloading">1. 🧱 Compile-Time Polymorphism (Method Overloading)<a class="headerlink" href="#1-compile-time-polymorphism-method-overloading" title="Permanent link">&para;</a></h2>
-<p><strong>Overloading</strong> terjadi ketika beberapa method memiliki nama yang sama, namun dengan <strong>parameter berbeda</strong>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Kalkulator</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">tambah</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<p><strong>Polymorphism</strong> (polimorfisme) berasal dari kata Yunani <em>poly</em> (banyak) dan <em>morph</em> (bentuk), yang berarti kemampuan sebuah method atau objek untuk memiliki <strong>banyak bentuk perilaku</strong>. Dalam Java, polimorfisme memungkinkan method yang sama untuk berperilaku berbeda tergantung pada objek yang memanggilnya. Ini meningkatkan fleksibilitas dan reusabilitas kode, mendukung prinsip <strong>Open/Closed</strong> dalam desain OOP (kode terbuka untuk ekstensi, tertutup untuk modifikasi).</p>
+<p>Polimorfisme di Java terdiri dari dua jenis utama:
+1. <strong>Compile-time Polymorphism</strong> (Static): Dicapai melalui <em>method overloading</em>.
+2. <strong>Runtime Polymorphism</strong> (Dynamic): Dicapai melalui <em>method overriding</em>.</p>
+<h2 id="jenis-jenis-polimorfisme">🔧 Jenis-Jenis Polimorfisme<a class="headerlink" href="#jenis-jenis-polimorfisme" title="Permanent link">&para;</a></h2>
+<h3 id="1-compile-time-polymorphism-method-overloading">1. Compile-Time Polymorphism (Method Overloading)<a class="headerlink" href="#1-compile-time-polymorphism-method-overloading" title="Permanent link">&para;</a></h3>
+<p><strong>Method overloading</strong> terjadi ketika sebuah kelas memiliki beberapa method dengan <strong>nama yang sama</strong> tetapi <strong>parameter yang berbeda</strong> (dalam jumlah, tipe, atau urutan). Kompiler menentukan method mana yang dipanggil berdasarkan parameter saat kode dikompilasi.</p>
+<h4 id="contoh-overloading">Contoh Overloading:<a class="headerlink" href="#contoh-overloading" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Kalkulator</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">tambah</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">tambah</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">tambah</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">tambah</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">tambah</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-<span class="err">````</span>
-
-<span class="err">###</span><span class="w"> </span><span class="n">Penggunaan</span><span class="p">:</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="n">Kalkulator</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Kalkulator</span><span class="p">();</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">k</span><span class="p">.</span><span class="na">tambah</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w">       </span><span class="c1">// 5</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">k</span><span class="p">.</span><span class="na">tambah</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="mf">3.5</span><span class="p">));</span><span class="w">   </span><span class="c1">// 6.0</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">k</span><span class="p">.</span><span class="na">tambah</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w">    </span><span class="c1">// 6</span>
+</code></pre></div>
+<h4 id="penggunaan">Penggunaan:<a class="headerlink" href="#penggunaan" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KalkulatorDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Kalkulator</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Kalkulator</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2 + 3 = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="p">.</span><span class="na">tambah</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2.5 + 3.5 = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="p">.</span><span class="na">tambah</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="mf">3.5</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 + 2 + 3 = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="p">.</span><span class="na">tambah</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>2 + 3 = 5
+2.5 + 3.5 = 6.0
+1 + 2 + 3 = 6
 </code></pre></div>
 <blockquote>
-<p>🧠 Overloading terjadi saat <strong>compile time</strong>, karena compiler bisa membedakan berdasarkan parameter.</p>
+<p>📌 <strong>Catatan</strong>: Overloading terjadi saat <strong>compile-time</strong>, karena kompiler memilih method berdasarkan tanda tangan (<em>signature</em>) method.</p>
 </blockquote>
-<hr />
-<h2 id="2-runtime-polymorphism-method-overriding">2. 🔄 Runtime Polymorphism (Method Overriding)<a class="headerlink" href="#2-runtime-polymorphism-method-overriding" title="Permanent link">&para;</a></h2>
-<p><strong>Overriding</strong> terjadi saat subclass memberikan implementasi ulang terhadap method dari superclass.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Hewan</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">suara</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hewan bersuara&quot;</span><span class="p">);</span>
+<h3 id="2-runtime-polymorphism-method-overriding">2. Runtime Polymorphism (Method Overriding)<a class="headerlink" href="#2-runtime-polymorphism-method-overriding" title="Permanent link">&para;</a></h3>
+<p><strong>Method overriding</strong> terjadi ketika subclass menyediakan implementasi baru untuk method yang diwarisi dari superclass. Method yang di-<em>override</em> harus memiliki nama, parameter, dan tipe kembalian yang sama, ditandai dengan anotasi <code>@Override</code> untuk kejelasan.</p>
+<h4 id="contoh-overriding">Contoh Overriding:<a class="headerlink" href="#contoh-overriding" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Hewan</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">suara</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hewan bersuara...&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Kucing</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Hewan</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">suara</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">suara</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Meong&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Anjing</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Hewan</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">suara</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">suara</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Guk Guk&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="polymorphism-dengan-referensi-superclass">🎯 Polymorphism dengan Referensi Superclass<a class="headerlink" href="#polymorphism-dengan-referensi-superclass" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
+<h4 id="penggunaan_1">Penggunaan:<a class="headerlink" href="#penggunaan_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HewanDemo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Hewan</span><span class="w"> </span><span class="n">h1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Kucing</span><span class="p">();</span>
-<span class="w">        </span><span class="n">Hewan</span><span class="w"> </span><span class="n">h2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Anjing</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Hewan</span><span class="w"> </span><span class="n">h1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Kucing</span><span class="p">();</span><span class="w"> </span><span class="c1">// Polymorphism</span>
+<span class="w">        </span><span class="n">Hewan</span><span class="w"> </span><span class="n">h2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Anjing</span><span class="p">();</span><span class="w"> </span><span class="c1">// Polymorphism</span>
 
-<span class="w">        </span><span class="n">h1</span><span class="p">.</span><span class="na">suara</span><span class="p">();</span><span class="w"> </span><span class="c1">// Meong</span>
-<span class="w">        </span><span class="n">h2</span><span class="p">.</span><span class="na">suara</span><span class="p">();</span><span class="w"> </span><span class="c1">// Guk Guk</span>
+<span class="w">        </span><span class="n">h1</span><span class="p">.</span><span class="na">suara</span><span class="p">();</span>
+<span class="w">        </span><span class="n">h2</span><span class="p">.</span><span class="na">suara</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Meong
+Guk Guk
+</code></pre></div>
 <blockquote>
-<p>🧠 Di sini, method <code>suara()</code> dieksekusi sesuai dengan <strong>objek aktual</strong>, bukan tipe referensi-nya.</p>
+<p>💡 <strong>Info</strong>: Method yang dipanggil ditentukan saat <strong>runtime</strong> berdasarkan tipe objek aktual, bukan tipe referensi (Hewan).</p>
 </blockquote>
-<hr />
-<h2 id="kenapa-polymorphism-penting">⚠️ Kenapa Polymorphism Penting?<a class="headerlink" href="#kenapa-polymorphism-penting" title="Permanent link">&para;</a></h2>
-<ul>
-<li>✅ Membuat kode lebih <strong>modular &amp; scalable</strong></li>
-<li>✅ Mendukung prinsip <strong>Open/Closed</strong> (OOP Design Principle)</li>
-<li>✅ Memungkinkan satu antarmuka dipakai untuk banyak implementasi</li>
-</ul>
-<hr />
-<h2 id="studi-kasus-kendaraan">🧪 Studi Kasus: Kendaraan<a class="headerlink" href="#studi-kasus-kendaraan" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Kendaraan</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">jalan</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<h2 id="polymorphism-dengan-referensi-superclass">🎯 Polymorphism dengan Referensi Superclass<a class="headerlink" href="#polymorphism-dengan-referensi-superclass" title="Permanent link">&para;</a></h2>
+<p>Polimorfisme sering digunakan dengan referensi superclass untuk merujuk ke objek subclass, memungkinkan fleksibilitas dalam menangani berbagai tipe objek secara seragam.</p>
+<h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PolymorphismDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Hewan</span><span class="o">[]</span><span class="w"> </span><span class="n">hewan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Kucing</span><span class="p">(),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Anjing</span><span class="p">()</span><span class="w"> </span><span class="p">};</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Hewan</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">hewan</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">h</span><span class="p">.</span><span class="na">suara</span><span class="p">();</span><span class="w"> </span><span class="c1">// Memanggil method sesuai tipe objek</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Meong
+Guk Guk
+</code></pre></div>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Polimorfisme runtime memungkinkan kode untuk bekerja dengan tipe yang berbeda tanpa perlu tahu tipe spesifiknya.</p>
+</blockquote>
+<h2 id="mengapa-polimorfisme-penting">⚠️ Mengapa Polimorfisme Penting?<a class="headerlink" href="#mengapa-polimorfisme-penting" title="Permanent link">&para;</a></h2>
+<p>Polimorfisme adalah kunci untuk membangun kode yang fleksibel dan mudah diperluas:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Manfaat</strong></th>
+<th><strong>Penjelasan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modularitas</strong></td>
+<td>Kode dapat menangani berbagai tipe objek dengan antarmuka yang sama.</td>
+</tr>
+<tr>
+<td><strong>Skalabilitas</strong></td>
+<td>Mudah menambahkan subclass baru tanpa mengubah kode utama.</td>
+</tr>
+<tr>
+<td><strong>Prinsip Open/Closed</strong></td>
+<td>Kelas dapat diperluas tanpa memodifikasi kode yang ada.</td>
+</tr>
+<tr>
+<td><strong>Reusabilitas</strong></td>
+<td>Satu antarmuka dapat digunakan untuk banyak implementasi.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="studi-kasus-sistem-kendaraan">🧪 Studi Kasus: Sistem Kendaraan<a class="headerlink" href="#studi-kasus-sistem-kendaraan" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah contoh polimorfisme yang memodelkan kendaraan dengan perilaku berbeda untuk setiap jenis.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Kendaraan</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jalan</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Kendaraan bergerak...&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Mobil</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Kendaraan</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">jalan</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mobil melaju di jalan&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jalan</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mobil melaju di jalan raya&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Motor</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Kendaraan</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">jalan</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">jalan</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Motor menyusuri gang kecil&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DemoKendaraan</span><span class="w"> </span><span class="p">{</span>
+</code></pre></div>
+<h3 id="penggunaan_2">Penggunaan:<a class="headerlink" href="#penggunaan_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KendaraanDemo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Kendaraan</span><span class="w"> </span><span class="n">k1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mobil</span><span class="p">();</span>
-<span class="w">        </span><span class="n">Kendaraan</span><span class="w"> </span><span class="n">k2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Motor</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">k1</span><span class="p">.</span><span class="na">jalan</span><span class="p">();</span><span class="w"> </span><span class="c1">// Mobil melaju di jalan</span>
-<span class="w">        </span><span class="n">k2</span><span class="p">.</span><span class="na">jalan</span><span class="p">();</span><span class="w"> </span><span class="c1">// Motor menyusuri gang kecil</span>
+<span class="w">        </span><span class="n">Kendaraan</span><span class="o">[]</span><span class="w"> </span><span class="n">kendaraan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mobil</span><span class="p">(),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Motor</span><span class="p">()</span><span class="w"> </span><span class="p">};</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Kendaraan</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">kendaraan</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">k</span><span class="p">.</span><span class="na">jalan</span><span class="p">();</span><span class="w"> </span><span class="c1">// Memanggil method sesuai tipe objek</span>
+<span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Mobil melaju di jalan raya
+Motor menyusuri gang kecil
+</code></pre></div>
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>Polimorfisme memungkinkan fleksibilitas dalam desain kode:</p>
 <table>
 <thead>
 <tr>
-<th>Jenis Polymorphism</th>
-<th>Teknik</th>
-<th>Waktu Terjadi</th>
+<th><strong>Jenis Polimorfisme</strong></th>
+<th><strong>Teknik</strong></th>
+<th><strong>Waktu Terjadi</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Compile-time</td>
+<td><strong>Compile-time</strong></td>
 <td>Method Overloading</td>
 <td>Saat kompilasi</td>
 </tr>
 <tr>
-<td>Runtime</td>
+<td><strong>Runtime</strong></td>
 <td>Method Overriding</td>
-<td>Saat program jalan</td>
+<td>Saat program berjalan</td>
 </tr>
 <tr>
-<td>Tujuan Umum</td>
-<td>Fleksibilitas &amp; Reusabilitas Kode</td>
+<td><strong>Tujuan Umum</strong></td>
+<td>Fleksibilitas dan reusabilitas kode</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Selanjutnya: <a href="../abstraction/">Abstraction (Abstraksi)</a></p>
+<blockquote>
+<p>🎯 <strong>Tujuan Utama</strong>: Polimorfisme memungkinkan satu antarmuka untuk mendukung banyak implementasi, membuat kode lebih modular dan mudah diperluas.</p>
+</blockquote>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../abstraction/">Abstraction (Abstraksi)</a> untuk memahami cara menyembunyikan kompleksitas implementasi.</p>
+<p>⬅️ Kembali: <a href="../inheritance/">Inheritance (Pewarisan)</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 

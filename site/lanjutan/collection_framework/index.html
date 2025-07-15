@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami struktur data dalam Java Collection Framework seperti List, Set, Map, dan Queue beserta penggunaannya">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Collection Framework - Dokumentasi Java Lengkap</title>
+        <title>Java Collection Framework (JCF) Tingkat Lanjut - Dokumentasi Java Lengkap</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Collection Framework
+              Java Collection Framework (JCF) Tingkat Lanjut
             
           </span>
         </div>
@@ -1406,38 +1406,131 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hirarki-umum" class="md-nav__link">
+  <a href="#hirarki-java-collection-framework" class="md-nav__link">
     <span class="md-ellipsis">
-      🔖 Hirarki Umum
+      🔖 Hirarki Java Collection Framework
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#map-key-value" class="md-nav__link">
+  <a href="#list-urutan-dan-duplikasi" class="md-nav__link">
     <span class="md-ellipsis">
-      🧭 Map: Key-Value
+      📘 List: Urutan dan Duplikasi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📘 List: Urutan dan Duplikasi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#queue-deque" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Queue &amp; Deque
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#iterator-for-each" class="md-nav__link">
+  <a href="#set-unik-dan-tidak-selalu-berurutan" class="md-nav__link">
     <span class="md-ellipsis">
-      🔁 Iterator &amp; For-Each
+      🔐 Set: Unik dan Tidak Selalu Berurutan
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🔐 Set: Unik dan Tidak Selalu Berurutan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-pasangan-key-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Map: Pasangan Key-Value
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Map: Pasangan Key-Value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queue-dan-deque-antrean-dan-tumpukan" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Queue dan Deque: Antrean dan Tumpukan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Queue dan Deque: Antrean dan Tumpukan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Queue:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterator-dan-for-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Iterator dan For-Each
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 Iterator dan For-Each">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-for-each-dan-iterator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh For-Each dan Iterator:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1448,12 +1541,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="💥 Synchronized Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#pilih-struktur-data-yang-tepat" class="md-nav__link">
+  <a href="#memilih-struktur-data-yang-tepat" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Pilih Struktur Data yang Tepat
+      🧠 Memilih Struktur Data yang Tepat
     </span>
   </a>
   
@@ -1463,6 +1571,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1527,165 +1644,276 @@
 
 
 <h1 id="java-collection-framework-jcf-tingkat-lanjut">🧺 Java Collection Framework (JCF) Tingkat Lanjut<a class="headerlink" href="#java-collection-framework-jcf-tingkat-lanjut" title="Permanent link">&para;</a></h1>
-<p>Java Collection Framework menyediakan struktur data siap pakai seperti:
-- List (ArrayList, LinkedList)
-- Set (HashSet, TreeSet)
-- Map (HashMap, TreeMap)
-- Queue (LinkedList, PriorityQueue)</p>
-<p>Struktur data ini sangat efisien, aman, dan mendukung operasi skala besar.</p>
-<hr />
-<h2 id="hirarki-umum">🔖 Hirarki Umum<a class="headerlink" href="#hirarki-umum" title="Permanent link">&para;</a></h2>
+<p><strong>Java Collection Framework (JCF)</strong> menyediakan sekumpulan struktur data siap pakai yang efisien, aman, dan mendukung operasi skala besar. JCF mencakup antarmuka seperti <code>List</code>, <code>Set</code>, <code>Map</code>, dan <code>Queue</code>, serta implementasi seperti <code>ArrayList</code>, <code>HashSet</code>, <code>HashMap</code>, dan <code>PriorityQueue</code>. Bagian ini menjelaskan hirarki, karakteristik, dan penggunaan praktis dari JCF, serta panduan untuk memilih struktur data yang tepat.</p>
+<h2 id="hirarki-java-collection-framework">🔖 Hirarki Java Collection Framework<a class="headerlink" href="#hirarki-java-collection-framework" title="Permanent link">&para;</a></h2>
+<p>JCF terdiri dari antarmuka utama <code>Collection</code> dan <code>Map</code>, dengan berbagai implementasi:</p>
 <div class="highlight"><pre><span></span><code>Collection
 ├── List
-│    ├── ArrayList
-│    └── LinkedList
+│   ├── ArrayList
+│   ├── LinkedList
+│   └── Vector (thread-safe, jarang digunakan)
 ├── Set
-│    ├── HashSet
-│    └── TreeSet
+│   ├── HashSet
+│   ├── LinkedHashSet
+│   └── TreeSet
 └── Queue
-├── LinkedList
-└── PriorityQueue
+    ├── LinkedList
+    ├── PriorityQueue
+    └── Deque
+        └── ArrayDeque
 
-Map (bukan bagian dari Collection, tapi setara)
+Map (terpisah dari Collection)
 ├── HashMap
-└── TreeMap
-
-````
-
----
-
-## 📘 List: Urutan dan Duplikasi
-
-```java
-List&lt;String&gt; daftar = new ArrayList&lt;&gt;();
-daftar.add(&quot;Ali&quot;);
-daftar.add(&quot;Ali&quot;); // duplikasi diperbolehkan
-````
-
-* `ArrayList`: Akses cepat
-* `LinkedList`: Sisip/hapus cepat
-
----
-
-## 🔐 Set: Unik dan Tidak Berurutan
-
-```java
-Set&lt;String&gt; unik = new HashSet&lt;&gt;();
-unik.add(&quot;Marno&quot;);
-unik.add(&quot;Marno&quot;); // hanya 1 yang disimpan
+├── LinkedHashMap
+├── TreeMap
+└── Hashtable (thread-safe, jarang digunakan)
 </code></pre></div>
-<ul>
-<li><code>HashSet</code>: Unordered</li>
-<li><code>TreeSet</code>: Otomatis terurut (asc)</li>
-</ul>
-<hr />
-<h2 id="map-key-value">🧭 Map: Key-Value<a class="headerlink" href="#map-key-value" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="n">umur</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">);</span>
-<span class="n">umur</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: <code>Map</code> bukan bagian dari antarmuka <code>Collection</code>, tetapi merupakan bagian integral dari JCF karena sering digunakan bersama koleksi lainnya.</p>
+</blockquote>
+<h2 id="list-urutan-dan-duplikasi">📘 List: Urutan dan Duplikasi<a class="headerlink" href="#list-urutan-dan-duplikasi" title="Permanent link">&para;</a></h2>
+<p><strong>List</strong> adalah koleksi yang mempertahankan <strong>urutan elemen</strong> dan <strong>memperbolehkan duplikasi</strong>. Implementasi utama adalah <code>ArrayList</code> dan <code>LinkedList</code>.</p>
+<h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">umur</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 25</span>
-</code></pre></div>
-<ul>
-<li><code>HashMap</code>: Tidak berurutan</li>
-<li><code>TreeMap</code>: Key otomatis diurutkan</li>
-<li><code>LinkedHashMap</code>: Urut sesuai input</li>
-</ul>
-<hr />
-<h2 id="queue-deque">📦 Queue &amp; Deque<a class="headerlink" href="#queue-deque" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">antrian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="n">antrian</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;User1&quot;</span><span class="p">);</span>
-<span class="n">antrian</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;User2&quot;</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">antrian</span><span class="p">.</span><span class="na">poll</span><span class="p">());</span><span class="w"> </span><span class="c1">// User1 keluar</span>
-</code></pre></div>
-<ul>
-<li>FIFO (first in first out)</li>
-<li>Bisa dipakai untuk sistem antrean, notifikasi, dll.</li>
-</ul>
-<hr />
-<h2 id="iterator-for-each">🔁 Iterator &amp; For-Each<a class="headerlink" href="#iterator-for-each" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">daftar</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nama</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="c1">// atau pakai Iterator</span>
-<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">itr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">daftar</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ListDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">daftar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">daftar</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ali&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">daftar</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ali&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Duplikasi diperbolehkan</span>
+<span class="w">        </span><span class="n">daftar</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Daftar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">daftar</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Daftar: [Ali, Ali, Budi]
+</code></pre></div>
+<ul>
+<li><strong>ArrayList</strong>: Cepat untuk akses elemen berdasarkan indeks, lambat untuk penyisipan/penghapusan di tengah.</li>
+<li><strong>LinkedList</strong>: Cepat untuk penyisipan/penghapusan, lambat untuk akses acak.</li>
+</ul>
+<h2 id="set-unik-dan-tidak-selalu-berurutan">🔐 Set: Unik dan Tidak Selalu Berurutan<a class="headerlink" href="#set-unik-dan-tidak-selalu-berurutan" title="Permanent link">&para;</a></h2>
+<p><strong>Set</strong> adalah koleksi yang <strong>tidak memperbolehkan duplikasi</strong> dan tidak selalu mempertahankan urutan. Implementasi utama adalah <code>HashSet</code> dan <code>TreeSet</code>.</p>
+<h3 id="contoh_1">Contoh:<a class="headerlink" href="#contoh_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SetDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">unik</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">unik</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">unik</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Tidak disimpan karena duplikat</span>
+<span class="w">        </span><span class="n">unik</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Set: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">unik</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>�二叉️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Set: [Budi, Marno]
+</code></pre></div>
+<ul>
+<li><strong>HashSet</strong>: Tidak terurut, performa cepat untuk operasi dasar.</li>
+<li><strong>TreeSet</strong>: Otomatis mengurutkan elemen secara ascending (berdasarkan urutan alami atau comparator).</li>
+<li><strong>LinkedHashSet</strong>: Mempertahankan urutan penyisipan.</li>
+</ul>
+<h2 id="map-pasangan-key-value">🧭 Map: Pasangan Key-Value<a class="headerlink" href="#map-pasangan-key-value" title="Permanent link">&para;</a></h2>
+<p><strong>Map</strong> menyimpan data dalam bentuk pasangan <strong>key-value</strong>, di mana setiap kunci unik memetakan ke satu nilai. Implementasi utama adalah <code>HashMap</code> dan <code>TreeMap</code>.</p>
+<h3 id="contoh_2">Contoh:<a class="headerlink" href="#contoh_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MapDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">umur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">umur</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">);</span>
+<span class="w">        </span><span class="n">umur</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Umur Marno: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">umur</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Umur Marno: 25
+</code></pre></div>
+<ul>
+<li><strong>HashMap</strong>: Tidak terurut, performa cepat untuk operasi dasar.</li>
+<li><strong>TreeMap</strong>: Kunci diurutkan secara ascending.</li>
+<li><strong>LinkedHashMap</strong>: Mempertahankan urutan penyisipan kunci.</li>
+</ul>
+<h2 id="queue-dan-deque-antrean-dan-tumpukan">📦 Queue dan Deque: Antrean dan Tumpukan<a class="headerlink" href="#queue-dan-deque-antrean-dan-tumpukan" title="Permanent link">&para;</a></h2>
+<p><strong>Queue</strong> mengikuti prinsip <strong>FIFO</strong> (First In, First Out) atau prioritas, cocok untuk sistem antrean. <strong>Deque</strong> (Double-Ended Queue) mendukung operasi dari kedua ujung.</p>
+<h3 id="contoh-queue">Contoh Queue:<a class="headerlink" href="#contoh-queue" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.LinkedList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Queue</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">QueueDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">antrian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">antrian</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;User1&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">antrian</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;User2&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Keluar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">antrian</span><span class="p">.</span><span class="na">poll</span><span class="p">());</span><span class="w"> </span><span class="c1">// Mengambil dan menghapus elemen pertama</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Antrian sekarang: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">antrian</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Keluar: User1
+Antrian sekarang: [User2]
+</code></pre></div>
+<ul>
+<li><strong>LinkedList</strong>: Implementasi <code>Queue</code> yang fleksibel, juga mendukung <code>Deque</code>.</li>
+<li><strong>PriorityQueue</strong>: Elemen diurutkan berdasarkan prioritas (alami atau custom).</li>
+<li><strong>ArrayDeque</strong>: Efisien untuk operasi di kedua ujung (tumpukan atau antrean).</li>
+</ul>
+<h2 id="iterator-dan-for-each">🔁 Iterator dan For-Each<a class="headerlink" href="#iterator-dan-for-each" title="Permanent link">&para;</a></h2>
+<p>Untuk mengakses elemen koleksi, gunakan <strong>for-each</strong> atau <strong>Iterator</strong>.</p>
+<h3 id="contoh-for-each-dan-iterator">Contoh For-Each dan Iterator:<a class="headerlink" href="#contoh-for-each-dan-iterator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Iterator</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IteratorDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">daftar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">daftar</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ali&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">daftar</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Menggunakan for-each</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Menggunakan for-each:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">daftar</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nama</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Menggunakan Iterator</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Menggunakan Iterator:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">itr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">daftar</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Menggunakan for-each:
+Ali
+Budi
+Menggunakan Iterator:
+Ali
+Budi
+</code></pre></div>
+<blockquote>
+<p>💡 <strong>Tips</strong>: Gunakan <code>for-each</code> untuk iterasi sederhana, dan <code>Iterator</code> jika perlu menghapus elemen selama iterasi (<code>itr.remove()</code>).</p>
+</blockquote>
 <h2 id="synchronized-collection">💥 Synchronized Collection<a class="headerlink" href="#synchronized-collection" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">aman</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collections</span><span class="p">.</span><span class="na">synchronizedList</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">());</span>
+<p>Secara default, koleksi JCF tidak <em>thread-safe</em>. Untuk membuat koleksi aman dalam lingkungan multi-thread, gunakan <code>Collections.synchronizedXXX</code>.</p>
+<h3 id="contoh_3">Contoh:<a class="headerlink" href="#contoh_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collections</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SynchronizedDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">aman</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Collections</span><span class="p">.</span><span class="na">synchronizedList</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">());</span>
+<span class="w">        </span><span class="n">aman</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Data1&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;List thread-safe: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">aman</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>Untuk koleksi yang thread-safe.</p>
-<hr />
-<h2 id="pilih-struktur-data-yang-tepat">🧠 Pilih Struktur Data yang Tepat<a class="headerlink" href="#pilih-struktur-data-yang-tepat" title="Permanent link">&para;</a></h2>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>List thread-safe: [Data1]
+</code></pre></div>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Untuk performa lebih baik dalam aplikasi multi-thread, pertimbangkan menggunakan kelas dari paket <code>java.util.concurrent</code>, seperti <code>CopyOnWriteArrayList</code> atau <code>ConcurrentHashMap</code>.</p>
+</blockquote>
+<h2 id="memilih-struktur-data-yang-tepat">🧠 Memilih Struktur Data yang Tepat<a class="headerlink" href="#memilih-struktur-data-yang-tepat" title="Permanent link">&para;</a></h2>
+<p>Memilih struktur data yang sesuai sangat penting untuk efisiensi program:</p>
 <table>
 <thead>
 <tr>
-<th>Kasus</th>
-<th>Gunakan</th>
+<th><strong>Kasus Penggunaan</strong></th>
+<th><strong>Struktur Data yang Disarankan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Data berurutan, boleh duplikat</td>
-<td><code>ArrayList</code> atau <code>LinkedList</code></td>
+<td>Data berurutan, boleh duplikasi</td>
+<td><code>ArrayList</code> (akses cepat) atau <code>LinkedList</code> (sisip/hapus cepat)</td>
 </tr>
 <tr>
-<td>Data unik, tidak penting urutan</td>
+<td>Data unik, urutan tidak penting</td>
 <td><code>HashSet</code></td>
 </tr>
 <tr>
-<td>Data unik &amp; perlu urut</td>
+<td>Data unik, perlu diurutkan</td>
 <td><code>TreeSet</code></td>
 </tr>
 <tr>
-<td>Peta key → value</td>
-<td><code>HashMap</code> atau <code>TreeMap</code></td>
+<td>Pasangan key-value, akses cepat</td>
+<td><code>HashMap</code></td>
 </tr>
 <tr>
-<td>Antrean proses/data</td>
-<td><code>Queue</code> (<code>LinkedList</code>, <code>PriorityQueue</code>)</td>
+<td>Pasangan key-value, kunci terurut</td>
+<td><code>TreeMap</code></td>
+</tr>
+<tr>
+<td>Pasangan key-value, urut berdasarkan input</td>
+<td><code>LinkedHashMap</code></td>
+</tr>
+<tr>
+<td>Antrean proses/data (FIFO)</td>
+<td><code>LinkedList</code> sebagai <code>Queue</code></td>
+</tr>
+<tr>
+<td>Antrean berdasarkan prioritas</td>
+<td><code>PriorityQueue</code></td>
+</tr>
+<tr>
+<td>Tumpukan atau antrean dua arah</td>
+<td><code>ArrayDeque</code></td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>Java Collection Framework menyediakan struktur data yang fleksibel dan efisien untuk berbagai kebutuhan:</p>
 <table>
 <thead>
 <tr>
-<th>Struktur</th>
-<th>Ciri Khas</th>
+<th><strong>Struktur</strong></th>
+<th><strong>Ciri Khas</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>List</td>
+<td><strong>List</strong></td>
 <td>Urutan tetap, boleh duplikasi</td>
 </tr>
 <tr>
-<td>Set</td>
-<td>Tidak duplikat, tidak selalu terurut</td>
+<td><strong>Set</strong></td>
+<td>Elemen unik, tidak selalu terurut</td>
 </tr>
 <tr>
-<td>Map</td>
-<td>Key-value, akses cepat</td>
+<td><strong>Map</strong></td>
+<td>Pasangan key-value, kunci unik</td>
 </tr>
 <tr>
-<td>Queue</td>
-<td>Antrean data, FIFO</td>
+<td><strong>Queue</strong></td>
+<td>Antrean data, biasanya FIFO atau prioritas</td>
 </tr>
 </tbody>
 </table>
-<hr />
+<p>JCF adalah alat penting untuk mengelola data dalam program Java secara efisien.</p>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../advanced/generics.md">Generics dalam Java</a> untuk memahami cara membuat koleksi yang lebih aman dan fleksibel dengan tipe data.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

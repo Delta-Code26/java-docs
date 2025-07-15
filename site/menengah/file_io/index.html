@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami cara membaca dan menulis file teks menggunakan API File I/O di Java">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>File I/O - Dokumentasi Java Lengkap</title>
+        <title>File I/O (Input dan Output File) dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              File I/O
+              File I/O (Input dan Output File) dalam Java
             
           </span>
         </div>
@@ -1058,6 +1058,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tujuan-file-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tujuan File I/O
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#membaca-file-teks" class="md-nav__link">
     <span class="md-ellipsis">
       📥 Membaca File Teks
@@ -1068,9 +1077,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-menggunakan-bufferedreader" class="md-nav__link">
+  <a href="#contoh-dengan-bufferedreader-menggunakan-try-with-resources" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Menggunakan BufferedReader
+      Contoh dengan BufferedReader (Menggunakan Try-with-Resources):
     </span>
   </a>
   
@@ -1082,20 +1091,74 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#append-menambahkan-tanpa-menimpa" class="md-nav__link">
+  <a href="#menulis-ke-file-teks" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Append (Menambahkan Tanpa Menimpa)
+      📝 Menulis ke File Teks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Menulis ke File Teks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-dengan-bufferedwriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh dengan BufferedWriter:
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#cek-apakah-file-ada" class="md-nav__link">
+  <a href="#menambahkan-data-ke-file-append" class="md-nav__link">
     <span class="md-ellipsis">
-      📄 Cek Apakah File Ada
+      🔄 Menambahkan Data ke File (Append)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🔄 Menambahkan Data ke File (Append)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-append" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Append:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memeriksa-keberadaan-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Memeriksa Keberadaan File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📄 Memeriksa Keberadaan File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1106,21 +1169,36 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="📂 Membuat Folder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#exception-yang-umum" class="md-nav__link">
+  <a href="#exception-umum-dalam-file-io" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Exception yang Umum
+      ⚠️ Exception Umum dalam File I/O
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#studi-kasus-simpan-nama-pekerja-ke-file" class="md-nav__link">
+  <a href="#studi-kasus-menyimpan-daftar-pekerja-ke-file" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Studi Kasus: Simpan Nama Pekerja ke File
+      🧪 Studi Kasus: Menyimpan Daftar Pekerja ke File
     </span>
   </a>
   
@@ -1130,6 +1208,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1542,49 +1629,54 @@
 
 
 <h1 id="file-io-input-dan-output-file-dalam-java">📁 File I/O (Input dan Output File) dalam Java<a class="headerlink" href="#file-io-input-dan-output-file-dalam-java" title="Permanent link">&para;</a></h1>
-<p>Java menyediakan API lengkap untuk membaca dan menulis file, baik teks maupun biner.</p>
-<hr />
+<p>Java menyediakan API yang kuat untuk <strong>File Input/Output (I/O)</strong>, memungkinkan program untuk membaca dan menulis data ke file, baik dalam format teks maupun biner. Bagian ini berfokus pada operasi I/O untuk file teks menggunakan kelas seperti <code>FileReader</code>, <code>BufferedReader</code>, <code>FileWriter</code>, dan <code>BufferedWriter</code>, serta pengelolaan file dan folder dengan kelas <code>File</code>.</p>
+<h3 id="tujuan-file-io">Tujuan File I/O<a class="headerlink" href="#tujuan-file-io" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Membaca Data</strong>: Mengambil konten dari file untuk diproses.</li>
+<li><strong>Menulis Data</strong>: Menyimpan hasil program ke file untuk penyimpanan permanen.</li>
+<li><strong>Mengelola File/Folder</strong>: Memeriksa keberadaan file atau membuat direktori.</li>
+</ul>
 <h2 id="membaca-file-teks">📥 Membaca File Teks<a class="headerlink" href="#membaca-file-teks" title="Permanent link">&para;</a></h2>
-<h3 id="1-menggunakan-bufferedreader">1. Menggunakan <code>BufferedReader</code><a class="headerlink" href="#1-menggunakan-bufferedreader" title="Permanent link">&para;</a></h3>
+<p>Untuk membaca file teks, gunakan <code>BufferedReader</code> bersama <code>FileReader</code> untuk efisiensi, karena <code>BufferedReader</code> membaca data per baris dengan buffer, mengurangi akses langsung ke disk.</p>
+<h3 id="contoh-dengan-bufferedreader-menggunakan-try-with-resources">Contoh dengan <code>BufferedReader</code> (Menggunakan Try-with-Resources):<a class="headerlink" href="#contoh-dengan-bufferedreader-menggunakan-try-with-resources" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileReader</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BacaFile</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BacaFileDemo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;data.txt&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;data.txt&quot;</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">baris</span><span class="p">;</span>
 <span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">baris</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">baris</span><span class="p">);</span>
 <span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="n">reader</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 <span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Gagal membaca file: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-<span class="err">````</span>
-
-<span class="o">---</span>
-
-<span class="err">##</span><span class="w"> </span><span class="err">📝</span><span class="w"> </span><span class="n">Menulis</span><span class="w"> </span><span class="n">ke</span><span class="w"> </span><span class="n">File</span>
-
-<span class="err">###</span><span class="w"> </span><span class="mf">2.</span><span class="w"> </span><span class="n">Menggunakan</span><span class="w"> </span><span class="err">`</span><span class="n">BufferedWriter</span><span class="err">`</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedWriter</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>🖨️ Output (jika data.txt berisi):</strong></p>
+<div class="highlight"><pre><span></span><code>Ali
+Budi
+Cici
+</code></pre></div>
+<blockquote>
+<p>💡 <strong>Tips</strong>: Gunakan <strong>try-with-resources</strong> untuk memastikan file ditutup secara otomatis, mengurangi risiko kebocoran sumber daya.</p>
+</blockquote>
+<h2 id="menulis-ke-file-teks">📝 Menulis ke File Teks<a class="headerlink" href="#menulis-ke-file-teks" title="Permanent link">&para;</a></h2>
+<p>Untuk menulis ke file teks, gunakan <code>BufferedWriter</code> bersama <code>FileWriter</code> untuk efisiensi dan kemudahan menulis data per baris.</p>
+<h3 id="contoh-dengan-bufferedwriter">Contoh dengan <code>BufferedWriter</code>:<a class="headerlink" href="#contoh-dengan-bufferedwriter" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedWriter</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileWriter</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TulisFile</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TulisFileDemo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;output.txt&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;output.txt&quot;</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Data panen berhasil dicatat.&quot;</span><span class="p">);</span>
 <span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">newLine</span><span class="p">();</span>
 <span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Total berat: 1234 kg&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 <span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Berhasil menulis file.&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Gagal menulis file: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
@@ -1592,108 +1684,199 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="append-menambahkan-tanpa-menimpa">🔄 Append (Menambahkan Tanpa Menimpa)<a class="headerlink" href="#append-menambahkan-tanpa-menimpa" title="Permanent link">&para;</a></h2>
-<p>Gunakan <code>new FileWriter("nama.txt", true)</code> untuk menambahkan isi tanpa menimpa:</p>
-<div class="highlight"><pre><span></span><code><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;log.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">));</span>
+<p><strong>🖨️ Output (di konsol):</strong></p>
+<div class="highlight"><pre><span></span><code>Berhasil menulis file.
 </code></pre></div>
-<hr />
-<h2 id="cek-apakah-file-ada">📄 Cek Apakah File Ada<a class="headerlink" href="#cek-apakah-file-ada" title="Permanent link">&para;</a></h2>
+<p><strong>Isi file output.txt:</strong></p>
+<div class="highlight"><pre><span></span><code>Data panen berhasil dicatat.
+Total berat: 1234 kg
+</code></pre></div>
+<h2 id="menambahkan-data-ke-file-append">🔄 Menambahkan Data ke File (Append)<a class="headerlink" href="#menambahkan-data-ke-file-append" title="Permanent link">&para;</a></h2>
+<p>Untuk menambahkan data tanpa menimpa isi file yang ada, gunakan parameter <code>true</code> pada konstruktor <code>FileWriter</code>.</p>
+<h3 id="contoh-append">Contoh Append:<a class="headerlink" href="#contoh-append" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedWriter</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileWriter</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppendFileDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;log.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Tambahan data: 2025-07-15&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">newLine</span><span class="p">();</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Berhasil menambahkan data ke file.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Gagal menambahkan data: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output (di konsol):</strong></p>
+<div class="highlight"><pre><span></span><code>Berhasil menambahkan data ke file.
+</code></pre></div>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Parameter <code>true</code> pada <code>FileWriter</code> mengaktifkan mode <em>append</em>. Tanpa parameter ini, file akan ditimpa.</p>
+</blockquote>
+<h2 id="memeriksa-keberadaan-file">📄 Memeriksa Keberadaan File<a class="headerlink" href="#memeriksa-keberadaan-file" title="Permanent link">&para;</a></h2>
+<p>Kelas <code>File</code> digunakan untuk mengelola informasi file dan folder, seperti memeriksa keberadaan file.</p>
+<h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span>
 
-<span class="n">File</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;data.txt&quot;</span><span class="p">);</span>
-
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;File ditemukan!&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;File tidak ada.&quot;</span><span class="p">);</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CekFileDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;data.txt&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;File ditemukan: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="na">getAbsolutePath</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;File tidak ada.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output (jika file ada):</strong></p>
+<div class="highlight"><pre><span></span><code>File ditemukan: /path/to/data.txt
+</code></pre></div>
 <h2 id="membuat-folder">📂 Membuat Folder<a class="headerlink" href="#membuat-folder" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">File</span><span class="w"> </span><span class="n">folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;rekap/&quot;</span><span class="p">);</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">folder</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">folder</span><span class="p">.</span><span class="na">mkdir</span><span class="p">();</span>
+<p>Kelas <code>File</code> juga dapat digunakan untuk membuat direktori baru.</p>
+<h3 id="contoh_1">Contoh:<a class="headerlink" href="#contoh_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BuatFolderDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="n">folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;rekap&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">folder</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">folder</span><span class="p">.</span><span class="na">mkdir</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Folder &#39;rekap&#39; berhasil dibuat.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Gagal membuat folder.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Folder sudah ada.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="exception-yang-umum">⚠️ Exception yang Umum<a class="headerlink" href="#exception-yang-umum" title="Permanent link">&para;</a></h2>
+<p><strong>🖨️ Output (jika folder belum ada):</strong></p>
+<div class="highlight"><pre><span></span><code>Folder &#39;rekap&#39; berhasil dibuat.
+</code></pre></div>
+<h2 id="exception-umum-dalam-file-io">⚠️ Exception Umum dalam File I/O<a class="headerlink" href="#exception-umum-dalam-file-io" title="Permanent link">&para;</a></h2>
+<p>Operasi File I/O sering kali memicu <em>exception</em> yang perlu ditangani:</p>
 <table>
 <thead>
 <tr>
-<th>Exception</th>
-<th>Penyebab</th>
+<th><strong>Exception</strong></th>
+<th><strong>Penyebab</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>FileNotFoundException</code></td>
-<td>File tidak ditemukan</td>
+<td>File tidak ditemukan atau tidak dapat diakses.</td>
 </tr>
 <tr>
 <td><code>IOException</code></td>
-<td>Error umum I/O (akses, permission)</td>
+<td>Error umum I/O, seperti masalah izin atau kegagalan perangkat.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="studi-kasus-simpan-nama-pekerja-ke-file">🧪 Studi Kasus: Simpan Nama Pekerja ke File<a class="headerlink" href="#studi-kasus-simpan-nama-pekerja-ke-file" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileWriter</span><span class="p">;</span>
+<blockquote>
+<p>💡 <strong>Tips</strong>: Selalu tangani <em>exception</em> dengan try-catch dan gunakan try-with-resources untuk menutup sumber daya secara otomatis.</p>
+</blockquote>
+<h2 id="studi-kasus-menyimpan-daftar-pekerja-ke-file">🧪 Studi Kasus: Menyimpan Daftar Pekerja ke File<a class="headerlink" href="#studi-kasus-menyimpan-daftar-pekerja-ke-file" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah contoh penggunaan File I/O untuk menyimpan daftar nama pekerja ke file teks dan membacanya kembali.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedWriter</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileWriter</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SimpanPekerja</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PekerjaFileDemo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">FileWriter</span><span class="w"> </span><span class="n">fw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;pekerja.txt&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">fw</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Ali\nBudi\nCici&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">fw</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Data pekerja disimpan.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Menulis daftar pekerja ke file</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;pekerja.txt&quot;</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Ali&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">newLine</span><span class="p">();</span>
+<span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">newLine</span><span class="p">();</span>
+<span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Cici&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">writer</span><span class="p">.</span><span class="na">newLine</span><span class="p">();</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Data pekerja berhasil disimpan.&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Gagal menyimpan: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Membaca daftar pekerja dari file</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;pekerja.txt&quot;</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Daftar pekerja:&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">baris</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">nomor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">baris</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%d. %s%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nomor</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">baris</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Gagal membaca: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Data pekerja berhasil disimpan.
+Daftar pekerja:
+1. Ali
+2. Budi
+3. Cici
+</code></pre></div>
+<p><strong>Isi file pekerja.txt:</strong></p>
+<div class="highlight"><pre><span></span><code>Ali
+Budi
+Cici
+</code></pre></div>
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>File I/O adalah alat penting untuk menyimpan dan mengambil data dari file:</p>
 <table>
 <thead>
 <tr>
-<th>Konsep</th>
-<th>Penjelasan</th>
+<th><strong>Konsep</strong></th>
+<th><strong>Penjelasan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>FileReader</td>
-<td>Membaca file karakter per karakter</td>
+<td><strong><code>FileReader</code></strong></td>
+<td>Membaca karakter demi karakter dari file.</td>
 </tr>
 <tr>
-<td>BufferedReader</td>
-<td>Membaca per baris, lebih efisien</td>
+<td><strong><code>BufferedReader</code></strong></td>
+<td>Membaca per baris dengan buffer untuk efisiensi.</td>
 </tr>
 <tr>
-<td>FileWriter</td>
-<td>Menulis file karakter per karakter</td>
+<td><strong><code>FileWriter</code></strong></td>
+<td>Menulis karakter demi karakter ke file.</td>
 </tr>
 <tr>
-<td>BufferedWriter</td>
-<td>Menulis dengan buffer, lebih efisien</td>
+<td><strong><code>BufferedWriter</code></strong></td>
+<td>Menulis dengan buffer untuk efisiensi.</td>
 </tr>
 <tr>
-<td>File</td>
-<td>Mengelola info dasar file dan folder</td>
+<td><strong><code>File</code></strong></td>
+<td>Mengelola file dan folder (misalnya, cek keberadaan, buat folder).</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Selanjutnya: <a href="../enum/">Enum (Konstanta Bertipe Kelas)</a></p>
+<blockquote>
+<p>🎯 <strong>Tujuan Utama</strong>: File I/O memungkinkan program untuk berinteraksi dengan sistem file, menyimpan data secara permanen, dan mengambil data untuk pemrosesan.</p>
+</blockquote>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../enum/">Enum (Konstanta Bertipe Kelas)</a> untuk memahami cara mendefinisikan konstanta dengan tipe data khusus di Java.</p>
+<p>⬅️ Kembali: <a href="../hashmap/">HashMap dalam Java</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 

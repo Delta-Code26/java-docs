@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Merangkum pilar-pilar OOP dan menerapkannya dalam studi kasus sistem rekap panen sawit">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Ringkasan OOP - Dokumentasi Java Lengkap</title>
+        <title>Ringkasan OOP dan Studi Kasus - Dokumentasi Java Lengkap</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ringkasan-oop-studi-kasus" class="md-skip">
+        <a href="#ringkasan-oop-dan-studi-kasus" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ringkasan OOP
+              Ringkasan OOP dan Studi Kasus
             
           </span>
         </div>
@@ -888,23 +888,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#studi-kasus-sistem-rekap-panen-sawit-sederhana" class="md-nav__link">
+  <a href="#studi-kasus-sistem-rekap-panen-sawit" class="md-nav__link">
     <span class="md-ellipsis">
-      📘 Studi Kasus: Sistem Rekap Panen Sawit (Sederhana)
+      📘 Studi Kasus: Sistem Rekap Panen Sawit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📘 Studi Kasus: Sistem Rekap Panen Sawit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-membuat-abstract-class-pekerja" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Membuat Abstract Class: Pekerja
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#1-buat-class-abstrak-pekerja" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-membuat-kelas-turanan" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Buat Class Abstrak: Pekerja
+      2. Membuat Kelas Tur,anan
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Buat Class Abstrak: Pekerja">
+    <nav class="md-nav" aria-label="2. Membuat Kelas Tur,anan">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-pemotong" class="md-nav__link">
+    <span class="md-ellipsis">
+      a) Pemotong
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#b-penyusun" class="md-nav__link">
@@ -928,13 +947,27 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-implementasi-main" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-implementasi-program-utama" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Implementasi Main
+      3. Implementasi Program Utama
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-penerapan-oop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analisis Penerapan OOP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -951,6 +984,15 @@
   <a href="#catatan-tambahan" class="md-nav__link">
     <span class="md-ellipsis">
       📎 Catatan Tambahan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1541,41 +1583,43 @@
   
 
 
-<h1 id="ringkasan-oop-studi-kasus">🧾 Ringkasan OOP &amp; Studi Kasus<a class="headerlink" href="#ringkasan-oop-studi-kasus" title="Permanent link">&para;</a></h1>
-<p>Setelah mempelajari semua pilar <strong>Object-Oriented Programming (OOP)</strong>, saatnya kita merangkum dan melihat bagaimana semuanya bekerja dalam praktik nyata.</p>
-<hr />
+<h1 id="ringkasan-oop-dan-studi-kasus">🧾 Ringkasan OOP dan Studi Kasus<a class="headerlink" href="#ringkasan-oop-dan-studi-kasus" title="Permanent link">&para;</a></h1>
+<p>Setelah mempelajari pilar-pilar <strong>Object-Oriented Programming (OOP)</strong>, bagian ini merangkum konsep-konsep inti dan menunjukkan penerapannya dalam studi kasus praktis. Studi kasus ini mengilustrasikan bagaimana <strong>Encapsulation</strong>, <strong>Inheritance</strong>, <strong>Polymorphism</strong>, dan <strong>Abstraction</strong> bekerja bersama untuk membangun sistem yang terorganisir dan fleksibel.</p>
 <h2 id="ringkasan-empat-pilar-oop">🧱 Ringkasan Empat Pilar OOP<a class="headerlink" href="#ringkasan-empat-pilar-oop" title="Permanent link">&para;</a></h2>
+<p>OOP di Java dibangun di atas empat pilar utama:</p>
 <table>
 <thead>
 <tr>
-<th>Pilar</th>
-<th>Konsep Inti</th>
+<th><strong>Pilar</strong></th>
+<th><strong>Konsep Inti</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Encapsulation</td>
-<td>Menyembunyikan data, hanya akses via getter/setter</td>
+<td><strong>Encapsulation</strong></td>
+<td>Menyembunyikan data dengan akses terkontrol melalui getter dan setter.</td>
 </tr>
 <tr>
-<td>Inheritance</td>
-<td>Pewarisan method &amp; atribut dari class induk ke class anak</td>
+<td><strong>Inheritance</strong></td>
+<td>Mewarisi atribut dan method dari kelas induk ke kelas anak untuk reuse kode.</td>
 </tr>
 <tr>
-<td>Polymorphism</td>
-<td>Banyak bentuk: satu interface, banyak implementasi</td>
+<td><strong>Polymorphism</strong></td>
+<td>Memungkinkan satu interface memiliki banyak implementasi melalui overriding.</td>
 </tr>
 <tr>
-<td>Abstraction</td>
-<td>Menyembunyikan kompleksitas, hanya menampilkan fitur utama</td>
+<td><strong>Abstraction</strong></td>
+<td>Menyembunyikan kompleksitas implementasi, hanya menampilkan fungsi esensial.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="studi-kasus-sistem-rekap-panen-sawit-sederhana">📘 Studi Kasus: Sistem Rekap Panen Sawit (Sederhana)<a class="headerlink" href="#studi-kasus-sistem-rekap-panen-sawit-sederhana" title="Permanent link">&para;</a></h2>
-<p>Bayangkan kita sedang membuat sistem untuk mencatat hasil panen kelapa sawit. Setiap pekerja memiliki peran berbeda dalam satu tim (pemotong, penyusun, pengutip), dan kita ingin menghitung gaji mereka berdasarkan kontribusi masing-masing.</p>
-<hr />
-<h2 id="1-buat-class-abstrak-pekerja">1. Buat Class Abstrak: <code>Pekerja</code><a class="headerlink" href="#1-buat-class-abstrak-pekerja" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Info</strong>: Pilar-pilar ini memungkinkan pembuatan kode yang modular, mudah dipelihara, dan dapat diskalakan.</p>
+</blockquote>
+<h2 id="studi-kasus-sistem-rekap-panen-sawit">📘 Studi Kasus: Sistem Rekap Panen Sawit<a class="headerlink" href="#studi-kasus-sistem-rekap-panen-sawit" title="Permanent link">&para;</a></h2>
+<p>Mari kita bangun sistem sederhana untuk mencatat hasil panen kelapa sawit. Dalam sistem ini, terdapat tiga jenis pekerja: <strong>Pemotong</strong>, <strong>Penyusun</strong>, dan <strong>Pengutip</strong>, masing-masing dengan peran dan kontribusi berbeda terhadap total berat panen. Gaji mereka dihitung berdasarkan persentase dari total berat panen.</p>
+<h3 id="1-membuat-abstract-class-pekerja">1. Membuat Abstract Class: <code>Pekerja</code><a class="headerlink" href="#1-membuat-abstract-class-pekerja" title="Permanent link">&para;</a></h3>
+<p>Kelas abstrak <code>Pekerja</code> mendefinisikan struktur umum untuk semua jenis pekerja, dengan method abstrak untuk menghitung gaji.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Pekerja</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
 
@@ -1583,114 +1627,129 @@
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nama</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="c1">// Method abstrak untuk diimplementasikan oleh subclass</span>
 <span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">hitungGaji</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">totalBerat</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="err">````</span>
 
-<span class="o">---</span>
-
-<span class="err">##</span><span class="w"> </span><span class="mf">2.</span><span class="w"> </span><span class="n">Buat</span><span class="w"> </span><span class="n">Class</span><span class="w"> </span><span class="n">Turunan</span>
-
-<span class="err">###</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="n">Pemotong</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="kd">class</span> <span class="nc">Pemotong</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Pekerja</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Pemotong</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nama</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">hitungGaji</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">totalBerat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalBerat</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.4</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNama</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nama</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="b-penyusun">b) Penyusun<a class="headerlink" href="#b-penyusun" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Atribut <code>nama</code> dideklarasikan sebagai <code>protected</code> untuk mendukung <strong>encapsulation</strong> dengan akses terbatas ke subclass.</p>
+</blockquote>
+<h3 id="2-membuat-kelas-turanan">2. Membuat Kelas Tur,anan<a class="headerlink" href="#2-membuat-kelas-turanan" title="Permanent link">&para;</a></h3>
+<p>Kelas turunan mengimplementasikan method <code>hitungGaji</code> sesuai peran masing-masing pekerja.</p>
+<h4 id="a-pemotong">a) Pemotong<a class="headerlink" href="#a-pemotong" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Pemotong</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Pekerja</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Pemotong</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nama</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">hitungGaji</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">totalBerat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalBerat</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.4</span><span class="p">;</span><span class="w"> </span><span class="c1">// 40% dari total berat</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="b-penyusun">b) Penyusun<a class="headerlink" href="#b-penyusun" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Penyusun</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Pekerja</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Penyusun</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Penyusun</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nama</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">hitungGaji</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">totalBerat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalBerat</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.35</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalBerat</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.35</span><span class="p">;</span><span class="w"> </span><span class="c1">// 35% dari total berat</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="c-pengutip">c) Pengutip<a class="headerlink" href="#c-pengutip" title="Permanent link">&para;</a></h3>
+<h4 id="c-pengutip">c) Pengutip<a class="headerlink" href="#c-pengutip" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Pengutip</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Pekerja</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Pengutip</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Pengutip</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nama</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">hitungGaji</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">totalBerat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalBerat</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.25</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalBerat</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.25</span><span class="p">;</span><span class="w"> </span><span class="c1">// 25% dari total berat</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="3-implementasi-main">3. Implementasi Main<a class="headerlink" href="#3-implementasi-main" title="Permanent link">&para;</a></h2>
+<h3 id="3-implementasi-program-utama">3. Implementasi Program Utama<a class="headerlink" href="#3-implementasi-program-utama" title="Permanent link">&para;</a></h3>
+<p>Program utama menunjukkan bagaimana pilar-pilar OOP diterapkan melalui <strong>polymorphism</strong> dan <strong>inheritance</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DemoPanen</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">beratPanen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="c1">// kg</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">beratPanen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="c1">// Total berat panen dalam kg</span>
 
+<span class="w">        </span><span class="c1">// Membuat objek pekerja dengan polymorphism</span>
 <span class="w">        </span><span class="n">Pekerja</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pemotong</span><span class="p">(</span><span class="s">&quot;Ali&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="n">Pekerja</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Penyusun</span><span class="p">(</span><span class="s">&quot;Budi&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="n">Pekerja</span><span class="w"> </span><span class="n">p3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pengutip</span><span class="p">(</span><span class="s">&quot;Cici&quot;</span><span class="p">);</span>
 
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="na">nama</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: RM &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p1</span><span class="p">.</span><span class="na">hitungGaji</span><span class="p">(</span><span class="n">beratPanen</span><span class="p">));</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p2</span><span class="p">.</span><span class="na">nama</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: RM &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="na">hitungGaji</span><span class="p">(</span><span class="n">beratPanen</span><span class="p">));</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p3</span><span class="p">.</span><span class="na">nama</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: RM &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p3</span><span class="p">.</span><span class="na">hitungGaji</span><span class="p">(</span><span class="n">beratPanen</span><span class="p">));</span>
+<span class="w">        </span><span class="c1">// Menghitung dan menampilkan gaji</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s: RM %.2f%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p1</span><span class="p">.</span><span class="na">getNama</span><span class="p">(),</span><span class="w"> </span><span class="n">p1</span><span class="p">.</span><span class="na">hitungGaji</span><span class="p">(</span><span class="n">beratPanen</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s: RM %.2f%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="na">getNama</span><span class="p">(),</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="na">hitungGaji</span><span class="p">(</span><span class="n">beratPanen</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s: RM %.2f%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p3</span><span class="p">.</span><span class="na">getNama</span><span class="p">(),</span><span class="w"> </span><span class="n">p3</span><span class="p">.</span><span class="na">hitungGaji</span><span class="p">(</span><span class="n">beratPanen</span><span class="p">));</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>💡 Output:</p>
-<div class="highlight"><pre><span></span><code>Ali: RM 400.0
-Budi: RM 350.0
-Cici: RM 250.0
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Ali: RM 400.00
+Budi: RM 350.00
+Cici: RM 250.00
 </code></pre></div>
-<hr />
-<h2 id="kesimpulan-akhir">🎓 Kesimpulan Akhir<a class="headerlink" href="#kesimpulan-akhir" title="Permanent link">&para;</a></h2>
+<h3 id="analisis-penerapan-oop">Analisis Penerapan OOP<a class="headerlink" href="#analisis-penerapan-oop" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Konsep</th>
-<th>Realisasi dalam Studi Kasus</th>
+<th><strong>Pilar OOP</strong></th>
+<th><strong>Realisasi dalam Studi Kasus</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Encapsulation</td>
-<td>Atribut <code>nama</code> disimpan secara protected</td>
+<td><strong>Encapsulation</strong></td>
+<td>Atribut <code>nama</code> bersifat <code>protected</code>, diakses via getter.</td>
 </tr>
 <tr>
-<td>Inheritance</td>
-<td>Semua class mewarisi dari <code>Pekerja</code></td>
+<td><strong>Inheritance</strong></td>
+<td>Kelas <code>Pemotong</code>, <code>Penyusun</code>, dan <code>Pengutip</code> mewarisi <code>Pekerja</code>.</td>
 </tr>
 <tr>
-<td>Polymorphism</td>
-<td>Pemanggilan <code>hitungGaji()</code> sesuai objek nyata</td>
+<td><strong>Polymorphism</strong></td>
+<td>Method <code>hitungGaji</code> dipanggil secara polimorfik pada tipe <code>Pekerja</code>.</td>
 </tr>
 <tr>
-<td>Abstraction</td>
-<td><code>Pekerja</code> sebagai class abstrak</td>
+<td><strong>Abstraction</strong></td>
+<td>Kelas abstrak <code>Pekerja</code> menyediakan kontrak untuk <code>hitungGaji</code>.</td>
 </tr>
 </tbody>
 </table>
-<hr />
+<h2 id="kesimpulan-akhir">🎓 Kesimpulan Akhir<a class="headerlink" href="#kesimpulan-akhir" title="Permanent link">&para;</a></h2>
+<p>Empat pilar OOP—<strong>Encapsulation</strong>, <strong>Inheritance</strong>, <strong>Polymorphism</strong>, dan <strong>Abstraction</strong>—memungkinkan pembuatan kode yang:
+- <strong>Modular</strong>: Mudah dikelola dan diperluas.
+- <strong>Reusable</strong>: Kode dapat digunakan kembali melalui pewarisan dan polimorfisme.
+- <strong>Scalable</strong>: Dapat diintegrasikan dengan sistem yang lebih besar, seperti database atau API.</p>
+<p>Studi kasus sistem rekap panen sawit menunjukkan bagaimana pilar-pilar ini bekerja bersama untuk membangun aplikasi yang terstruktur dan efisien.</p>
 <h2 id="catatan-tambahan">📎 Catatan Tambahan<a class="headerlink" href="#catatan-tambahan" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Dalam proyek besar, struktur OOP akan dipadukan dengan database dan API</li>
-<li>Prinsip OOP penting untuk membuat kode <strong>fleksibel, reusable, dan scalable</strong></li>
-<li>Gunakan OOP untuk semua entitas bisnis: <code>User</code>, <code>Gaji</code>, <code>Panen</code>, <code>Tim</code>, dll</li>
+<li>Dalam proyek nyata, OOP sering dipadukan dengan teknologi seperti <strong>database</strong> (misalnya, JDBC atau JPA), <strong>API</strong> (RESTful services), atau <strong>framework</strong> (Spring, Hibernate).</li>
+<li>Gunakan OOP untuk memodelkan entitas bisnis seperti <code>User</code>, <code>Gaji</code>, <code>Panen</code>, atau <code>Tim</code> untuk menjaga kode tetap terorganisir.</li>
+<li>Pertimbangkan prinsip <strong>SOLID</strong> (Single Responsibility, Open-Closed, dll.) untuk desain OOP yang lebih baik di proyek besar.</li>
 </ul>
-<hr />
-<p>➡️ Selesai! Kamu sekarang siap membangun aplikasi Java dengan dasar OOP yang kokoh 🏗️</p>
-<p>⬅️ Kembali: <a href="../abstraction/">Abstraction (Abstraksi)</a></p>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../advanced/collections.md">Java Collection Framework (JCF)</a> untuk memahami cara mengelola kumpulan data secara efisien dalam program Java.</p>
+<p>⬅️ Kembali: <a href="../abstraction/">Abstraksi dalam Java</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 

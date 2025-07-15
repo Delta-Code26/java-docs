@@ -40,7 +40,7 @@ edit_uri: edit/main/docs/
 
 nav:
   - Beranda: index.md
-  - Dasar Java:
+  - Dasar:
       - Struktur Program: dasar/struktur.md
       - Tipe Data: dasar/tipe_data.md
       - Operator: dasar/operator.md
@@ -48,7 +48,7 @@ nav:
       - Kontrol Alur: dasar/kontrol_alur.md
       - Perulangan: dasar/perulangan.md
       - Method: dasar/method.md
-  - Pemrograman Berbasis Objek:
+  - OOP:
       - Konsep OOP: oop/konsep.md
       - Class & Objek: oop/class_objek.md
       - Encapsulation: oop/encapsulation.md
@@ -56,7 +56,7 @@ nav:
       - Polymorphism: oop/polymorphism.md
       - Abstraction: oop/abstraction.md
       - Ringkasan OOP: oop/ringkasan.md
-  - Java Tingkat Menengah:
+  - Menengah:
       - Package & Import: menengah/package_import.md
       - Exception Handling: menengah/exception_handling.md
       - ArrayList: menengah/array_list.md
@@ -64,7 +64,7 @@ nav:
       - File I/O: menengah/file_io.md
       - Enum: menengah/enum.md
       - Inner Class: menengah/inner_class.md
-  - Java Tingkat Lanjut:
+  - Advanced:
       - Overview: lanjutan/overview.md
       - Generics: lanjutan/generics.md
       - Functional Interface: lanjutan/interface_functional.md
@@ -98,10 +98,10 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/username
+      link: https://github.com/Delta-Code26
     - icon: fontawesome/brands/youtube
-      link: https://youtube.com/@namachannel
-    - icon: fontawesome/brands/twitter
+      link: https://www.youtube.com/@on_ram
+    - icon: fontawesome/brands/instagram
       link: https://twitter.com/marnodev
 
 copyright: © 2025 Marno. Semua Hak Dilindungi.

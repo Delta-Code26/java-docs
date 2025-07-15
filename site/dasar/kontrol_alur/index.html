@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami struktur kontrol alur seperti if, else, else if, dan switch untuk pengambilan keputusan dalam Java">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Kontrol Alur - Dokumentasi Java Lengkap</title>
+        <title>Kontrol Alur dalam Java (if, else, switch) - Dokumentasi Java Lengkap</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kontrol Alur
+              Kontrol Alur dalam Java (if, else, switch)
             
           </span>
         </div>
@@ -614,17 +614,17 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-if-else" class="md-nav__link">
+    <nav class="md-nav" aria-label="🧠 1. Pernyataan if">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struktur" class="md-nav__link">
     <span class="md-ellipsis">
-      🔀 2. if - else
+      Struktur:
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔀 2. if - else">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#contoh" class="md-nav__link">
@@ -641,14 +641,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-if-else-if-else" class="md-nav__link">
+  <a href="#2-pernyataan-if-else" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 3. if - else if - else
+      🔀 2. Pernyataan if-else
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧱 3. if - else if - else">
+    <nav class="md-nav" aria-label="🔀 2. Pernyataan if-else">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struktur_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struktur:
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#contoh_1" class="md-nav__link">
@@ -665,26 +674,83 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-operator-logika-dalam-if" class="md-nav__link">
+  <a href="#3-pernyataan-if-else-if-else" class="md-nav__link">
     <span class="md-ellipsis">
-      🎚️ 4. Operator Logika dalam if
+      🧱 3. Pernyataan if-else if-else
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🧱 3. Pernyataan if-else if-else">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struktur_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struktur:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-operator-logika-dalam-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎛️ 4. Operator Logika dalam if
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎛️ 4. Operator Logika dalam if">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#5-pernyataan-switch" class="md-nav__link">
     <span class="md-ellipsis">
-      🎛️ 5. Pernyataan switch
+      🎚️ 5. Pernyataan switch
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🎛️ 5. Pernyataan switch">
+    <nav class="md-nav" aria-label="🎚️ 5. Pernyataan switch">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contoh_2" class="md-nav__link">
+  <a href="#struktur_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struktur:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh_4" class="md-nav__link">
     <span class="md-ellipsis">
       Contoh:
     </span>
@@ -710,6 +776,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1572,175 +1647,228 @@
 
 
 <h1 id="kontrol-alur-dalam-java-if-else-switch">🔀 Kontrol Alur dalam Java (if, else, switch)<a class="headerlink" href="#kontrol-alur-dalam-java-if-else-switch" title="Permanent link">&para;</a></h1>
-<p>Kontrol alur adalah struktur dalam Java yang memungkinkan program mengambil <strong>keputusan</strong> berdasarkan kondisi tertentu.</p>
-<p>Dengan kontrol alur, kita bisa membuat program yang <strong>berpikir</strong> dan <strong>bereaksi</strong> terhadap data.</p>
-<hr />
+<p><strong>Kontrol alur</strong> memungkinkan program Java membuat <strong>keputusan</strong> berdasarkan kondisi tertentu. Dengan struktur seperti <code>if</code>, <code>else</code>, <code>else if</code>, dan <code>switch</code>, program dapat mengeksekusi blok kode yang berbeda sesuai dengan logika yang ditentukan. Bagian ini menjelaskan cara menggunakan struktur kontrol alur untuk membuat program yang lebih dinamis dan responsif.</p>
 <h2 id="1-pernyataan-if">🧠 1. Pernyataan <code>if</code><a class="headerlink" href="#1-pernyataan-if" title="Permanent link">&para;</a></h2>
-<p>Struktur dasar:
+<p>Pernyataan <code>if</code> mengeksekusi blok kode jika kondisi tertentu bernilai <code>true</code>.</p>
+<h3 id="struktur">Struktur:<a class="headerlink" href="#struktur" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kondisi</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// kode dijalankan jika kondisi true</span>
-<span class="p">}</span>
-<span class="err">````</span>
-
-<span class="err">###</span><span class="w"> </span><span class="n">Contoh</span><span class="p">:</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">usia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">usia</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Anda sudah dewasa.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<hr />
-<h2 id="2-if-else">🔀 2. <code>if</code> - <code>else</code><a class="headerlink" href="#2-if-else" title="Permanent link">&para;</a></h2>
-<p>Gunakan <code>else</code> untuk kondisi sebaliknya:</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kondisi</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// jika true</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// jika false</span>
+<span class="w">    </span><span class="c1">// Kode dijalankan jika kondisi true</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">nilai</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">55</span><span class="p">;</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nilai</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Lulus&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tidak Lulus&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IfDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">usia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">usia</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Anda sudah dewasa.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="3-if-else-if-else">🧱 3. <code>if</code> - <code>else if</code> - <code>else</code><a class="headerlink" href="#3-if-else-if-else" title="Permanent link">&para;</a></h2>
-<p>Untuk banyak kondisi:</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kondisi1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// aksi 1</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kondisi2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// aksi 2</span>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Anda sudah dewasa.
+</code></pre></div>
+<h2 id="2-pernyataan-if-else">🔀 2. Pernyataan <code>if-else</code><a class="headerlink" href="#2-pernyataan-if-else" title="Permanent link">&para;</a></h2>
+<p>Pernyataan <code>else</code> menangani kasus ketika kondisi <code>if</code> bernilai <code>false</code>.</p>
+<h3 id="struktur_1">Struktur:<a class="headerlink" href="#struktur_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kondisi</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Kode dijalankan jika kondisi true</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// aksi default</span>
+<span class="w">    </span><span class="c1">// Kode dijalankan jika kondisi false</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="contoh_1">Contoh:<a class="headerlink" href="#contoh_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">nilai</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
-
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nilai</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nilai</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nilai</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">70</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IfElseDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nilai</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">55</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nilai</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Lulus&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tidak Lulus&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Tidak Lulus
+</code></pre></div>
+<h2 id="3-pernyataan-if-else-if-else">🧱 3. Pernyataan <code>if-else if-else</code><a class="headerlink" href="#3-pernyataan-if-else-if-else" title="Permanent link">&para;</a></h2>
+<p>Pernyataan <code>else if</code> digunakan untuk mengevaluasi beberapa kondisi secara berurutan. Jika semua kondisi <code>if</code> dan <code>else if</code> bernilai <code>false</code>, blok <code>else</code> (jika ada) akan dijalankan.</p>
+<h3 id="struktur_2">Struktur:<a class="headerlink" href="#struktur_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kondisi1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Kode untuk kondisi1 true</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kondisi2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Kode untuk kondisi2 true</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Kode default jika semua kondisi false</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="4-operator-logika-dalam-if">🎚️ 4. Operator Logika dalam <code>if</code><a class="headerlink" href="#4-operator-logika-dalam-if" title="Permanent link">&para;</a></h2>
-<p>Gabungkan beberapa kondisi:</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// antara 10 dan 20</span>
+<h3 id="contoh_2">Contoh:<a class="headerlink" href="#contoh_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IfElseIfDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nilai</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nilai</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Grade: A&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nilai</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Grade: B&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nilai</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">70</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Grade: C&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Grade: D&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Grade: B
+</code></pre></div>
+<h2 id="4-operator-logika-dalam-if">🎛️ 4. Operator Logika dalam <code>if</code><a class="headerlink" href="#4-operator-logika-dalam-if" title="Permanent link">&para;</a></h2>
+<p>Operator logika seperti <code>&amp;&amp;</code> (AND), <code>||</code> (OR), dan <code>!</code> (NOT) digunakan untuk menggabungkan beberapa kondisi dalam pernyataan <code>if</code>.</p>
 <table>
 <thead>
 <tr>
-<th>Operator</th>
-<th>Fungsi</th>
-<th></th>
-<th></th>
+<th><strong>Operator</strong></th>
+<th><strong>Fungsi</strong></th>
+<th><strong>Contoh</strong></th>
+<th><strong>Hasil</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>&amp;&amp;</code></td>
-<td>dan</td>
-<td></td>
-<td></td>
+<td>AND</td>
+<td><code>(x &gt; 10 &amp;&amp; x &lt; 20)</code></td>
+<td><code>true</code> jika keduanya benar</td>
 </tr>
 <tr>
-<td>`</td>
-<td></td>
-<td>`</td>
-<td>atau</td>
+<td><code>||</code></td>
+<td>OR</td>
+<td><code>(x &lt; 5 || x &gt; 15)</code></td>
+<td><code>true</code> jika salah satu benar</td>
 </tr>
 <tr>
 <td><code>!</code></td>
-<td>bukan</td>
-<td></td>
-<td></td>
+<td>NOT</td>
+<td><code>!true</code></td>
+<td><code>false</code></td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="5-pernyataan-switch">🎛️ 5. Pernyataan <code>switch</code><a class="headerlink" href="#5-pernyataan-switch" title="Permanent link">&para;</a></h2>
-<p>Alternatif lebih rapi daripada <code>if-else</code> berantai ketika mengevaluasi satu variabel dengan banyak kemungkinan nilai.</p>
+<h3 id="contoh_3">Contoh:<a class="headerlink" href="#contoh_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LogicalOperatorDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x berada di antara 10 dan 20&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>x berada di antara 10 dan 20
+</code></pre></div>
+<h2 id="5-pernyataan-switch">🎚️ 5. Pernyataan <code>switch</code><a class="headerlink" href="#5-pernyataan-switch" title="Permanent link">&para;</a></h2>
+<p>Pernyataan <code>switch</code> adalah alternatif untuk <code>if-else</code> berantai, cocok untuk mengevaluasi satu variabel terhadap beberapa nilai konstan.</p>
+<h3 id="struktur_3">Struktur:<a class="headerlink" href="#struktur_3" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">variabel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">nilai1</span><span class="p">:</span>
-<span class="w">        </span><span class="c1">// aksi</span>
+<span class="w">        </span><span class="c1">// Kode untuk nilai1</span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span>
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">nilai2</span><span class="p">:</span>
-<span class="w">        </span><span class="c1">// aksi</span>
+<span class="w">        </span><span class="c1">// Kode untuk nilai2</span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span>
 <span class="w">    </span><span class="k">default</span><span class="p">:</span>
-<span class="w">        </span><span class="c1">// aksi default</span>
+<span class="w">        </span><span class="c1">// Kode default jika tidak ada case yang cocok</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="contoh_2">Contoh:<a class="headerlink" href="#contoh_2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">hari</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">hari</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Senin&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Selasa&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Rabu&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">default</span><span class="p">:</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hari tidak diketahui&quot;</span><span class="p">);</span>
+<ul>
+<li><strong><code>break</code></strong>: Menghentikan eksekusi <code>switch</code> setelah case cocok.</li>
+<li><strong><code>default</code></strong>: Opsional, dijalankan jika tidak ada <code>case</code> yang cocok.</li>
+</ul>
+<h3 id="contoh_4">Contoh:<a class="headerlink" href="#contoh_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SwitchDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">hari</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">hari</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Senin&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Selasa&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Rabu&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">default</span><span class="p">:</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hari tidak diketahui&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Rabu
+</code></pre></div>
+<blockquote>
+<p>💡 <strong>Tips</strong>: Lupa menambahkan <code>break</code> akan menyebabkan eksekusi berlanjut ke <code>case</code> berikutnya (<em>fall-through</em>), yang bisa menjadi bug jika tidak diinginkan.</p>
+</blockquote>
 <h2 id="studi-kasus-menentukan-ganjilgenap">🧪 Studi Kasus: Menentukan Ganjil/Genap<a class="headerlink" href="#studi-kasus-menentukan-ganjilgenap" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">angka</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
-
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">angka</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Genap&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ganjil&quot;</span><span class="p">);</span>
+<p>Berikut adalah contoh program untuk menentukan apakah sebuah angka ganjil atau genap menggunakan <code>if-else</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GanjilGenap</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">angka</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">angka</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Angka &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">angka</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; adalah genap&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Angka &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">angka</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; adalah ganjil&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Angka 7 adalah ganjil
+</code></pre></div>
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>Struktur kontrol alur memungkinkan program Java membuat keputusan berdasarkan kondisi:</p>
 <table>
 <thead>
 <tr>
-<th>Struktur</th>
-<th>Kegunaan</th>
+<th><strong>Struktur</strong></th>
+<th><strong>Kegunaan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>if</code></td>
-<td>Mengecek kondisi benar</td>
+<td>Mengevaluasi kondisi tunggal</td>
 </tr>
 <tr>
 <td><code>else</code></td>
-<td>Aksi jika kondisi salah</td>
+<td>Menangani kasus ketika kondisi <code>if</code> salah</td>
 </tr>
 <tr>
 <td><code>else if</code></td>
-<td>Mengecek banyak kondisi</td>
+<td>Mengevaluasi beberapa kondisi secara berurutan</td>
 </tr>
 <tr>
 <td><code>switch</code></td>
-<td>Menangani banyak pilihan nilai dengan rapi</td>
+<td>Menangani banyak nilai konstan dengan rapi</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Selanjutnya: <a href="../perulangan/">Perulangan (Loop) dalam Java</a></p>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Gunakan <code>switch</code> untuk nilai diskrit (seperti angka atau enum) dan <code>if-else</code> untuk kondisi yang lebih kompleks atau rentang nilai.</p>
+</blockquote>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../../oop/konsep/">Konsep OOP: Object-Oriented Programming</a> untuk memahami cara membangun program berbasis objek.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

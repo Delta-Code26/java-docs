@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Panduan Pemrograman Java dari Pemula hingga Mahir">
+        <meta name="description" content="Memahami cara membuat dan menggunakan method, parameter, nilai kembalian, dan method overloading di Java">
       
       
         <meta name="author" content="Marno">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Method - Dokumentasi Java Lengkap</title>
+        <title>Method dan Parameter dalam Java - Dokumentasi Java Lengkap</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#method-parameter-dalam-java" class="md-skip">
+        <a href="#method-dan-parameter-dalam-java" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Method
+              Method dan Parameter dalam Java
             
           </span>
         </div>
@@ -660,6 +660,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🧱 Struktur Dasar Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-method-tanpa-parameter-dan-nilai-kembalian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Method Tanpa Parameter dan Nilai Kembalian:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -668,6 +683,21 @@
       🔁 Memanggil Method
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🔁 Memanggil Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Program:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -680,6 +710,15 @@
   
     <nav class="md-nav" aria-label="🎯 Method dengan Parameter">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-method-dengan-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Method dengan Parameter:
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#contoh-pemanggilan" class="md-nav__link">
@@ -706,9 +745,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contoh" class="md-nav__link">
+  <a href="#contoh-method-dengan-nilai-kembalian" class="md-nav__link">
     <span class="md-ellipsis">
-      Contoh:
+      Contoh Method dengan Nilai Kembalian:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh-program_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Program:
     </span>
   </a>
   
@@ -720,18 +768,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overloading-method" class="md-nav__link">
+  <a href="#method-overloading" class="md-nav__link">
     <span class="md-ellipsis">
-      🔀 Overloading Method
+      🔀 Method Overloading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔀 Method Overloading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contoh-method-overloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contoh Method Overloading:
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#studi-kasus-hitung-luas-persegi-panjang" class="md-nav__link">
+  <a href="#studi-kasus-menghitung-luas-persegi-panjang" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Studi Kasus: Hitung Luas Persegi Panjang
+      📚 Studi Kasus: Menghitung Luas Persegi Panjang
     </span>
   </a>
   
@@ -741,6 +804,15 @@
   <a href="#kesimpulan" class="md-nav__link">
     <span class="md-ellipsis">
       📌 Kesimpulan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-selanjutnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Langkah Selanjutnya
     </span>
   </a>
   
@@ -1556,125 +1628,176 @@
   
 
 
-<h1 id="method-parameter-dalam-java">🔧 Method &amp; Parameter dalam Java<a class="headerlink" href="#method-parameter-dalam-java" title="Permanent link">&para;</a></h1>
-<p><strong>Method</strong> adalah blok kode yang dirancang untuk melakukan tugas tertentu.<br />
-Dengan method, kita bisa <strong>mengelola kode lebih rapi</strong>, <strong>menghindari duplikasi</strong>, dan <strong>mengulang logika tanpa menulis ulang</strong>.</p>
-<hr />
+<h1 id="method-dan-parameter-dalam-java">🔧 Method dan Parameter dalam Java<a class="headerlink" href="#method-dan-parameter-dalam-java" title="Permanent link">&para;</a></h1>
+<p><strong>Method</strong> adalah blok kode yang dirancang untuk melakukan tugas tertentu dan dapat digunakan kembali dalam program. Method membantu menjaga kode tetap <strong>terorganisir</strong>, <strong>mengurangi duplikasi</strong>, dan mempermudah <strong>pengulangan logika</strong> tanpa menulis ulang kode. Bagian ini menjelaskan struktur method, cara memanggilnya, penggunaan parameter, nilai kembalian, dan konsep <em>method overloading</em>.</p>
 <h2 id="struktur-dasar-method">🧱 Struktur Dasar Method<a class="headerlink" href="#struktur-dasar-method" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">tipeKembalian</span><span class="w"> </span><span class="nf">namaMethod</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// blok kode</span>
+<p>Method didefinisikan dengan struktur berikut:</p>
+<div class="highlight"><pre><span></span><code><span class="n">tipeKembalian</span><span class="w"> </span><span class="nf">namaMethod</span><span class="p">(</span><span class="n">tipeParameter1</span><span class="w"> </span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="n">tipeParameter2</span><span class="w"> </span><span class="n">param2</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Blok kode</span>
+<span class="w">    </span><span class="c1">// (opsional) return nilai;</span>
 <span class="p">}</span>
-<span class="err">````</span>
-
-<span class="err">###</span><span class="w"> </span><span class="n">Contoh</span><span class="p">:</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">sapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</code></pre></div>
+<ul>
+<li><strong>Tipe Kembalian</strong>: Tipe data hasil method (misalnya, <code>int</code>, <code>String</code>, atau <code>void</code> jika tidak mengembalikan nilai).</li>
+<li><strong>Nama Method</strong>: Nama unik untuk method, mengikuti aturan penamaan variabel (camelCase).</li>
+<li><strong>Parameter</strong>: Data masukan (opsional) yang diterima method.</li>
+<li><strong>Blok Kode</strong>: Logika yang dijalankan oleh method.</li>
+<li><strong>Return</strong>: Mengembalikan nilai (jika tipe kembalian bukan <code>void</code>).</li>
+</ul>
+<h3 id="contoh-method-tanpa-parameter-dan-nilai-kembalian">Contoh Method Tanpa Parameter dan Nilai Kembalian:<a class="headerlink" href="#contoh-method-tanpa-parameter-dan-nilai-kembalian" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">sapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Halo, Dunia!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Method <code>sapa()</code> tidak mengembalikan nilai (<code>void</code>) dan tidak menerima parameter.</p>
-<hr />
+<p>Method <code>sapa()</code> bertipe <code>void</code> (tidak mengembalikan nilai) dan tidak menerima parameter.</p>
 <h2 id="memanggil-method">🔁 Memanggil Method<a class="headerlink" href="#memanggil-method" title="Permanent link">&para;</a></h2>
-<p>Untuk menjalankan method, cukup panggil namanya:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
+<p>Untuk menjalankan method, panggil namanya di dalam program. Method harus didefinisikan dalam kelas dan dapat dipanggil dari method lain, seperti <code>main</code>.</p>
+<h3 id="contoh-program">Contoh Program:<a class="headerlink" href="#contoh-program" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MethodDemo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Halo, Dunia!&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">sapa</span><span class="p">();</span><span class="w"> </span><span class="c1">// memanggil method</span>
+<span class="w">        </span><span class="n">sapa</span><span class="p">();</span><span class="w"> </span><span class="c1">// Memanggil method sapa</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Halo, Dunia!
+</code></pre></div>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Keyword <code>static</code> memungkinkan method dipanggil tanpa membuat objek kelas. Untuk method non-static, Anda perlu membuat instance kelas terlebih dahulu.</p>
+</blockquote>
 <h2 id="method-dengan-parameter">🎯 Method dengan Parameter<a class="headerlink" href="#method-dengan-parameter" title="Permanent link">&para;</a></h2>
-<p>Kita bisa mengirimkan nilai ke dalam method sebagai <strong>parameter</strong>.</p>
+<p><strong>Parameter</strong> memungkinkan method menerima data masukan untuk diproses. Parameter didefinisikan dengan tipe data dan nama.</p>
+<h3 id="contoh-method-dengan-parameter">Contoh Method dengan Parameter:<a class="headerlink" href="#contoh-method-dengan-parameter" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sapa</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Halo, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="contoh-pemanggilan">Contoh Pemanggilan:<a class="headerlink" href="#contoh-pemanggilan" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">sapa</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">);</span>
-<span class="n">sapa</span><span class="p">(</span><span class="s">&quot;Dunia&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MethodParamDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sapa</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Halo, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nama</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">sapa</span><span class="p">(</span><span class="s">&quot;Marno&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Memanggil dengan parameter &quot;Marno&quot;</span>
+<span class="w">        </span><span class="n">sapa</span><span class="p">(</span><span class="s">&quot;Dunia&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Memanggil dengan parameter &quot;Dunia&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>💡 Output:</p>
+<p><strong>🖨️ Output:</strong></p>
 <div class="highlight"><pre><span></span><code>Halo, Marno!
 Halo, Dunia!
 </code></pre></div>
-<hr />
 <h2 id="method-dengan-nilai-kembalian">🔁 Method dengan Nilai Kembalian<a class="headerlink" href="#method-dengan-nilai-kembalian" title="Permanent link">&para;</a></h2>
-<p>Jika method menghasilkan output, gunakan <code>return</code> dan tentukan tipe data:</p>
+<p>Method dapat mengembalikan nilai menggunakan kata kunci <code>return</code>. Tipe kembalian harus sesuai dengan tipe data yang dideklarasikan.</p>
+<h3 id="contoh-method-dengan-nilai-kembalian">Contoh Method dengan Nilai Kembalian:<a class="headerlink" href="#contoh-method-dengan-nilai-kembalian" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">tambah</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="contoh">Contoh:<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">hasil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tambah</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hasil = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hasil</span><span class="p">);</span>
+<h3 id="contoh-program_1">Contoh Program:<a class="headerlink" href="#contoh-program_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MethodReturnDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">tambah</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">hasil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tambah</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// Menyimpan hasil kembalian</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hasil = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hasil</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>💡 Output:</p>
+<p><strong>🖨️ Output:</strong></p>
 <div class="highlight"><pre><span></span><code>Hasil = 8
 </code></pre></div>
-<hr />
-<h2 id="overloading-method">🔀 Overloading Method<a class="headerlink" href="#overloading-method" title="Permanent link">&para;</a></h2>
-<p>Java memungkinkan dua method dengan <strong>nama sama</strong>, tapi <strong>parameter berbeda</strong>. Ini disebut <em>method overloading</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cetak</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">teks</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">teks</span><span class="p">);</span>
-<span class="p">}</span>
+<blockquote>
+<p>💡 <strong>Tips</strong>: Gunakan <code>return</code> untuk mengakhiri eksekusi method dan mengembalikan nilai. Jika tipe kembalian adalah <code>void</code>, <code>return</code> bersifat opsional dan digunakan untuk keluar dari method.</p>
+</blockquote>
+<h2 id="method-overloading">🔀 Method Overloading<a class="headerlink" href="#method-overloading" title="Permanent link">&para;</a></h2>
+<p><strong>Method overloading</strong> memungkinkan definisi beberapa method dengan <strong>nama sama</strong> tetapi <strong>parameter berbeda</strong> (dalam jumlah atau tipe). Java akan memilih method yang sesuai berdasarkan parameter yang diberikan saat pemanggilan.</p>
+<h3 id="contoh-method-overloading">Contoh Method Overloading:<a class="headerlink" href="#contoh-method-overloading" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MethodOverloadDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cetak</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">teks</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Teks: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">teks</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cetak</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">angka</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Angka: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">angka</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cetak</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">angka</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Angka: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">angka</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cetak</span><span class="p">(</span><span class="s">&quot;Hai&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Memanggil method dengan parameter String</span>
+<span class="w">        </span><span class="n">cetak</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w">    </span><span class="c1">// Memanggil method dengan parameter int</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Pemanggilan <code>cetak("Hai")</code> dan <code>cetak(5)</code> akan memilih versi method yang sesuai.</p>
-<hr />
-<h2 id="studi-kasus-hitung-luas-persegi-panjang">📚 Studi Kasus: Hitung Luas Persegi Panjang<a class="headerlink" href="#studi-kasus-hitung-luas-persegi-panjang" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hitungLuas</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">panjang</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">lebar</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">panjang</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">lebar</span><span class="p">;</span>
-<span class="p">}</span>
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Teks: Hai
+Angka: 5
+</code></pre></div>
+<blockquote>
+<p>📌 <strong>Catatan</strong>: Overloading tidak bergantung pada tipe kembalian, hanya pada jumlah dan tipe parameter.</p>
+</blockquote>
+<h2 id="studi-kasus-menghitung-luas-persegi-panjang">📚 Studi Kasus: Menghitung Luas Persegi Panjang<a class="headerlink" href="#studi-kasus-menghitung-luas-persegi-panjang" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah contoh program untuk menghitung luas persegi panjang menggunakan method dengan parameter dan nilai kembalian:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LuasPersegiPanjang</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hitungLuas</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">panjang</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">lebar</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">panjang</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">lebar</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">luas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hitungLuas</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Luas = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">luas</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">luas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hitungLuas</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Luas persegi panjang = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">luas</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; cm²&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
+<p><strong>🖨️ Output:</strong></p>
+<div class="highlight"><pre><span></span><code>Luas persegi panjang = 15 cm²
+</code></pre></div>
 <h2 id="kesimpulan">📌 Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah ringkasan konsep method di Java:</p>
 <table>
 <thead>
 <tr>
-<th>Konsep</th>
-<th>Penjelasan</th>
+<th><strong>Konsep</strong></th>
+<th><strong>Penjelasan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Method</td>
-<td>Blok kode yang bisa digunakan berulang</td>
+<td><strong>Method</strong></td>
+<td>Blok kode untuk tugas tertentu, dapat digunakan ulang</td>
 </tr>
 <tr>
-<td>Parameter</td>
-<td>Data yang dikirimkan ke dalam method</td>
+<td><strong>Parameter</strong></td>
+<td>Data masukan yang diterima method</td>
 </tr>
 <tr>
-<td>Return</td>
-<td>Nilai yang dikembalikan oleh method</td>
+<td><strong>Nilai Kembalian</strong></td>
+<td>Nilai yang dihasilkan method menggunakan <code>return</code></td>
 </tr>
 <tr>
-<td>Overloading</td>
-<td>Method dengan nama sama tapi parameter beda</td>
+<td><strong>Overloading</strong></td>
+<td>Method dengan nama sama tetapi parameter berbeda</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>➡️ Selanjutnya: <a href="../../oop/konsep/">Konsep OOP: Object-Oriented Programming</a></p>
+<p>Method adalah fondasi penting untuk membuat kode yang modular dan efisien.</p>
+<h2 id="langkah-selanjutnya">📚 Langkah Selanjutnya<a class="headerlink" href="#langkah-selanjutnya" title="Permanent link">&para;</a></h2>
+<p>Pelajari lebih lanjut tentang <a href="../oop/k Sony/konsep.md">Konsep OOP: Object-Oriented Programming</a> untuk memahami cara membangun program berbasis objek.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
